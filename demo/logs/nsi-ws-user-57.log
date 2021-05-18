@@ -1,0 +1,102 @@
+2021-05-18 11:23:43,955|[12]|ERROR|44e38885c695|(null)|Estat.Sri.Ws.Retrievers.Manager.MappingStoreSettingsManager|anonymous|No connection string with name MappingStoreServer could not be found. Please add at the Web.config at <connectionStrings> section a connection string with name MappingStoreServer.|
+2021-05-18 11:23:44,666|[12]|ERROR|44e38885c695|(null)|Org.Sdmxsource.Sdmx.Api.Exception.SdmxException|anonymous|No structures found for the specific query|Org.Sdmxsource.Sdmx.Api.Exception.SdmxNoResultsException: No structures found for the specific query
+
+2021-05-18 11:23:44,718|[12]|ERROR|44e38885c695|(null)|Org.Sdmxsource.Sdmx.Api.Exception.SdmxException|anonymous|Could not find requested structures|Org.Sdmxsource.Sdmx.Api.Exception.SdmxNoResultsException: Could not find requested structures
+
+2021-05-18 11:23:44,719|[12]|ERROR|44e38885c695|(null)|Estat.Sri.Ws.Rest.StructureResourceErrorHandler|anonymous|Org.Sdmxsource.Sdmx.Api.Exception.SdmxNoResultsException: Could not find requested structures
+   at Estat.Sri.Ws.Controllers.Manager.RetrieverManager.TryFactories(Func`2 tryRetrieverFactory) in /app/src/Controllers/Manager/RetrieverManager.cs:line 787
+   at Estat.Sri.Ws.Controllers.Manager.RetrieverManager.ParseRequest(SdmxSchema sdmxSchema, IRestStructureQuery query) in /app/src/Controllers/Manager/RetrieverManager.cs:line 247
+   at Estat.Sri.Ws.Controllers.Controller.StructureRequestController.ParseRequest(IRestStructureQuery query, IHeaderDictionary headersFromRequest, HttpContext ctx) in /app/src/Controllers/Controller/StructureRequestController.cs:line 164
+   at Estat.Sri.Ws.Rest.StructureResource.ProcessRequest(String structure, String agencyId, String resourceId, String version, String filter, HttpContext ctx) in /app/src/NSIWebServices/StructureResource.cs:line 435
+   at Estat.Sri.Ws.Rest.StructureResource.GetStructure(String structure, String agencyId, String resourceId, String version, String filter) in /app/src/NSIWebServices/StructureResource.cs:line 158
+   at Estat.Sri.Ws.Rest.StructureResourceErrorHandler.GetStructure(String structure, String agencyId, String resourceId, String version, String filter) in /app/src/NSIWebServices/StructureResourceErrorHandler.cs:line 83|
+2021-05-18 11:23:44,758|[12]|ERROR|44e38885c695|(null)|Estat.Sri.Ws.Controllers.Builder.ServiceExceptionRestBuilder|anonymous|SdmxError : No Results Found, code : 100|
+2021-05-18 11:23:44,759|[12]|ERROR|44e38885c695|(null)|Estat.Sri.Ws.Controllers.Builder.ServiceExceptionRestBuilder|anonymous|Could not find requested structures|Org.Sdmxsource.Sdmx.Api.Exception.SdmxNoResultsException: Could not find requested structures
+   at Estat.Sri.Ws.Controllers.Manager.RetrieverManager.TryFactories(Func`2 tryRetrieverFactory) in /app/src/Controllers/Manager/RetrieverManager.cs:line 787
+   at Estat.Sri.Ws.Controllers.Manager.RetrieverManager.ParseRequest(SdmxSchema sdmxSchema, IRestStructureQuery query) in /app/src/Controllers/Manager/RetrieverManager.cs:line 247
+   at Estat.Sri.Ws.Controllers.Controller.StructureRequestController.ParseRequest(IRestStructureQuery query, IHeaderDictionary headersFromRequest, HttpContext ctx) in /app/src/Controllers/Controller/StructureRequestController.cs:line 164
+   at Estat.Sri.Ws.Rest.StructureResource.ProcessRequest(String structure, String agencyId, String resourceId, String version, String filter, HttpContext ctx) in /app/src/NSIWebServices/StructureResource.cs:line 435
+   at Estat.Sri.Ws.Rest.StructureResource.GetStructure(String structure, String agencyId, String resourceId, String version, String filter) in /app/src/NSIWebServices/StructureResource.cs:line 158
+   at Estat.Sri.Ws.Rest.StructureResourceErrorHandler.GetStructure(String structure, String agencyId, String resourceId, String version, String filter) in /app/src/NSIWebServices/StructureResourceErrorHandler.cs:line 83
+
+2021-05-18 11:23:59,951|[10]|ERROR|44e38885c695|(null)|Org.Sdmxsource.Sdmx.Api.Exception.SdmxException|anonymous|No structures found for the specific query|Org.Sdmxsource.Sdmx.Api.Exception.SdmxNoResultsException: No structures found for the specific query
+
+2021-05-18 11:23:59,952|[10]|ERROR|44e38885c695|(null)|Org.Sdmxsource.Sdmx.Api.Exception.SdmxException|anonymous|Could not find requested structures|Org.Sdmxsource.Sdmx.Api.Exception.SdmxNoResultsException: Could not find requested structures
+
+2021-05-18 11:23:59,952|[10]|ERROR|44e38885c695|(null)|Estat.Sri.Ws.Rest.StructureResourceErrorHandler|anonymous|Org.Sdmxsource.Sdmx.Api.Exception.SdmxNoResultsException: Could not find requested structures
+   at Estat.Sri.Ws.Controllers.Manager.RetrieverManager.TryFactories(Func`2 tryRetrieverFactory) in /app/src/Controllers/Manager/RetrieverManager.cs:line 787
+   at Estat.Sri.Ws.Controllers.Manager.RetrieverManager.ParseRequest(SdmxSchema sdmxSchema, IRestStructureQuery query) in /app/src/Controllers/Manager/RetrieverManager.cs:line 247
+   at Estat.Sri.Ws.Controllers.Controller.StructureRequestController.ParseRequest(IRestStructureQuery query, IHeaderDictionary headersFromRequest, HttpContext ctx) in /app/src/Controllers/Controller/StructureRequestController.cs:line 164
+   at Estat.Sri.Ws.Rest.StructureResource.ProcessRequest(String structure, String agencyId, String resourceId, String version, String filter, HttpContext ctx) in /app/src/NSIWebServices/StructureResource.cs:line 435
+   at Estat.Sri.Ws.Rest.StructureResource.GetStructure(String structure, String agencyId, String resourceId, String version, String filter) in /app/src/NSIWebServices/StructureResource.cs:line 158
+   at Estat.Sri.Ws.Rest.StructureResourceErrorHandler.GetStructure(String structure, String agencyId, String resourceId, String version, String filter) in /app/src/NSIWebServices/StructureResourceErrorHandler.cs:line 83|
+2021-05-18 11:23:59,954|[10]|ERROR|44e38885c695|(null)|Estat.Sri.Ws.Controllers.Builder.ServiceExceptionRestBuilder|anonymous|SdmxError : No Results Found, code : 100|
+2021-05-18 11:23:59,955|[10]|ERROR|44e38885c695|(null)|Estat.Sri.Ws.Controllers.Builder.ServiceExceptionRestBuilder|anonymous|Could not find requested structures|Org.Sdmxsource.Sdmx.Api.Exception.SdmxNoResultsException: Could not find requested structures
+   at Estat.Sri.Ws.Controllers.Manager.RetrieverManager.TryFactories(Func`2 tryRetrieverFactory) in /app/src/Controllers/Manager/RetrieverManager.cs:line 787
+   at Estat.Sri.Ws.Controllers.Manager.RetrieverManager.ParseRequest(SdmxSchema sdmxSchema, IRestStructureQuery query) in /app/src/Controllers/Manager/RetrieverManager.cs:line 247
+   at Estat.Sri.Ws.Controllers.Controller.StructureRequestController.ParseRequest(IRestStructureQuery query, IHeaderDictionary headersFromRequest, HttpContext ctx) in /app/src/Controllers/Controller/StructureRequestController.cs:line 164
+   at Estat.Sri.Ws.Rest.StructureResource.ProcessRequest(String structure, String agencyId, String resourceId, String version, String filter, HttpContext ctx) in /app/src/NSIWebServices/StructureResource.cs:line 435
+   at Estat.Sri.Ws.Rest.StructureResource.GetStructure(String structure, String agencyId, String resourceId, String version, String filter) in /app/src/NSIWebServices/StructureResource.cs:line 158
+   at Estat.Sri.Ws.Rest.StructureResourceErrorHandler.GetStructure(String structure, String agencyId, String resourceId, String version, String filter) in /app/src/NSIWebServices/StructureResourceErrorHandler.cs:line 83
+
+2021-05-18 11:24:55,142|[5]|ERROR|44e38885c695|(null)|Estat.Sri.MappingStore.Store.Engine.Update.InsertNewItemsEngine|anonymous|BUG: Tried to insert new category items using InsertNewItems instead of UpdateCategoryScheme|
+2021-05-18 15:03:33,240|[39]|ERROR|44e38885c695|(null)|Org.Sdmxsource.Sdmx.Api.Exception.SdmxException|anonymous|No structures found for the specific query|Org.Sdmxsource.Sdmx.Api.Exception.SdmxNoResultsException: No structures found for the specific query
+
+2021-05-18 15:03:33,243|[39]|ERROR|44e38885c695|(null)|Org.Sdmxsource.Sdmx.Api.Exception.SdmxException|anonymous|Could not find requested structures|Org.Sdmxsource.Sdmx.Api.Exception.SdmxNoResultsException: Could not find requested structures
+
+2021-05-18 15:03:33,243|[39]|ERROR|44e38885c695|(null)|Estat.Sri.Ws.Rest.StructureResourceErrorHandler|anonymous|Org.Sdmxsource.Sdmx.Api.Exception.SdmxNoResultsException: Could not find requested structures
+   at Estat.Sri.Ws.Controllers.Manager.RetrieverManager.TryFactories(Func`2 tryRetrieverFactory) in /app/src/Controllers/Manager/RetrieverManager.cs:line 787
+   at Estat.Sri.Ws.Controllers.Manager.RetrieverManager.ParseRequest(SdmxSchema sdmxSchema, IRestStructureQuery query) in /app/src/Controllers/Manager/RetrieverManager.cs:line 247
+   at Estat.Sri.Ws.Controllers.Controller.StructureRequestController.ParseRequest(IRestStructureQuery query, IHeaderDictionary headersFromRequest, HttpContext ctx) in /app/src/Controllers/Controller/StructureRequestController.cs:line 164
+   at Estat.Sri.Ws.Rest.StructureResource.ProcessRequest(String structure, String agencyId, String resourceId, String version, String filter, HttpContext ctx) in /app/src/NSIWebServices/StructureResource.cs:line 435
+   at Estat.Sri.Ws.Rest.StructureResource.GetStructure(String structure, String agencyId, String resourceId, String version, String filter) in /app/src/NSIWebServices/StructureResource.cs:line 158
+   at Estat.Sri.Ws.Rest.StructureResourceErrorHandler.GetStructure(String structure, String agencyId, String resourceId, String version, String filter) in /app/src/NSIWebServices/StructureResourceErrorHandler.cs:line 83|
+2021-05-18 15:03:33,245|[39]|ERROR|44e38885c695|(null)|Estat.Sri.Ws.Controllers.Builder.ServiceExceptionRestBuilder|anonymous|SdmxError : No Results Found, code : 100|
+2021-05-18 15:03:33,245|[39]|ERROR|44e38885c695|(null)|Estat.Sri.Ws.Controllers.Builder.ServiceExceptionRestBuilder|anonymous|Could not find requested structures|Org.Sdmxsource.Sdmx.Api.Exception.SdmxNoResultsException: Could not find requested structures
+   at Estat.Sri.Ws.Controllers.Manager.RetrieverManager.TryFactories(Func`2 tryRetrieverFactory) in /app/src/Controllers/Manager/RetrieverManager.cs:line 787
+   at Estat.Sri.Ws.Controllers.Manager.RetrieverManager.ParseRequest(SdmxSchema sdmxSchema, IRestStructureQuery query) in /app/src/Controllers/Manager/RetrieverManager.cs:line 247
+   at Estat.Sri.Ws.Controllers.Controller.StructureRequestController.ParseRequest(IRestStructureQuery query, IHeaderDictionary headersFromRequest, HttpContext ctx) in /app/src/Controllers/Controller/StructureRequestController.cs:line 164
+   at Estat.Sri.Ws.Rest.StructureResource.ProcessRequest(String structure, String agencyId, String resourceId, String version, String filter, HttpContext ctx) in /app/src/NSIWebServices/StructureResource.cs:line 435
+   at Estat.Sri.Ws.Rest.StructureResource.GetStructure(String structure, String agencyId, String resourceId, String version, String filter) in /app/src/NSIWebServices/StructureResource.cs:line 158
+   at Estat.Sri.Ws.Rest.StructureResourceErrorHandler.GetStructure(String structure, String agencyId, String resourceId, String version, String filter) in /app/src/NSIWebServices/StructureResourceErrorHandler.cs:line 83
+
+2021-05-18 15:03:36,311|[41]|ERROR|44e38885c695|(null)|Org.Sdmxsource.Sdmx.Api.Exception.SdmxException|anonymous|No structures found for the specific query|Org.Sdmxsource.Sdmx.Api.Exception.SdmxNoResultsException: No structures found for the specific query
+
+2021-05-18 15:03:36,312|[41]|ERROR|44e38885c695|(null)|Org.Sdmxsource.Sdmx.Api.Exception.SdmxException|anonymous|Could not find requested structures|Org.Sdmxsource.Sdmx.Api.Exception.SdmxNoResultsException: Could not find requested structures
+
+2021-05-18 15:03:36,312|[41]|ERROR|44e38885c695|(null)|Estat.Sri.Ws.Rest.StructureResourceErrorHandler|anonymous|Org.Sdmxsource.Sdmx.Api.Exception.SdmxNoResultsException: Could not find requested structures
+   at Estat.Sri.Ws.Controllers.Manager.RetrieverManager.TryFactories(Func`2 tryRetrieverFactory) in /app/src/Controllers/Manager/RetrieverManager.cs:line 787
+   at Estat.Sri.Ws.Controllers.Manager.RetrieverManager.ParseRequest(SdmxSchema sdmxSchema, IRestStructureQuery query) in /app/src/Controllers/Manager/RetrieverManager.cs:line 247
+   at Estat.Sri.Ws.Controllers.Controller.StructureRequestController.ParseRequest(IRestStructureQuery query, IHeaderDictionary headersFromRequest, HttpContext ctx) in /app/src/Controllers/Controller/StructureRequestController.cs:line 164
+   at Estat.Sri.Ws.Rest.StructureResource.ProcessRequest(String structure, String agencyId, String resourceId, String version, String filter, HttpContext ctx) in /app/src/NSIWebServices/StructureResource.cs:line 435
+   at Estat.Sri.Ws.Rest.StructureResource.GetStructure(String structure, String agencyId, String resourceId, String version, String filter) in /app/src/NSIWebServices/StructureResource.cs:line 158
+   at Estat.Sri.Ws.Rest.StructureResourceErrorHandler.GetStructure(String structure, String agencyId, String resourceId, String version, String filter) in /app/src/NSIWebServices/StructureResourceErrorHandler.cs:line 83|
+2021-05-18 15:03:36,313|[41]|ERROR|44e38885c695|(null)|Estat.Sri.Ws.Controllers.Builder.ServiceExceptionRestBuilder|anonymous|SdmxError : No Results Found, code : 100|
+2021-05-18 15:03:36,313|[41]|ERROR|44e38885c695|(null)|Estat.Sri.Ws.Controllers.Builder.ServiceExceptionRestBuilder|anonymous|Could not find requested structures|Org.Sdmxsource.Sdmx.Api.Exception.SdmxNoResultsException: Could not find requested structures
+   at Estat.Sri.Ws.Controllers.Manager.RetrieverManager.TryFactories(Func`2 tryRetrieverFactory) in /app/src/Controllers/Manager/RetrieverManager.cs:line 787
+   at Estat.Sri.Ws.Controllers.Manager.RetrieverManager.ParseRequest(SdmxSchema sdmxSchema, IRestStructureQuery query) in /app/src/Controllers/Manager/RetrieverManager.cs:line 247
+   at Estat.Sri.Ws.Controllers.Controller.StructureRequestController.ParseRequest(IRestStructureQuery query, IHeaderDictionary headersFromRequest, HttpContext ctx) in /app/src/Controllers/Controller/StructureRequestController.cs:line 164
+   at Estat.Sri.Ws.Rest.StructureResource.ProcessRequest(String structure, String agencyId, String resourceId, String version, String filter, HttpContext ctx) in /app/src/NSIWebServices/StructureResource.cs:line 435
+   at Estat.Sri.Ws.Rest.StructureResource.GetStructure(String structure, String agencyId, String resourceId, String version, String filter) in /app/src/NSIWebServices/StructureResource.cs:line 158
+   at Estat.Sri.Ws.Rest.StructureResourceErrorHandler.GetStructure(String structure, String agencyId, String resourceId, String version, String filter) in /app/src/NSIWebServices/StructureResourceErrorHandler.cs:line 83
+
+2021-05-18 15:03:37,751|[39]|ERROR|44e38885c695|(null)|Org.Sdmxsource.Sdmx.Api.Exception.SdmxException|anonymous|No structures found for the specific query|Org.Sdmxsource.Sdmx.Api.Exception.SdmxNoResultsException: No structures found for the specific query
+
+2021-05-18 15:03:37,752|[39]|ERROR|44e38885c695|(null)|Org.Sdmxsource.Sdmx.Api.Exception.SdmxException|anonymous|Could not find requested structures|Org.Sdmxsource.Sdmx.Api.Exception.SdmxNoResultsException: Could not find requested structures
+
+2021-05-18 15:03:37,752|[39]|ERROR|44e38885c695|(null)|Estat.Sri.Ws.Rest.StructureResourceErrorHandler|anonymous|Org.Sdmxsource.Sdmx.Api.Exception.SdmxNoResultsException: Could not find requested structures
+   at Estat.Sri.Ws.Controllers.Manager.RetrieverManager.TryFactories(Func`2 tryRetrieverFactory) in /app/src/Controllers/Manager/RetrieverManager.cs:line 787
+   at Estat.Sri.Ws.Controllers.Manager.RetrieverManager.ParseRequest(SdmxSchema sdmxSchema, IRestStructureQuery query) in /app/src/Controllers/Manager/RetrieverManager.cs:line 247
+   at Estat.Sri.Ws.Controllers.Controller.StructureRequestController.ParseRequest(IRestStructureQuery query, IHeaderDictionary headersFromRequest, HttpContext ctx) in /app/src/Controllers/Controller/StructureRequestController.cs:line 164
+   at Estat.Sri.Ws.Rest.StructureResource.ProcessRequest(String structure, String agencyId, String resourceId, String version, String filter, HttpContext ctx) in /app/src/NSIWebServices/StructureResource.cs:line 435
+   at Estat.Sri.Ws.Rest.StructureResource.GetStructure(String structure, String agencyId, String resourceId, String version, String filter) in /app/src/NSIWebServices/StructureResource.cs:line 158
+   at Estat.Sri.Ws.Rest.StructureResourceErrorHandler.GetStructure(String structure, String agencyId, String resourceId, String version, String filter) in /app/src/NSIWebServices/StructureResourceErrorHandler.cs:line 83|
+2021-05-18 15:03:37,753|[39]|ERROR|44e38885c695|(null)|Estat.Sri.Ws.Controllers.Builder.ServiceExceptionRestBuilder|anonymous|SdmxError : No Results Found, code : 100|
+2021-05-18 15:03:37,754|[39]|ERROR|44e38885c695|(null)|Estat.Sri.Ws.Controllers.Builder.ServiceExceptionRestBuilder|anonymous|Could not find requested structures|Org.Sdmxsource.Sdmx.Api.Exception.SdmxNoResultsException: Could not find requested structures
+   at Estat.Sri.Ws.Controllers.Manager.RetrieverManager.TryFactories(Func`2 tryRetrieverFactory) in /app/src/Controllers/Manager/RetrieverManager.cs:line 787
+   at Estat.Sri.Ws.Controllers.Manager.RetrieverManager.ParseRequest(SdmxSchema sdmxSchema, IRestStructureQuery query) in /app/src/Controllers/Manager/RetrieverManager.cs:line 247
+   at Estat.Sri.Ws.Controllers.Controller.StructureRequestController.ParseRequest(IRestStructureQuery query, IHeaderDictionary headersFromRequest, HttpContext ctx) in /app/src/Controllers/Controller/StructureRequestController.cs:line 164
+   at Estat.Sri.Ws.Rest.StructureResource.ProcessRequest(String structure, String agencyId, String resourceId, String version, String filter, HttpContext ctx) in /app/src/NSIWebServices/StructureResource.cs:line 435
+   at Estat.Sri.Ws.Rest.StructureResource.GetStructure(String structure, String agencyId, String resourceId, String version, String filter) in /app/src/NSIWebServices/StructureResource.cs:line 158
+   at Estat.Sri.Ws.Rest.StructureResourceErrorHandler.GetStructure(String structure, String agencyId, String resourceId, String version, String filter) in /app/src/NSIWebServices/StructureResourceErrorHandler.cs:line 83
+

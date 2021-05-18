@@ -1,0 +1,47 @@
+version: "3.5"
+
+volumes:
+  postgres_data:
+      driver: local
+      
+services:
+  postgres:
+    image: postgres:12
+    container_name: postgres
+    restart: always 
+    volumes:
+        - postgres_data:/var/lib/postgresql/data
+    environment:
+        POSTGRES_DB: ${KEYCLOAK_DB}
+        POSTGRES_USER: ${KEYCLOAK_DB_USER}
+        POSTGRES_PASSWORD: ${KEYCLOAK_DB_PASSWORD}
+    ports:
+      - "${KEYCLOAK_DB_PORT}:5432"
+    networks:
+        - dotstat_network
+
+  keycloak:    
+    image: jboss/keycloak:7.0.0
+    container_name: keycloak
+    depends_on:
+        - postgres
+    ports:
+        - "${KEYCLOAK_PORT}:8080"
+    volumes:
+        - "./realm:/opt/jboss/import"     
+    environment:
+        - DB_VENDOR=POSTGRES
+        - DB_SCHEMA=public
+        - KEYCLOAK_USER=${KEYCLOAK_USER}
+        - KEYCLOAK_PASSWORD=${KEYCLOAK_PASSWORD}                       
+        - DB_USER=${KEYCLOAK_DB_USER}
+        - DB_PASSWORD=${KEYCLOAK_DB_PASSWORD}
+        - DB_ADDR=postgres
+        - DB_DATABASE=${KEYCLOAK_DB}
+        - KEYCLOAK_IMPORT=import/demo-realm.json
+    networks:
+        - dotstat_network
+
+networks:
+  dotstat_network:
+    name: dotstat_common_network

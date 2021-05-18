@@ -1,0 +1,52 @@
+{
+  "app": {
+    "title": "Demo Data viewer",
+    "favicon": "/assets/siscc/data-explorer/images/favicon.ico"
+  },
+  "ga": {},
+  "share": {
+    "endpoint": "http://localhost:3005"
+  },
+  "i18n": {
+    "locales": {
+      "en": { "id": "en" },
+      "fr": { "id": "fr" },
+      "es": { "id": "es" },
+      "it": { "id": "it" },
+      "ar": { "id": "ar", "isRtl": "true" },
+      "km": { "id": "km" },
+      "nl": { "id": "nl" }
+    }
+  },
+  "sdmx": {
+    "attributes": {
+      "flags": ["OBS_STATUS"],
+      "footnotes": ["TIME_FORMAT"],
+      "prefscale": ["PREF_SCALE"], 
+      "decimals": ["DECIMALS"]
+    }
+  },
+  "styles": "/assets/siscc/data-explorer/styles/styles.css",
+  "theme": {
+    "table": {
+      "yBg": "#B5CEEB",
+      "yBgHover": "#c3d7ef",
+      "yBgActive": "#7e90a4",
+      "yFontHeader": "#1C2768",
+      "yFont": "#43679F",
+      "zBg": "#386CAA",
+      "zBgHover": "#5f89bb",
+      "zBgActive": "#274b76",
+      "zFontHeader": "#A2C2E4",
+      "zFont": "#FFFFFF",
+      "xBg": "#FFFFFF",
+      "xBgHeader": "#D7E6F4",
+      "xBgHover": "#dfebf6",
+      "xBgActive": "#96a1aa",
+      "xFontHeader": "#1C2768",
+      "xFont": "#43679F",
+      "oFont": "#494444",
+      "sBg": "#F0F0F0"
+    }
+  }
+}

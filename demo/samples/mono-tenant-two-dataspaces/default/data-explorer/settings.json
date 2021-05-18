@@ -1,0 +1,168 @@
+{
+  "sdmx": {
+    "datasourceIds": [
+      "demo-design",
+      "demo-release"
+    ],
+    "range": [0, 2499],
+    "attributes": {
+      "flags": ["OBS_STATUS", "CONF_STATUS"],
+      "footnotes": ["FOOTNOTE", "COMMENT", "COLLECTION", "TABLE_IDENTIFIER", "UNIT_MULT", "UNIT_MEASURE", "TIME_FORMAT"],
+      "prefscale": "PREF_SCALE", 
+      "decimals": "DECIMALS"
+    },
+    "units": {
+      "id": "UNIT",
+      "annotationsDefinitionCodes": {
+        "concepts": ["UNIT_MEASURE_CONCEPTS"]
+      },
+      "defaultCodes": ["UNIT_MEASURE", "UNIT_MULT", "BASE_PER"],
+      "rejectedValueIds": ["_L", "_T", "_Z"]
+    },
+    "period": {
+      "boundaries": ["1970", "2025"],
+      "default": ["2015", "2020"]
+    },
+    "valueIcons": {
+      "Topics": {
+        "EDU": "M10 20v-6h4v6h5v-8h3L12 3 2 12h3v8z",
+        "GOV": "M10 20v-6h4v6h5v-8h3L12 3 2 12h3v8z"
+      }
+    },
+    "frequency": "A"
+  },
+  "viewer": {
+    "owner": "SIS-CC",
+    "logo": "/assets/siscc/data-explorer/images/sis-cc-logo.png",
+    "terms": {
+      "label": "Terms & Conditions (example)",
+      "link": "http://www.oecd.org/termsandconditions/"
+    },
+    "api": {
+      "doc": "https://github.com/sdmx-twg/sdmx-rest/tree/master/v2_1/ws/rest/docs",
+      "contact": "https://gitlab.com/sis-cc/.stat-suite"
+    }
+  },
+  "app": {
+    "title": "Demo Data Explorer",
+    "favicon": "/assets/siscc/data-explorer/images/favicon.ico"
+  },
+  "assets": {
+    "header": "/assets/siscc/data-explorer/images/sis-cc-logo.png",
+    "subheader": "/assets/siscc/data-explorer/images/dotstat-data-explorer-logo.png",
+    "footer": "/assets/siscc/data-explorer/images/sis-cc-icon.png",
+    "splash": "/assets/siscc/data-explorer/images/dotstat-data-explorer-logo.png"
+  },
+  "chart": {
+    "url": "",
+    "source": "http://dotstat.oecd.org/",
+    "maps": {
+      "fra-poc": {
+        "id": "fra-poc",
+        "projection": "mercator",
+        "path": "/assets/siscc/data-explorer/maps/fra-poc.json",
+        "levels": ["dep"],
+        "scale": 2000
+      }
+    },
+    "options": {
+      "axis": {
+        "x": {
+          "font": {
+            "family": "'Segoe UI'"
+          }
+        },
+        "y": {
+          "font": {
+            "family": "'Segoe UI'"
+          }
+        }
+      },
+      "serie": {
+        "annotation": {
+          "font": {
+            "family": "'Segoe UI'"
+          }
+        },
+        "tooltip": {
+          "font": {
+            "family": "'Segoe UI'"
+          }
+        }
+      }
+    },
+    "size": {
+      "height": 400
+    }
+  },
+  "table": {
+    "cellsLimit": 6000
+  },
+  "theme": {
+    "visFont": "'Segoe UI'"
+  },
+  "i18n": {
+    "localeId": "en",
+    "locales": {
+      "en": {
+        "id": "en",
+        "delimiters": { "thousands": " ", "decimal": "."  },
+        "timeFormat": "YYYY-MMM"
+      },
+      "fr": {
+        "id": "fr",
+        "delimiters": { "thousands": " ", "decimal": ","  },
+        "timeFormat": "MMM YYYY"
+      },
+      "es": {
+        "id": "es",
+        "delimiters": { "thousands": " ", "decimal": ","  },
+        "timeFormat": "MMM YYYY"
+      },
+      "it": {
+        "id": "it",
+        "delimiters": { "thousands": " ", "decimal": ","  },
+        "timeFormat": "MMM YYYY"
+      },
+      "ar": {
+        "id": "ar",
+        "isRtl": true,
+        "delimiters": { "thousands": " ", "decimal": ","  }
+      },
+      "km": {
+        "id": "km",
+        "delimiters": { "thousands": " ", "decimal": ","  },
+        "timeFormat": "YYYY-MMM"
+      },
+      "nl": {
+        "id": "nl",
+        "delimiters": { "thousands": " ", "decimal": ","  },
+        "timeFormat": "YYYY-MMM"
+      }
+    }
+  },
+  "ga": {},
+  "styles": "/assets/siscc/data-explorer/styles/styles.css",
+  "search": {
+    "endpoint": "http://localhost:3004/api",
+    "homeFacetIds": ["Topic", "Thème", "datasourceId", "Frequency", "Institution de santé"],
+    "pinnedFacetIds": ["datasourceId", "Topic", "Thème"],
+    "excludedFacetIds": [
+      "Territory",
+      "Indicator number",
+      "Age",
+      "Reporting country",
+      "Counterpart country",
+      "Activity",
+      "Institutional sector",
+      "Transaction",
+      "Financial instrument"
+    ],
+    "defaultRows": 20
+  },
+  "share": {
+    "confirmUrl": "http://localhost:7002",
+    "endpoint": "http://localhost:3005/api/charts",
+    "policy": "http://www.oecd.org/general/privacypolicy.htm"
+  }
+}

@@ -1,0 +1,77 @@
+{
+  "sdmx": {
+    "datasourceIds": [
+      "demo-design",
+      "demo-release"
+    ],
+    "datasources": {
+      "demo-release": {
+        "color": "white",
+        "backgroundColor": "#606A80",
+        "label": "demo-release",
+        "dataExplorerUrl": "http://localhost:7001"
+      },
+      "demo-design": {
+        "color": "white",
+        "backgroundColor": "#735667",
+        "label": "demo-design",
+        "dataExplorerUrl": "http://localhost:7001"
+      }
+    },
+    "typeIds": [
+      "agencyscheme",
+      "categoryscheme",
+      "categorisation",
+      "codelist",
+      "conceptscheme",
+      "contentconstraint",
+      "datastructure",
+      "dataflow",
+      "hierarchicalcodelist",
+      "metadatastructure",
+      "metadataflow",
+      "structureset"
+    ],
+    "uploadSizeLimit": 30000000
+  },
+  "i18n": {
+    "localeId": "en",
+    "locales": {
+      "en": {
+        "id": "en",
+        "delimiters": { "thousands": " ", "decimal": "."  },
+        "timeFormat": "YYYY-MMM"
+      },
+      "fr": {
+        "id": "fr",
+        "delimiters": { "thousands": " ", "decimal": ","  },
+        "timeFormat": "MMM YYYY"
+      },
+      "es": {
+        "id": "es",
+        "delimiters": { "thousands": " ", "decimal": "."  },
+        "timeFormat": "YYYY-MMM"
+      },
+      "it": {
+        "id": "it",
+        "delimiters": { "thousands": " ", "decimal": ","  },
+        "timeFormat": "MMM YYYY"
+      },
+      "ar": {
+        "id": "ar",
+        "isRtl": "true",
+        "delimiters": { "thousands": " ", "decimal": ","  }
+      },
+      "nl": {
+        "id": "nl",
+        "delimiters": { "thousands": " ", "decimal": ","  },
+        "timeFormat": "YYYY-MMM"
+      }
+    }
+  },
+  "assets": {
+    "logo": "/assets/siscc/data-lifecycle-manager/images/logo.png",
+    "icon": "/assets/siscc/data-lifecycle-manager/images/sis-cc-icon.png"
+  },
+  "styles": "/assets/siscc/data-lifecycle-manager/styles/styles.css"
+}

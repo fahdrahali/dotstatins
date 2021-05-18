@@ -1,0 +1,7 @@
+{
+  "default": {
+    "id": "default",
+    "name": "default",
+    "keycloak": { "realm": "demo", "clientId": "stat-suite" }
+  }
+}

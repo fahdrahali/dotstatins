@@ -1,0 +1,261 @@
+# Note in Kubernetes wait4sql image, wait-tool volume and entrypoint override is not needed. This is just to overcome docker-compose
+# limitation when dependent services start immediately, not waiting till sql database is fully ready.
+
+version: "3.5"
+services:
+
+    nsiws-demo-design:
+        image: siscc/sdmxri-nsi-maapi
+        container_name: nsiws-demo-design
+        ports:
+          - "${NSI_DESIGN_PORT}:80"
+        environment:
+            # Authentication configuration
+            auth__enabled: ${AUTH_ENABLED}
+            auth__allowAnonymous: "true"
+            auth__authority: http://keycloak:8080/auth/realms/${KEYCLOAK_REALM}
+            auth__clientId: ${KEYCLOAK_CLIENT_ID}
+            auth__requireHttps: "false"
+            auth__validateIssuer: "false"
+            auth__showPii: "true"
+            # Authorization configuration
+            authorization__enabled: ${AUTH_ENABLED}
+            mappingStore__Id__Default: "demo-design" #Dataspace id
+            DotStatSuiteCoreCommonDbConnectionString: Server=${COMMON_DB_SERVER};Database=${COMMON_DB};User=${COMMON_DB_USER};Password=${COMMON_DB_PWD};
+            # Database configuration
+            SQL_SERVER: ${STRUCT_DB_DESIGN_SERVER}
+            SQL_DATABASE: ${STRUCT_DB_DESIGN}
+            SQL_USER: ${STRUCT_DB_DESIGN_USER}
+            SQL_PASSWORD: ${STRUCT_DB_DESIGN_PWD}
+            # MAAPI.NET configuration
+            MA_SQL_USER: ${DB_SA_USER}
+            MA_SQL_PASSWORD: ${DB_SA_PASSWORD}
+            MA_ALWAYS_RESET: N
+            # Other NSI WS configuration
+            INSERT_NEW_ITEM_SCHEME_VALUES: "true"
+            SENDER_ID: "demo-design - DotStat v8"
+            enableReleaseManagement: "true"
+        depends_on:
+          - auth-service
+          - dbup-struct-design
+        volumes:
+          - "./logs:/app/logs"
+          - wait-tool:/tool
+        entrypoint: bash -c "/tool/wait4sql '${STRUCT_DB_DESIGN_SERVER}' '${STRUCT_DB_DESIGN_USER}' '${STRUCT_DB_DESIGN_PWD}' '${STRUCT_DB_DESIGN}' && ./entrypoint.sh"
+        networks:
+          - dotstat_network
+
+    nsiws-demo-release:
+        image: siscc/sdmxri-nsi-maapi
+        container_name: nsiws-demo-release
+        ports:
+          - "${NSI_RELEASE_PORT}:80"
+        environment:
+            # Authentication configuration
+            auth__enabled: ${AUTH_ENABLED}
+            auth__allowAnonymous: "true"
+            auth__authority: http://keycloak:8080/auth/realms/${KEYCLOAK_REALM}
+            auth__clientId: ${KEYCLOAK_CLIENT_ID}
+            auth__requireHttps: "false"
+            auth__validateIssuer: "false"
+            auth__showPii: "true"
+            # Authorization configuration
+            authorization__enabled: ${AUTH_ENABLED}
+            mappingStore__Id__Default: "demo-release" #Dataspace id
+            DotStatSuiteCoreCommonDbConnectionString: Server=${COMMON_DB_SERVER};Database=${COMMON_DB};User=${COMMON_DB_USER};Password=${COMMON_DB_PWD};
+            # Database configuration
+            SQL_SERVER: ${STRUCT_DB_RELEASE_SERVER}
+            SQL_DATABASE: ${STRUCT_DB_RELEASE}
+            SQL_USER: ${STRUCT_DB_RELEASE_USER}
+            SQL_PASSWORD: ${STRUCT_DB_RELEASE_PWD}
+            # MAAPI.NET configuration
+            MA_SQL_USER: ${DB_SA_USER}
+            MA_SQL_PASSWORD: ${DB_SA_PASSWORD}
+            MA_ALWAYS_RESET: N
+            # Other NSI WS configuration
+            INSERT_NEW_ITEM_SCHEME_VALUES: "false"
+            SENDER_ID: "demot-release - DotStat v8"
+            enableReleaseManagement: "true"
+        depends_on:
+          - auth-service
+          - dbup-struct-release
+        volumes:
+          - "./logs:/app/logs"
+          - wait-tool:/tool
+        entrypoint: bash -c "/tool/wait4sql '${STRUCT_DB_RELEASE_SERVER}' '${STRUCT_DB_RELEASE_USER}' '${STRUCT_DB_RELEASE_PWD}' '${STRUCT_DB_RELEASE}' && ./entrypoint.sh"
+        networks:
+          - dotstat_network
+
+    transfer-service:
+        image: siscc/dotstatsuite-core-transfer
+        container_name: transfer-service
+        environment:
+            auth__Enabled: ${AUTH_ENABLED}
+            auth__authority: http://keycloak:8080/auth/realms/${KEYCLOAK_REALM}
+            auth__clientId: ${KEYCLOAK_CLIENT_ID}
+            auth__authorizationUrl: http://${KEYCLOAK_HOST}:${KEYCLOAK_PORT}/auth/realms/${KEYCLOAK_REALM}/protocol/openid-connect/auth
+            auth__scopes__0: openid
+            auth__scopes__1: profile
+            auth__scopes__2: email
+            auth__claimsMapping__email: email
+            auth__claimsMapping__groups: groups
+            auth__requireHttps: "false"
+            auth__validateIssuer: "false"
+            MaxTransferErrorAmount: 0
+            DefaultLanguageCode: en
+            SmtpHost: ${SMTP_HOST}
+            SmtpPort: ${SMTP_PORT}
+            SmtpEnableSsl: ${SMTP_SSL}
+            SmtpUserName: ${SMTP_USER}
+            SmtpUserPassword: ${SMTP_PASSWORD}
+            MailFrom: noreply@dlm.org
+            MaxTextAttributeLength: 150
+            DotStatSuiteCoreCommonDbConnectionString: Server=${COMMON_DB_SERVER};Database=${COMMON_DB};User=${COMMON_DB_USER};Password=${COMMON_DB_PWD};
+            SpacesInternal__0__Id: demo-design
+            SpacesInternal__0__DotStatSuiteCoreStructDbConnectionString: Server=${STRUCT_DB_DESIGN_SERVER};Database=${STRUCT_DB_DESIGN};User=${STRUCT_DB_DESIGN_USER};Password=${STRUCT_DB_DESIGN_PWD};
+            SpacesInternal__0__DotStatSuiteCoreDataDbConnectionString: Server=${DATA_DB_DESIGN_SERVER};Database=${DATA_DB_DESIGN};User=${DATA_DB_DESIGN_USER};Password=${DATA_DB_DESIGN_PWD};
+            SpacesInternal__0__DataImportTimeOutInMinutes: 2
+            SpacesInternal__0__DatabaseCommandTimeoutInSec: 60
+            SpacesInternal__0__AutoLog2DB: "true"
+            SpacesInternal__0__AutoLog2DBLogLevel: "Notice"
+            SpacesInternal__1__Id: demo-release
+            SpacesInternal__1__DotStatSuiteCoreStructDbConnectionString: Server=${STRUCT_DB_RELEASE_SERVER};Database=${STRUCT_DB_RELEASE};User=${STRUCT_DB_RELEASE_USER};Password=${STRUCT_DB_RELEASE_PWD};
+            SpacesInternal__1__DotStatSuiteCoreDataDbConnectionString: Server=${DATA_DB_RELEASE_SERVER};Database=${DATA_DB_RELEASE};User=${DATA_DB_RELEASE_USER};Password=${DATA_DB_RELEASE_PWD};
+            SpacesInternal__1__DataImportTimeOutInMinutes: 2
+            SpacesInternal__1__DatabaseCommandTimeoutInSec: 60
+            SpacesInternal__1__AutoLog2DB: "true"
+            SpacesInternal__1__AutoLog2DBLogLevel: "Notice"
+        volumes:
+          - "./logs:/app/logs"
+        ports:
+          - "${TRANSFER_PORT}:80"
+        depends_on:
+          - auth-service
+          - dbup-data-design
+          - dbup-struct-design
+          - dbup-data-release
+          - dbup-struct-release
+        networks:
+          - dotstat_network
+
+    auth-service:
+        image: siscc/dotstatsuite-core-auth-management
+        container_name: auth-service
+        environment:
+            auth__enabled: ${AUTH_ENABLED}
+            auth__authority: http://keycloak:8080/auth/realms/${KEYCLOAK_REALM}
+            auth__clientId: ${KEYCLOAK_CLIENT_ID}
+            auth__authorizationUrl: http://${KEYCLOAK_HOST}:${KEYCLOAK_PORT}/auth/realms/${KEYCLOAK_REALM}/protocol/openid-connect/auth
+            auth__scopes__0: openid
+            auth__scopes__1: profile
+            auth__scopes__2: email
+            auth__claimsMapping__email: email
+            auth__claimsMapping__groups: groups
+            auth__requireHttps: "false"
+            auth__validateIssuer: "false"
+            DotStatSuiteCoreCommonDbConnectionString: Server=${COMMON_DB_SERVER};Database=${COMMON_DB};User=${COMMON_DB_USER};Password=${COMMON_DB_PWD};
+        volumes:
+          - "./logs:/app/logs"
+        ports:
+          - "${AUTH_PORT}:80"
+        depends_on:
+          - dbup-common
+        networks:
+          - dotstat_network
+
+    dbup-struct-design:
+        image: siscc/dotstatsuite-dbup
+        container_name: dbup-struct-design
+        environment:
+            EXECUTION_PARAMETERS: upgrade --connectionString Server=${STRUCT_DB_DESIGN_SERVER};Database=${STRUCT_DB_DESIGN};User=${DB_SA_USER};Password=${DB_SA_PASSWORD}; --mappingStoreDb --loginName ${STRUCT_DB_DESIGN_USER} --loginPwd ${STRUCT_DB_DESIGN_PWD} --force
+        depends_on:
+          - db
+        volumes:
+          - wait-tool:/tool
+        entrypoint: bash -c "/tool/wait4sql ${STRUCT_DB_DESIGN_SERVER} ${DB_SA_USER} ${DB_SA_PASSWORD} && dotnet DotStat.DbUp.dll $$EXECUTION_PARAMETERS"
+        networks:
+          - dotstat_network
+
+    dbup-data-design:
+        image: siscc/dotstatsuite-dbup
+        container_name: dbup-data-design
+        environment:
+            EXECUTION_PARAMETERS: upgrade --connectionString Server=${DATA_DB_DESIGN_SERVER};Database=${DATA_DB_DESIGN};User=${DB_SA_USER};Password=${DB_SA_PASSWORD}; --dataDb --loginName ${DATA_DB_DESIGN_USER} --loginPwd ${DATA_DB_DESIGN_PWD} --force
+        depends_on:
+          - db
+        volumes:
+          - wait-tool:/tool
+        entrypoint: bash -c "/tool/wait4sql ${DATA_DB_DESIGN_SERVER} ${DB_SA_USER} ${DB_SA_PASSWORD} && dotnet DotStat.DbUp.dll $$EXECUTION_PARAMETERS"
+        networks:
+          - dotstat_network
+
+    dbup-struct-release:
+        image: siscc/dotstatsuite-dbup
+        container_name: dbup-struct-release
+        environment:
+            EXECUTION_PARAMETERS: upgrade --connectionString Server=${STRUCT_DB_RELEASE_SERVER};Database=${STRUCT_DB_RELEASE};User=${DB_SA_USER};Password=${DB_SA_PASSWORD}; --mappingStoreDb --loginName ${STRUCT_DB_RELEASE_USER} --loginPwd ${STRUCT_DB_RELEASE_PWD} --force
+        depends_on:
+          - db
+        volumes:
+          - wait-tool:/tool
+        entrypoint: bash -c "/tool/wait4sql ${STRUCT_DB_RELEASE_SERVER} ${DB_SA_USER} ${DB_SA_PASSWORD} && dotnet DotStat.DbUp.dll $$EXECUTION_PARAMETERS"
+        networks:
+          - dotstat_network
+
+    dbup-data-release:
+        image: siscc/dotstatsuite-dbup
+        container_name: dbup-data-release
+        environment:
+            EXECUTION_PARAMETERS: upgrade --connectionString Server=${DATA_DB_RELEASE_SERVER};Database=${DATA_DB_RELEASE};User=${DB_SA_USER};Password=${DB_SA_PASSWORD}; --dataDb --loginName ${DATA_DB_RELEASE_USER} --loginPwd ${DATA_DB_RELEASE_PWD} --force
+        depends_on:
+          - db
+        volumes:
+          - wait-tool:/tool
+        entrypoint: bash -c "/tool/wait4sql ${DATA_DB_RELEASE_SERVER} ${DB_SA_USER} ${DB_SA_PASSWORD} && dotnet DotStat.DbUp.dll $$EXECUTION_PARAMETERS"
+        networks:
+          - dotstat_network
+
+    dbup-common:
+        image: siscc/dotstatsuite-dbup
+        container_name: dbup-common
+        environment:
+            EXECUTION_PARAMETERS: upgrade --connectionString Server=${COMMON_DB_SERVER};Database=${COMMON_DB};User=${DB_SA_USER};Password=${DB_SA_PASSWORD}; --commonDb --loginName ${COMMON_DB_USER} --loginPwd ${COMMON_DB_PWD} --force
+        depends_on:
+          - db
+        volumes:
+          - wait-tool:/tool
+        entrypoint: bash -c "/tool/wait4sql ${COMMON_DB_SERVER} ${DB_SA_USER} ${DB_SA_PASSWORD} && dotnet DotStat.DbUp.dll $$EXECUTION_PARAMETERS"
+        networks:
+          - dotstat_network
+
+    db:
+        image: mcr.microsoft.com/mssql/server:2017-latest-ubuntu
+        container_name: mssql
+        ports:
+          - "${SQL_PORT}:1433"
+        environment:
+          - SA_PASSWORD=${DB_SA_PASSWORD}
+          - MSSQL_PID=Developer
+          - ACCEPT_EULA=Y
+        depends_on:
+          - wait
+        volumes:
+          - "db-data:/var/opt/mssql/data"
+        networks:
+          - dotstat_network
+
+    wait:
+        image: vigurous/wait4sql
+        container_name: wait4sql
+        volumes:
+          - wait-tool:/tool
+        networks:
+          - dotstat_network
+
+volumes:
+  db-data:
+  wait-tool:
+
+networks:
+  dotstat_network:
+    name: dotstat_common_network

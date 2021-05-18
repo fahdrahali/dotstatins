@@ -1,0 +1,1057 @@
+2021-05-11 23:04:44,367|[115]|DEBUG|ea599425a60c|Estat.Sri.Mapping.Api.Engine.AppConfigStore|AppConfigStore initialized|
+2021-05-11 23:04:44,389|[92]|DEBUG|ea599425a60c|Estat.Sri.Mapping.Api.Engine.AppConfigStore|AppConfigStore initialized|
+2021-05-11 23:04:44,493|[93]|DEBUG|ea599425a60c|Estat.Sri.MappingStoreRetrieval.Manager.Database|Got from configuration the parameter marker format '@{0}' for provider 'System.Data.SqlClient'|
+2021-05-11 23:04:44,493|[115]|DEBUG|ea599425a60c|Estat.Sri.MappingStoreRetrieval.Manager.Database|Got from configuration the parameter marker format '@{0}' for provider 'System.Data.SqlClient'|
+2021-05-11 23:04:44,493|[92]|DEBUG|ea599425a60c|Estat.Sri.MappingStoreRetrieval.Manager.Database|Got from configuration the parameter marker format '@{0}' for provider 'System.Data.SqlClient'|
+2021-05-11 23:04:44,571|[92]|DEBUG|ea599425a60c|DotStat.Db.DB.DotStatDbBase`1|SQL: SELECT VERSION FROM dbo.DB_VERSION|
+2021-05-11 23:04:44,572|[93]|DEBUG|ea599425a60c|DotStat.Db.DB.DotStatDbBase`1|SQL: SELECT VERSION FROM dbo.DB_VERSION|
+2021-05-11 23:04:44,571|[115]|DEBUG|ea599425a60c|DotStat.Db.DB.DotStatDbBase`1|SQL: SELECT VERSION FROM dbo.DB_VERSION|
+2021-05-11 23:04:44,870|[95]|DEBUG|ea599425a60c|DotStat.Db.DB.DotStatDbBase`1|SQL: SELECT VERSION FROM dbo.DB_VERSION|
+2021-05-11 23:04:45,069|[93]|ERROR|ea599425a60c|DotStatServices.Transfer.JsonExceptionMiddleware+<Invoke>d__3.MoveNext|The version of Data database of demo-design space is not supported by this operation. Current db version: 3.6, supported db version: 5.0. Please contact your system administrator.|System.NotSupportedException: The version of Data database of demo-design space is not supported by this operation. Current db version: 3.6, supported db version: 5.0. Please contact your system administrator.
+   at DotStat.Db.Repository.DatabaseRepositoryBase`1..ctor(DataspaceInternal dataspace, IGeneralConfiguration generalConfiguration, Version supportedDbVersion)
+   at DotStat.Db.Repository.SqlServer.SqlDatabaseRepositoryBase..ctor(DataspaceInternal dataspace, IGeneralConfiguration generalConfiguration, Version supportedDbVersion)
+   at DotStat.Db.Repository.SqlServer.SqlTransactionRepository..ctor(DataspaceInternal dataspace, IGeneralConfiguration generalConfiguration, Version supportedDbVersion)
+   at DotStat.Db.Manager.SqlServer.SqlServerDbManager.GetTransactionRepository(String dataspaceId)
+   at DotStatServices.Transfer.Controllers.CleanUpController.CleanUpMappingsets(String dataspace, String dataflow) in /app/DotStatServices.Transfer/Controllers/CleanUpController.cs:line 250
+   at lambda_method(Closure , Object , Object[] )
+   at Microsoft.Extensions.Internal.ObjectMethodExecutor.Execute(Object target, Object[] parameters)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.SyncObjectResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeActionMethodAsync()
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeNextActionFilterAsync()
+--- End of stack trace from previous location where exception was thrown ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location where exception was thrown ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextResourceFilter>g__Awaited|24_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Rethrow(ResourceExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.InvokeFilterPipelineAsync()
+--- End of stack trace from previous location where exception was thrown ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Builder.Extensions.MapWhenMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Builder.Extensions.MapWhenMiddleware.Invoke(HttpContext context)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.ExceptionHandlerMiddleware.<Invoke>g__Awaited|6_0(ExceptionHandlerMiddleware middleware, HttpContext context, Task task)
+
+2021-05-11 23:04:45,069|[92]|ERROR|ea599425a60c|DotStatServices.Transfer.JsonExceptionMiddleware+<Invoke>d__3.MoveNext|The version of Data database of demo-design space is not supported by this operation. Current db version: 3.6, supported db version: 5.0. Please contact your system administrator.|System.NotSupportedException: The version of Data database of demo-design space is not supported by this operation. Current db version: 3.6, supported db version: 5.0. Please contact your system administrator.
+   at DotStat.Db.Repository.DatabaseRepositoryBase`1..ctor(DataspaceInternal dataspace, IGeneralConfiguration generalConfiguration, Version supportedDbVersion)
+   at DotStat.Db.Repository.SqlServer.SqlDatabaseRepositoryBase..ctor(DataspaceInternal dataspace, IGeneralConfiguration generalConfiguration, Version supportedDbVersion)
+   at DotStat.Db.Repository.SqlServer.SqlTransactionRepository..ctor(DataspaceInternal dataspace, IGeneralConfiguration generalConfiguration, Version supportedDbVersion)
+   at DotStat.Db.Manager.SqlServer.SqlServerDbManager.GetTransactionRepository(String dataspaceId)
+   at DotStatServices.Transfer.Controllers.CleanUpController.CleanUpMappingsets(String dataspace, String dataflow) in /app/DotStatServices.Transfer/Controllers/CleanUpController.cs:line 250
+   at lambda_method(Closure , Object , Object[] )
+   at Microsoft.Extensions.Internal.ObjectMethodExecutor.Execute(Object target, Object[] parameters)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.SyncObjectResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeActionMethodAsync()
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeNextActionFilterAsync()
+--- End of stack trace from previous location where exception was thrown ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location where exception was thrown ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextResourceFilter>g__Awaited|24_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Rethrow(ResourceExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.InvokeFilterPipelineAsync()
+--- End of stack trace from previous location where exception was thrown ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Builder.Extensions.MapWhenMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Builder.Extensions.MapWhenMiddleware.Invoke(HttpContext context)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.ExceptionHandlerMiddleware.<Invoke>g__Awaited|6_0(ExceptionHandlerMiddleware middleware, HttpContext context, Task task)
+
+2021-05-11 23:04:45,070|[115]|ERROR|ea599425a60c|DotStatServices.Transfer.JsonExceptionMiddleware+<Invoke>d__3.MoveNext|The version of Data database of demo-design space is not supported by this operation. Current db version: 3.6, supported db version: 5.0. Please contact your system administrator.|System.NotSupportedException: The version of Data database of demo-design space is not supported by this operation. Current db version: 3.6, supported db version: 5.0. Please contact your system administrator.
+   at DotStat.Db.Repository.DatabaseRepositoryBase`1..ctor(DataspaceInternal dataspace, IGeneralConfiguration generalConfiguration, Version supportedDbVersion)
+   at DotStat.Db.Repository.SqlServer.SqlDatabaseRepositoryBase..ctor(DataspaceInternal dataspace, IGeneralConfiguration generalConfiguration, Version supportedDbVersion)
+   at DotStat.Db.Repository.SqlServer.SqlTransactionRepository..ctor(DataspaceInternal dataspace, IGeneralConfiguration generalConfiguration, Version supportedDbVersion)
+   at DotStat.Db.Manager.SqlServer.SqlServerDbManager.GetTransactionRepository(String dataspaceId)
+   at DotStatServices.Transfer.Controllers.CleanUpController.CleanUpMappingsets(String dataspace, String dataflow) in /app/DotStatServices.Transfer/Controllers/CleanUpController.cs:line 250
+   at lambda_method(Closure , Object , Object[] )
+   at Microsoft.Extensions.Internal.ObjectMethodExecutor.Execute(Object target, Object[] parameters)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.SyncObjectResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeActionMethodAsync()
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeNextActionFilterAsync()
+--- End of stack trace from previous location where exception was thrown ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location where exception was thrown ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextResourceFilter>g__Awaited|24_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Rethrow(ResourceExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.InvokeFilterPipelineAsync()
+--- End of stack trace from previous location where exception was thrown ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Builder.Extensions.MapWhenMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Builder.Extensions.MapWhenMiddleware.Invoke(HttpContext context)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.ExceptionHandlerMiddleware.<Invoke>g__Awaited|6_0(ExceptionHandlerMiddleware middleware, HttpContext context, Task task)
+
+2021-05-11 23:04:45,070|[95]|ERROR|ea599425a60c|DotStatServices.Transfer.JsonExceptionMiddleware+<Invoke>d__3.MoveNext|The version of Data database of demo-design space is not supported by this operation. Current db version: 3.6, supported db version: 5.0. Please contact your system administrator.|System.NotSupportedException: The version of Data database of demo-design space is not supported by this operation. Current db version: 3.6, supported db version: 5.0. Please contact your system administrator.
+   at DotStat.Db.Repository.DatabaseRepositoryBase`1..ctor(DataspaceInternal dataspace, IGeneralConfiguration generalConfiguration, Version supportedDbVersion)
+   at DotStat.Db.Repository.SqlServer.SqlDatabaseRepositoryBase..ctor(DataspaceInternal dataspace, IGeneralConfiguration generalConfiguration, Version supportedDbVersion)
+   at DotStat.Db.Repository.SqlServer.SqlTransactionRepository..ctor(DataspaceInternal dataspace, IGeneralConfiguration generalConfiguration, Version supportedDbVersion)
+   at DotStat.Db.Manager.SqlServer.SqlServerDbManager.GetTransactionRepository(String dataspaceId)
+   at DotStatServices.Transfer.Controllers.CleanUpController.CleanUpMappingsets(String dataspace, String dataflow) in /app/DotStatServices.Transfer/Controllers/CleanUpController.cs:line 250
+   at lambda_method(Closure , Object , Object[] )
+   at Microsoft.Extensions.Internal.ObjectMethodExecutor.Execute(Object target, Object[] parameters)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.SyncObjectResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeActionMethodAsync()
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeNextActionFilterAsync()
+--- End of stack trace from previous location where exception was thrown ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location where exception was thrown ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextResourceFilter>g__Awaited|24_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Rethrow(ResourceExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.InvokeFilterPipelineAsync()
+--- End of stack trace from previous location where exception was thrown ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Builder.Extensions.MapWhenMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Builder.Extensions.MapWhenMiddleware.Invoke(HttpContext context)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.ExceptionHandlerMiddleware.<Invoke>g__Awaited|6_0(ExceptionHandlerMiddleware middleware, HttpContext context, Task task)
+
+2021-05-11 23:04:45,138|[93]|DEBUG|ea599425a60c|DotStat.Db.DB.DotStatDbBase`1|SQL: SELECT VERSION FROM dbo.DB_VERSION|
+2021-05-11 23:04:45,138|[115]|DEBUG|ea599425a60c|DotStat.Db.DB.DotStatDbBase`1|SQL: SELECT VERSION FROM dbo.DB_VERSION|
+2021-05-11 23:04:45,143|[115]|ERROR|ea599425a60c|DotStatServices.Transfer.JsonExceptionMiddleware+<Invoke>d__3.MoveNext|The version of Data database of demo-design space is not supported by this operation. Current db version: 3.6, supported db version: 5.0. Please contact your system administrator.|System.NotSupportedException: The version of Data database of demo-design space is not supported by this operation. Current db version: 3.6, supported db version: 5.0. Please contact your system administrator.
+   at DotStat.Db.Repository.DatabaseRepositoryBase`1..ctor(DataspaceInternal dataspace, IGeneralConfiguration generalConfiguration, Version supportedDbVersion)
+   at DotStat.Db.Repository.SqlServer.SqlDatabaseRepositoryBase..ctor(DataspaceInternal dataspace, IGeneralConfiguration generalConfiguration, Version supportedDbVersion)
+   at DotStat.Db.Repository.SqlServer.SqlTransactionRepository..ctor(DataspaceInternal dataspace, IGeneralConfiguration generalConfiguration, Version supportedDbVersion)
+   at DotStat.Db.Manager.SqlServer.SqlServerDbManager.GetTransactionRepository(String dataspaceId)
+   at DotStatServices.Transfer.Controllers.CleanUpController.CleanUpMappingsets(String dataspace, String dataflow) in /app/DotStatServices.Transfer/Controllers/CleanUpController.cs:line 250
+   at lambda_method(Closure , Object , Object[] )
+   at Microsoft.Extensions.Internal.ObjectMethodExecutor.Execute(Object target, Object[] parameters)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.SyncObjectResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeActionMethodAsync()
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeNextActionFilterAsync()
+--- End of stack trace from previous location where exception was thrown ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location where exception was thrown ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextResourceFilter>g__Awaited|24_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Rethrow(ResourceExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.InvokeFilterPipelineAsync()
+--- End of stack trace from previous location where exception was thrown ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Builder.Extensions.MapWhenMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Builder.Extensions.MapWhenMiddleware.Invoke(HttpContext context)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.ExceptionHandlerMiddleware.<Invoke>g__Awaited|6_0(ExceptionHandlerMiddleware middleware, HttpContext context, Task task)
+
+2021-05-11 23:04:45,145|[93]|ERROR|ea599425a60c|DotStatServices.Transfer.JsonExceptionMiddleware+<Invoke>d__3.MoveNext|The version of Data database of demo-design space is not supported by this operation. Current db version: 3.6, supported db version: 5.0. Please contact your system administrator.|System.NotSupportedException: The version of Data database of demo-design space is not supported by this operation. Current db version: 3.6, supported db version: 5.0. Please contact your system administrator.
+   at DotStat.Db.Repository.DatabaseRepositoryBase`1..ctor(DataspaceInternal dataspace, IGeneralConfiguration generalConfiguration, Version supportedDbVersion)
+   at DotStat.Db.Repository.SqlServer.SqlDatabaseRepositoryBase..ctor(DataspaceInternal dataspace, IGeneralConfiguration generalConfiguration, Version supportedDbVersion)
+   at DotStat.Db.Repository.SqlServer.SqlTransactionRepository..ctor(DataspaceInternal dataspace, IGeneralConfiguration generalConfiguration, Version supportedDbVersion)
+   at DotStat.Db.Manager.SqlServer.SqlServerDbManager.GetTransactionRepository(String dataspaceId)
+   at DotStatServices.Transfer.Controllers.CleanUpController.CleanUpMappingsets(String dataspace, String dataflow) in /app/DotStatServices.Transfer/Controllers/CleanUpController.cs:line 250
+   at lambda_method(Closure , Object , Object[] )
+   at Microsoft.Extensions.Internal.ObjectMethodExecutor.Execute(Object target, Object[] parameters)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.SyncObjectResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeActionMethodAsync()
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeNextActionFilterAsync()
+--- End of stack trace from previous location where exception was thrown ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location where exception was thrown ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextResourceFilter>g__Awaited|24_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Rethrow(ResourceExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.InvokeFilterPipelineAsync()
+--- End of stack trace from previous location where exception was thrown ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Builder.Extensions.MapWhenMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Builder.Extensions.MapWhenMiddleware.Invoke(HttpContext context)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.ExceptionHandlerMiddleware.<Invoke>g__Awaited|6_0(ExceptionHandlerMiddleware middleware, HttpContext context, Task task)
+
+2021-05-11 23:04:45,286|[95]|DEBUG|ea599425a60c|DotStat.Db.DB.DotStatDbBase`1|SQL: SELECT VERSION FROM dbo.DB_VERSION|
+2021-05-11 23:04:45,293|[95]|ERROR|ea599425a60c|DotStatServices.Transfer.JsonExceptionMiddleware+<Invoke>d__3.MoveNext|The version of Data database of demo-design space is not supported by this operation. Current db version: 3.6, supported db version: 5.0. Please contact your system administrator.|System.NotSupportedException: The version of Data database of demo-design space is not supported by this operation. Current db version: 3.6, supported db version: 5.0. Please contact your system administrator.
+   at DotStat.Db.Repository.DatabaseRepositoryBase`1..ctor(DataspaceInternal dataspace, IGeneralConfiguration generalConfiguration, Version supportedDbVersion)
+   at DotStat.Db.Repository.SqlServer.SqlDatabaseRepositoryBase..ctor(DataspaceInternal dataspace, IGeneralConfiguration generalConfiguration, Version supportedDbVersion)
+   at DotStat.Db.Repository.SqlServer.SqlTransactionRepository..ctor(DataspaceInternal dataspace, IGeneralConfiguration generalConfiguration, Version supportedDbVersion)
+   at DotStat.Db.Manager.SqlServer.SqlServerDbManager.GetTransactionRepository(String dataspaceId)
+   at DotStatServices.Transfer.Controllers.CleanUpController.CleanUpMappingsets(String dataspace, String dataflow) in /app/DotStatServices.Transfer/Controllers/CleanUpController.cs:line 250
+   at lambda_method(Closure , Object , Object[] )
+   at Microsoft.Extensions.Internal.ObjectMethodExecutor.Execute(Object target, Object[] parameters)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.SyncObjectResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeActionMethodAsync()
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeNextActionFilterAsync()
+--- End of stack trace from previous location where exception was thrown ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location where exception was thrown ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextResourceFilter>g__Awaited|24_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Rethrow(ResourceExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.InvokeFilterPipelineAsync()
+--- End of stack trace from previous location where exception was thrown ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Builder.Extensions.MapWhenMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Builder.Extensions.MapWhenMiddleware.Invoke(HttpContext context)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.ExceptionHandlerMiddleware.<Invoke>g__Awaited|6_0(ExceptionHandlerMiddleware middleware, HttpContext context, Task task)
+
+2021-05-11 23:04:45,303|[95]|DEBUG|ea599425a60c|DotStat.Db.DB.DotStatDbBase`1|SQL: SELECT VERSION FROM dbo.DB_VERSION|
+2021-05-11 23:04:45,308|[115]|DEBUG|ea599425a60c|DotStat.Db.DB.DotStatDbBase`1|SQL: SELECT VERSION FROM dbo.DB_VERSION|
+2021-05-11 23:04:45,312|[95]|ERROR|ea599425a60c|DotStatServices.Transfer.JsonExceptionMiddleware+<Invoke>d__3.MoveNext|The version of Data database of demo-design space is not supported by this operation. Current db version: 3.6, supported db version: 5.0. Please contact your system administrator.|System.NotSupportedException: The version of Data database of demo-design space is not supported by this operation. Current db version: 3.6, supported db version: 5.0. Please contact your system administrator.
+   at DotStat.Db.Repository.DatabaseRepositoryBase`1..ctor(DataspaceInternal dataspace, IGeneralConfiguration generalConfiguration, Version supportedDbVersion)
+   at DotStat.Db.Repository.SqlServer.SqlDatabaseRepositoryBase..ctor(DataspaceInternal dataspace, IGeneralConfiguration generalConfiguration, Version supportedDbVersion)
+   at DotStat.Db.Repository.SqlServer.SqlTransactionRepository..ctor(DataspaceInternal dataspace, IGeneralConfiguration generalConfiguration, Version supportedDbVersion)
+   at DotStat.Db.Manager.SqlServer.SqlServerDbManager.GetTransactionRepository(String dataspaceId)
+   at DotStatServices.Transfer.Controllers.CleanUpController.CleanUpMappingsets(String dataspace, String dataflow) in /app/DotStatServices.Transfer/Controllers/CleanUpController.cs:line 250
+   at lambda_method(Closure , Object , Object[] )
+   at Microsoft.Extensions.Internal.ObjectMethodExecutor.Execute(Object target, Object[] parameters)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.SyncObjectResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeActionMethodAsync()
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeNextActionFilterAsync()
+--- End of stack trace from previous location where exception was thrown ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeInnerFilterAsync>g__Awaited|13_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextResourceFilter>g__Awaited|24_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Rethrow(ResourceExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|19_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Builder.Extensions.MapWhenMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Builder.Extensions.MapWhenMiddleware.Invoke(HttpContext context)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.ExceptionHandlerMiddleware.<Invoke>g__Awaited|6_0(ExceptionHandlerMiddleware middleware, HttpContext context, Task task)
+
+2021-05-11 23:04:45,312|[115]|ERROR|ea599425a60c|DotStatServices.Transfer.JsonExceptionMiddleware+<Invoke>d__3.MoveNext|The version of Data database of demo-design space is not supported by this operation. Current db version: 3.6, supported db version: 5.0. Please contact your system administrator.|System.NotSupportedException: The version of Data database of demo-design space is not supported by this operation. Current db version: 3.6, supported db version: 5.0. Please contact your system administrator.
+   at DotStat.Db.Repository.DatabaseRepositoryBase`1..ctor(DataspaceInternal dataspace, IGeneralConfiguration generalConfiguration, Version supportedDbVersion)
+   at DotStat.Db.Repository.SqlServer.SqlDatabaseRepositoryBase..ctor(DataspaceInternal dataspace, IGeneralConfiguration generalConfiguration, Version supportedDbVersion)
+   at DotStat.Db.Repository.SqlServer.SqlTransactionRepository..ctor(DataspaceInternal dataspace, IGeneralConfiguration generalConfiguration, Version supportedDbVersion)
+   at DotStat.Db.Manager.SqlServer.SqlServerDbManager.GetTransactionRepository(String dataspaceId)
+   at DotStatServices.Transfer.Controllers.CleanUpController.CleanUpMappingsets(String dataspace, String dataflow) in /app/DotStatServices.Transfer/Controllers/CleanUpController.cs:line 250
+   at lambda_method(Closure , Object , Object[] )
+   at Microsoft.Extensions.Internal.ObjectMethodExecutor.Execute(Object target, Object[] parameters)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.SyncObjectResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeActionMethodAsync()
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeNextActionFilterAsync()
+--- End of stack trace from previous location where exception was thrown ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location where exception was thrown ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextResourceFilter>g__Awaited|24_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Rethrow(ResourceExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.InvokeFilterPipelineAsync()
+--- End of stack trace from previous location where exception was thrown ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Builder.Extensions.MapWhenMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Builder.Extensions.MapWhenMiddleware.Invoke(HttpContext context)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.ExceptionHandlerMiddleware.<Invoke>g__Awaited|6_0(ExceptionHandlerMiddleware middleware, HttpContext context, Task task)
+
+2021-05-11 23:04:45,316|[95]|DEBUG|ea599425a60c|DotStat.Db.DB.DotStatDbBase`1|SQL: SELECT VERSION FROM dbo.DB_VERSION|
+2021-05-11 23:04:45,319|[95]|ERROR|ea599425a60c|DotStatServices.Transfer.JsonExceptionMiddleware+<Invoke>d__3.MoveNext|The version of Data database of demo-design space is not supported by this operation. Current db version: 3.6, supported db version: 5.0. Please contact your system administrator.|System.NotSupportedException: The version of Data database of demo-design space is not supported by this operation. Current db version: 3.6, supported db version: 5.0. Please contact your system administrator.
+   at DotStat.Db.Repository.DatabaseRepositoryBase`1..ctor(DataspaceInternal dataspace, IGeneralConfiguration generalConfiguration, Version supportedDbVersion)
+   at DotStat.Db.Repository.SqlServer.SqlDatabaseRepositoryBase..ctor(DataspaceInternal dataspace, IGeneralConfiguration generalConfiguration, Version supportedDbVersion)
+   at DotStat.Db.Repository.SqlServer.SqlTransactionRepository..ctor(DataspaceInternal dataspace, IGeneralConfiguration generalConfiguration, Version supportedDbVersion)
+   at DotStat.Db.Manager.SqlServer.SqlServerDbManager.GetTransactionRepository(String dataspaceId)
+   at DotStatServices.Transfer.Controllers.CleanUpController.CleanUpMappingsets(String dataspace, String dataflow) in /app/DotStatServices.Transfer/Controllers/CleanUpController.cs:line 250
+   at lambda_method(Closure , Object , Object[] )
+   at Microsoft.Extensions.Internal.ObjectMethodExecutor.Execute(Object target, Object[] parameters)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.SyncObjectResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeActionMethodAsync()
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeNextActionFilterAsync()
+--- End of stack trace from previous location where exception was thrown ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location where exception was thrown ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextResourceFilter>g__Awaited|24_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Rethrow(ResourceExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.InvokeFilterPipelineAsync()
+--- End of stack trace from previous location where exception was thrown ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Builder.Extensions.MapWhenMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Builder.Extensions.MapWhenMiddleware.Invoke(HttpContext context)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.ExceptionHandlerMiddleware.<Invoke>g__Awaited|6_0(ExceptionHandlerMiddleware middleware, HttpContext context, Task task)
+
+2021-05-11 23:04:45,323|[115]|DEBUG|ea599425a60c|DotStat.Db.DB.DotStatDbBase`1|SQL: SELECT VERSION FROM dbo.DB_VERSION|
+2021-05-11 23:04:45,326|[115]|ERROR|ea599425a60c|DotStatServices.Transfer.JsonExceptionMiddleware+<Invoke>d__3.MoveNext|The version of Data database of demo-design space is not supported by this operation. Current db version: 3.6, supported db version: 5.0. Please contact your system administrator.|System.NotSupportedException: The version of Data database of demo-design space is not supported by this operation. Current db version: 3.6, supported db version: 5.0. Please contact your system administrator.
+   at DotStat.Db.Repository.DatabaseRepositoryBase`1..ctor(DataspaceInternal dataspace, IGeneralConfiguration generalConfiguration, Version supportedDbVersion)
+   at DotStat.Db.Repository.SqlServer.SqlDatabaseRepositoryBase..ctor(DataspaceInternal dataspace, IGeneralConfiguration generalConfiguration, Version supportedDbVersion)
+   at DotStat.Db.Repository.SqlServer.SqlTransactionRepository..ctor(DataspaceInternal dataspace, IGeneralConfiguration generalConfiguration, Version supportedDbVersion)
+   at DotStat.Db.Manager.SqlServer.SqlServerDbManager.GetTransactionRepository(String dataspaceId)
+   at DotStatServices.Transfer.Controllers.CleanUpController.CleanUpMappingsets(String dataspace, String dataflow) in /app/DotStatServices.Transfer/Controllers/CleanUpController.cs:line 250
+   at lambda_method(Closure , Object , Object[] )
+   at Microsoft.Extensions.Internal.ObjectMethodExecutor.Execute(Object target, Object[] parameters)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.SyncObjectResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeActionMethodAsync()
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeNextActionFilterAsync()
+--- End of stack trace from previous location where exception was thrown ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location where exception was thrown ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextResourceFilter>g__Awaited|24_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Rethrow(ResourceExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.InvokeFilterPipelineAsync()
+--- End of stack trace from previous location where exception was thrown ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Builder.Extensions.MapWhenMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Builder.Extensions.MapWhenMiddleware.Invoke(HttpContext context)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.ExceptionHandlerMiddleware.<Invoke>g__Awaited|6_0(ExceptionHandlerMiddleware middleware, HttpContext context, Task task)
+
+2021-05-11 23:04:45,334|[95]|DEBUG|ea599425a60c|DotStat.Db.DB.DotStatDbBase`1|SQL: SELECT VERSION FROM dbo.DB_VERSION|
+2021-05-11 23:04:45,337|[95]|ERROR|ea599425a60c|DotStatServices.Transfer.JsonExceptionMiddleware+<Invoke>d__3.MoveNext|The version of Data database of demo-design space is not supported by this operation. Current db version: 3.6, supported db version: 5.0. Please contact your system administrator.|System.NotSupportedException: The version of Data database of demo-design space is not supported by this operation. Current db version: 3.6, supported db version: 5.0. Please contact your system administrator.
+   at DotStat.Db.Repository.DatabaseRepositoryBase`1..ctor(DataspaceInternal dataspace, IGeneralConfiguration generalConfiguration, Version supportedDbVersion)
+   at DotStat.Db.Repository.SqlServer.SqlDatabaseRepositoryBase..ctor(DataspaceInternal dataspace, IGeneralConfiguration generalConfiguration, Version supportedDbVersion)
+   at DotStat.Db.Repository.SqlServer.SqlTransactionRepository..ctor(DataspaceInternal dataspace, IGeneralConfiguration generalConfiguration, Version supportedDbVersion)
+   at DotStat.Db.Manager.SqlServer.SqlServerDbManager.GetTransactionRepository(String dataspaceId)
+   at DotStatServices.Transfer.Controllers.CleanUpController.CleanUpMappingsets(String dataspace, String dataflow) in /app/DotStatServices.Transfer/Controllers/CleanUpController.cs:line 250
+   at lambda_method(Closure , Object , Object[] )
+   at Microsoft.Extensions.Internal.ObjectMethodExecutor.Execute(Object target, Object[] parameters)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.SyncObjectResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeActionMethodAsync()
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeNextActionFilterAsync()
+--- End of stack trace from previous location where exception was thrown ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location where exception was thrown ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextResourceFilter>g__Awaited|24_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Rethrow(ResourceExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.InvokeFilterPipelineAsync()
+--- End of stack trace from previous location where exception was thrown ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Builder.Extensions.MapWhenMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Builder.Extensions.MapWhenMiddleware.Invoke(HttpContext context)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.ExceptionHandlerMiddleware.<Invoke>g__Awaited|6_0(ExceptionHandlerMiddleware middleware, HttpContext context, Task task)
+
+2021-05-11 23:05:32,191|[115]|DEBUG|ea599425a60c|DotStat.Db.DB.DotStatDbBase`1|SQL: SELECT VERSION FROM dbo.DB_VERSION|
+2021-05-11 23:05:32,199|[115]|ERROR|ea599425a60c|DotStatServices.Transfer.JsonExceptionMiddleware+<Invoke>d__3.MoveNext|The version of Data database of demo-design space is not supported by this operation. Current db version: 3.6, supported db version: 5.0. Please contact your system administrator.|System.NotSupportedException: The version of Data database of demo-design space is not supported by this operation. Current db version: 3.6, supported db version: 5.0. Please contact your system administrator.
+   at DotStat.Db.Repository.DatabaseRepositoryBase`1..ctor(DataspaceInternal dataspace, IGeneralConfiguration generalConfiguration, Version supportedDbVersion)
+   at DotStat.Db.Repository.SqlServer.SqlDatabaseRepositoryBase..ctor(DataspaceInternal dataspace, IGeneralConfiguration generalConfiguration, Version supportedDbVersion)
+   at DotStat.Db.Repository.SqlServer.SqlTransactionRepository..ctor(DataspaceInternal dataspace, IGeneralConfiguration generalConfiguration, Version supportedDbVersion)
+   at DotStat.Db.Manager.SqlServer.SqlServerDbManager.GetTransactionRepository(String dataspaceId)
+   at DotStatServices.Transfer.Controllers.CleanUpController.CleanUpMappingsets(String dataspace, String dataflow) in /app/DotStatServices.Transfer/Controllers/CleanUpController.cs:line 250
+   at lambda_method(Closure , Object , Object[] )
+   at Microsoft.Extensions.Internal.ObjectMethodExecutor.Execute(Object target, Object[] parameters)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.SyncObjectResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeActionMethodAsync()
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeNextActionFilterAsync()
+--- End of stack trace from previous location where exception was thrown ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location where exception was thrown ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextResourceFilter>g__Awaited|24_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Rethrow(ResourceExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.InvokeFilterPipelineAsync()
+--- End of stack trace from previous location where exception was thrown ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Builder.Extensions.MapWhenMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Builder.Extensions.MapWhenMiddleware.Invoke(HttpContext context)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.ExceptionHandlerMiddleware.<Invoke>g__Awaited|6_0(ExceptionHandlerMiddleware middleware, HttpContext context, Task task)
+
+2021-05-11 23:05:32,221|[115]|DEBUG|ea599425a60c|DotStat.Db.DB.DotStatDbBase`1|SQL: SELECT VERSION FROM dbo.DB_VERSION|
+2021-05-11 23:05:32,223|[115]|ERROR|ea599425a60c|DotStatServices.Transfer.JsonExceptionMiddleware+<Invoke>d__3.MoveNext|The version of Data database of demo-design space is not supported by this operation. Current db version: 3.6, supported db version: 5.0. Please contact your system administrator.|System.NotSupportedException: The version of Data database of demo-design space is not supported by this operation. Current db version: 3.6, supported db version: 5.0. Please contact your system administrator.
+   at DotStat.Db.Repository.DatabaseRepositoryBase`1..ctor(DataspaceInternal dataspace, IGeneralConfiguration generalConfiguration, Version supportedDbVersion)
+   at DotStat.Db.Repository.SqlServer.SqlDatabaseRepositoryBase..ctor(DataspaceInternal dataspace, IGeneralConfiguration generalConfiguration, Version supportedDbVersion)
+   at DotStat.Db.Repository.SqlServer.SqlTransactionRepository..ctor(DataspaceInternal dataspace, IGeneralConfiguration generalConfiguration, Version supportedDbVersion)
+   at DotStat.Db.Manager.SqlServer.SqlServerDbManager.GetTransactionRepository(String dataspaceId)
+   at DotStatServices.Transfer.Controllers.CleanUpController.CleanUpMappingsets(String dataspace, String dataflow) in /app/DotStatServices.Transfer/Controllers/CleanUpController.cs:line 250
+   at lambda_method(Closure , Object , Object[] )
+   at Microsoft.Extensions.Internal.ObjectMethodExecutor.Execute(Object target, Object[] parameters)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.SyncObjectResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeActionMethodAsync()
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeNextActionFilterAsync()
+--- End of stack trace from previous location where exception was thrown ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location where exception was thrown ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextResourceFilter>g__Awaited|24_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Rethrow(ResourceExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.InvokeFilterPipelineAsync()
+--- End of stack trace from previous location where exception was thrown ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Builder.Extensions.MapWhenMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Builder.Extensions.MapWhenMiddleware.Invoke(HttpContext context)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.ExceptionHandlerMiddleware.<Invoke>g__Awaited|6_0(ExceptionHandlerMiddleware middleware, HttpContext context, Task task)
+
+2021-05-11 23:05:32,237|[92]|DEBUG|ea599425a60c|DotStat.Db.DB.DotStatDbBase`1|SQL: SELECT VERSION FROM dbo.DB_VERSION|
+2021-05-11 23:05:32,239|[92]|ERROR|ea599425a60c|DotStatServices.Transfer.JsonExceptionMiddleware+<Invoke>d__3.MoveNext|The version of Data database of demo-design space is not supported by this operation. Current db version: 3.6, supported db version: 5.0. Please contact your system administrator.|System.NotSupportedException: The version of Data database of demo-design space is not supported by this operation. Current db version: 3.6, supported db version: 5.0. Please contact your system administrator.
+   at DotStat.Db.Repository.DatabaseRepositoryBase`1..ctor(DataspaceInternal dataspace, IGeneralConfiguration generalConfiguration, Version supportedDbVersion)
+   at DotStat.Db.Repository.SqlServer.SqlDatabaseRepositoryBase..ctor(DataspaceInternal dataspace, IGeneralConfiguration generalConfiguration, Version supportedDbVersion)
+   at DotStat.Db.Repository.SqlServer.SqlTransactionRepository..ctor(DataspaceInternal dataspace, IGeneralConfiguration generalConfiguration, Version supportedDbVersion)
+   at DotStat.Db.Manager.SqlServer.SqlServerDbManager.GetTransactionRepository(String dataspaceId)
+   at DotStatServices.Transfer.Controllers.CleanUpController.CleanUpMappingsets(String dataspace, String dataflow) in /app/DotStatServices.Transfer/Controllers/CleanUpController.cs:line 250
+   at lambda_method(Closure , Object , Object[] )
+   at Microsoft.Extensions.Internal.ObjectMethodExecutor.Execute(Object target, Object[] parameters)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.SyncObjectResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeActionMethodAsync()
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeNextActionFilterAsync()
+--- End of stack trace from previous location where exception was thrown ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location where exception was thrown ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextResourceFilter>g__Awaited|24_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Rethrow(ResourceExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.InvokeFilterPipelineAsync()
+--- End of stack trace from previous location where exception was thrown ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Builder.Extensions.MapWhenMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Builder.Extensions.MapWhenMiddleware.Invoke(HttpContext context)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.ExceptionHandlerMiddleware.<Invoke>g__Awaited|6_0(ExceptionHandlerMiddleware middleware, HttpContext context, Task task)
+
+2021-05-11 23:05:32,299|[115]|DEBUG|ea599425a60c|DotStat.Db.DB.DotStatDbBase`1|SQL: SELECT VERSION FROM dbo.DB_VERSION|
+2021-05-11 23:05:32,301|[115]|ERROR|ea599425a60c|DotStatServices.Transfer.JsonExceptionMiddleware+<Invoke>d__3.MoveNext|The version of Data database of demo-design space is not supported by this operation. Current db version: 3.6, supported db version: 5.0. Please contact your system administrator.|System.NotSupportedException: The version of Data database of demo-design space is not supported by this operation. Current db version: 3.6, supported db version: 5.0. Please contact your system administrator.
+   at DotStat.Db.Repository.DatabaseRepositoryBase`1..ctor(DataspaceInternal dataspace, IGeneralConfiguration generalConfiguration, Version supportedDbVersion)
+   at DotStat.Db.Repository.SqlServer.SqlDatabaseRepositoryBase..ctor(DataspaceInternal dataspace, IGeneralConfiguration generalConfiguration, Version supportedDbVersion)
+   at DotStat.Db.Repository.SqlServer.SqlTransactionRepository..ctor(DataspaceInternal dataspace, IGeneralConfiguration generalConfiguration, Version supportedDbVersion)
+   at DotStat.Db.Manager.SqlServer.SqlServerDbManager.GetTransactionRepository(String dataspaceId)
+   at DotStatServices.Transfer.Controllers.CleanUpController.CleanUpMappingsets(String dataspace, String dataflow) in /app/DotStatServices.Transfer/Controllers/CleanUpController.cs:line 250
+   at lambda_method(Closure , Object , Object[] )
+   at Microsoft.Extensions.Internal.ObjectMethodExecutor.Execute(Object target, Object[] parameters)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.SyncObjectResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeActionMethodAsync()
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeNextActionFilterAsync()
+--- End of stack trace from previous location where exception was thrown ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location where exception was thrown ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextResourceFilter>g__Awaited|24_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Rethrow(ResourceExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.InvokeFilterPipelineAsync()
+--- End of stack trace from previous location where exception was thrown ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Builder.Extensions.MapWhenMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Builder.Extensions.MapWhenMiddleware.Invoke(HttpContext context)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.ExceptionHandlerMiddleware.<Invoke>g__Awaited|6_0(ExceptionHandlerMiddleware middleware, HttpContext context, Task task)
+
+2021-05-11 23:05:32,311|[115]|DEBUG|ea599425a60c|DotStat.Db.DB.DotStatDbBase`1|SQL: SELECT VERSION FROM dbo.DB_VERSION|
+2021-05-11 23:05:32,314|[115]|ERROR|ea599425a60c|DotStatServices.Transfer.JsonExceptionMiddleware+<Invoke>d__3.MoveNext|The version of Data database of demo-design space is not supported by this operation. Current db version: 3.6, supported db version: 5.0. Please contact your system administrator.|System.NotSupportedException: The version of Data database of demo-design space is not supported by this operation. Current db version: 3.6, supported db version: 5.0. Please contact your system administrator.
+   at DotStat.Db.Repository.DatabaseRepositoryBase`1..ctor(DataspaceInternal dataspace, IGeneralConfiguration generalConfiguration, Version supportedDbVersion)
+   at DotStat.Db.Repository.SqlServer.SqlDatabaseRepositoryBase..ctor(DataspaceInternal dataspace, IGeneralConfiguration generalConfiguration, Version supportedDbVersion)
+   at DotStat.Db.Repository.SqlServer.SqlTransactionRepository..ctor(DataspaceInternal dataspace, IGeneralConfiguration generalConfiguration, Version supportedDbVersion)
+   at DotStat.Db.Manager.SqlServer.SqlServerDbManager.GetTransactionRepository(String dataspaceId)
+   at DotStatServices.Transfer.Controllers.CleanUpController.CleanUpMappingsets(String dataspace, String dataflow) in /app/DotStatServices.Transfer/Controllers/CleanUpController.cs:line 250
+   at lambda_method(Closure , Object , Object[] )
+   at Microsoft.Extensions.Internal.ObjectMethodExecutor.Execute(Object target, Object[] parameters)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.SyncObjectResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeActionMethodAsync()
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeNextActionFilterAsync()
+--- End of stack trace from previous location where exception was thrown ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location where exception was thrown ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextResourceFilter>g__Awaited|24_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Rethrow(ResourceExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.InvokeFilterPipelineAsync()
+--- End of stack trace from previous location where exception was thrown ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Builder.Extensions.MapWhenMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Builder.Extensions.MapWhenMiddleware.Invoke(HttpContext context)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.ExceptionHandlerMiddleware.<Invoke>g__Awaited|6_0(ExceptionHandlerMiddleware middleware, HttpContext context, Task task)
+
+2021-05-11 23:05:32,323|[115]|DEBUG|ea599425a60c|DotStat.Db.DB.DotStatDbBase`1|SQL: SELECT VERSION FROM dbo.DB_VERSION|
+2021-05-11 23:05:32,328|[115]|ERROR|ea599425a60c|DotStatServices.Transfer.JsonExceptionMiddleware+<Invoke>d__3.MoveNext|The version of Data database of demo-design space is not supported by this operation. Current db version: 3.6, supported db version: 5.0. Please contact your system administrator.|System.NotSupportedException: The version of Data database of demo-design space is not supported by this operation. Current db version: 3.6, supported db version: 5.0. Please contact your system administrator.
+   at DotStat.Db.Repository.DatabaseRepositoryBase`1..ctor(DataspaceInternal dataspace, IGeneralConfiguration generalConfiguration, Version supportedDbVersion)
+   at DotStat.Db.Repository.SqlServer.SqlDatabaseRepositoryBase..ctor(DataspaceInternal dataspace, IGeneralConfiguration generalConfiguration, Version supportedDbVersion)
+   at DotStat.Db.Repository.SqlServer.SqlTransactionRepository..ctor(DataspaceInternal dataspace, IGeneralConfiguration generalConfiguration, Version supportedDbVersion)
+   at DotStat.Db.Manager.SqlServer.SqlServerDbManager.GetTransactionRepository(String dataspaceId)
+   at DotStatServices.Transfer.Controllers.CleanUpController.CleanUpMappingsets(String dataspace, String dataflow) in /app/DotStatServices.Transfer/Controllers/CleanUpController.cs:line 250
+   at lambda_method(Closure , Object , Object[] )
+   at Microsoft.Extensions.Internal.ObjectMethodExecutor.Execute(Object target, Object[] parameters)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.SyncObjectResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeActionMethodAsync()
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeNextActionFilterAsync()
+--- End of stack trace from previous location where exception was thrown ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location where exception was thrown ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextResourceFilter>g__Awaited|24_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Rethrow(ResourceExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.InvokeFilterPipelineAsync()
+--- End of stack trace from previous location where exception was thrown ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Builder.Extensions.MapWhenMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Builder.Extensions.MapWhenMiddleware.Invoke(HttpContext context)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.ExceptionHandlerMiddleware.<Invoke>g__Awaited|6_0(ExceptionHandlerMiddleware middleware, HttpContext context, Task task)
+
+2021-05-11 23:05:32,334|[92]|DEBUG|ea599425a60c|DotStat.Db.DB.DotStatDbBase`1|SQL: SELECT VERSION FROM dbo.DB_VERSION|
+2021-05-11 23:05:32,336|[92]|ERROR|ea599425a60c|DotStatServices.Transfer.JsonExceptionMiddleware+<Invoke>d__3.MoveNext|The version of Data database of demo-design space is not supported by this operation. Current db version: 3.6, supported db version: 5.0. Please contact your system administrator.|System.NotSupportedException: The version of Data database of demo-design space is not supported by this operation. Current db version: 3.6, supported db version: 5.0. Please contact your system administrator.
+   at DotStat.Db.Repository.DatabaseRepositoryBase`1..ctor(DataspaceInternal dataspace, IGeneralConfiguration generalConfiguration, Version supportedDbVersion)
+   at DotStat.Db.Repository.SqlServer.SqlDatabaseRepositoryBase..ctor(DataspaceInternal dataspace, IGeneralConfiguration generalConfiguration, Version supportedDbVersion)
+   at DotStat.Db.Repository.SqlServer.SqlTransactionRepository..ctor(DataspaceInternal dataspace, IGeneralConfiguration generalConfiguration, Version supportedDbVersion)
+   at DotStat.Db.Manager.SqlServer.SqlServerDbManager.GetTransactionRepository(String dataspaceId)
+   at DotStatServices.Transfer.Controllers.CleanUpController.CleanUpMappingsets(String dataspace, String dataflow) in /app/DotStatServices.Transfer/Controllers/CleanUpController.cs:line 250
+   at lambda_method(Closure , Object , Object[] )
+   at Microsoft.Extensions.Internal.ObjectMethodExecutor.Execute(Object target, Object[] parameters)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.SyncObjectResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeActionMethodAsync()
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeNextActionFilterAsync()
+--- End of stack trace from previous location where exception was thrown ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location where exception was thrown ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextResourceFilter>g__Awaited|24_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Rethrow(ResourceExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.InvokeFilterPipelineAsync()
+--- End of stack trace from previous location where exception was thrown ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Builder.Extensions.MapWhenMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Builder.Extensions.MapWhenMiddleware.Invoke(HttpContext context)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.ExceptionHandlerMiddleware.<Invoke>g__Awaited|6_0(ExceptionHandlerMiddleware middleware, HttpContext context, Task task)
+
+2021-05-11 23:05:32,361|[92]|DEBUG|ea599425a60c|DotStat.Db.DB.DotStatDbBase`1|SQL: SELECT VERSION FROM dbo.DB_VERSION|
+2021-05-11 23:05:32,363|[92]|ERROR|ea599425a60c|DotStatServices.Transfer.JsonExceptionMiddleware+<Invoke>d__3.MoveNext|The version of Data database of demo-design space is not supported by this operation. Current db version: 3.6, supported db version: 5.0. Please contact your system administrator.|System.NotSupportedException: The version of Data database of demo-design space is not supported by this operation. Current db version: 3.6, supported db version: 5.0. Please contact your system administrator.
+   at DotStat.Db.Repository.DatabaseRepositoryBase`1..ctor(DataspaceInternal dataspace, IGeneralConfiguration generalConfiguration, Version supportedDbVersion)
+   at DotStat.Db.Repository.SqlServer.SqlDatabaseRepositoryBase..ctor(DataspaceInternal dataspace, IGeneralConfiguration generalConfiguration, Version supportedDbVersion)
+   at DotStat.Db.Repository.SqlServer.SqlTransactionRepository..ctor(DataspaceInternal dataspace, IGeneralConfiguration generalConfiguration, Version supportedDbVersion)
+   at DotStat.Db.Manager.SqlServer.SqlServerDbManager.GetTransactionRepository(String dataspaceId)
+   at DotStatServices.Transfer.Controllers.CleanUpController.CleanUpMappingsets(String dataspace, String dataflow) in /app/DotStatServices.Transfer/Controllers/CleanUpController.cs:line 250
+   at lambda_method(Closure , Object , Object[] )
+   at Microsoft.Extensions.Internal.ObjectMethodExecutor.Execute(Object target, Object[] parameters)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.SyncObjectResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeActionMethodAsync()
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeNextActionFilterAsync()
+--- End of stack trace from previous location where exception was thrown ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location where exception was thrown ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextResourceFilter>g__Awaited|24_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Rethrow(ResourceExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.InvokeFilterPipelineAsync()
+--- End of stack trace from previous location where exception was thrown ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Builder.Extensions.MapWhenMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Builder.Extensions.MapWhenMiddleware.Invoke(HttpContext context)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.ExceptionHandlerMiddleware.<Invoke>g__Awaited|6_0(ExceptionHandlerMiddleware middleware, HttpContext context, Task task)
+
+2021-05-11 23:05:32,369|[115]|DEBUG|ea599425a60c|DotStat.Db.DB.DotStatDbBase`1|SQL: SELECT VERSION FROM dbo.DB_VERSION|
+2021-05-11 23:05:32,371|[115]|ERROR|ea599425a60c|DotStatServices.Transfer.JsonExceptionMiddleware+<Invoke>d__3.MoveNext|The version of Data database of demo-design space is not supported by this operation. Current db version: 3.6, supported db version: 5.0. Please contact your system administrator.|System.NotSupportedException: The version of Data database of demo-design space is not supported by this operation. Current db version: 3.6, supported db version: 5.0. Please contact your system administrator.
+   at DotStat.Db.Repository.DatabaseRepositoryBase`1..ctor(DataspaceInternal dataspace, IGeneralConfiguration generalConfiguration, Version supportedDbVersion)
+   at DotStat.Db.Repository.SqlServer.SqlDatabaseRepositoryBase..ctor(DataspaceInternal dataspace, IGeneralConfiguration generalConfiguration, Version supportedDbVersion)
+   at DotStat.Db.Repository.SqlServer.SqlTransactionRepository..ctor(DataspaceInternal dataspace, IGeneralConfiguration generalConfiguration, Version supportedDbVersion)
+   at DotStat.Db.Manager.SqlServer.SqlServerDbManager.GetTransactionRepository(String dataspaceId)
+   at DotStatServices.Transfer.Controllers.CleanUpController.CleanUpMappingsets(String dataspace, String dataflow) in /app/DotStatServices.Transfer/Controllers/CleanUpController.cs:line 250
+   at lambda_method(Closure , Object , Object[] )
+   at Microsoft.Extensions.Internal.ObjectMethodExecutor.Execute(Object target, Object[] parameters)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.SyncObjectResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeActionMethodAsync()
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeNextActionFilterAsync()
+--- End of stack trace from previous location where exception was thrown ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location where exception was thrown ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextResourceFilter>g__Awaited|24_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Rethrow(ResourceExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.InvokeFilterPipelineAsync()
+--- End of stack trace from previous location where exception was thrown ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Builder.Extensions.MapWhenMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Builder.Extensions.MapWhenMiddleware.Invoke(HttpContext context)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.ExceptionHandlerMiddleware.<Invoke>g__Awaited|6_0(ExceptionHandlerMiddleware middleware, HttpContext context, Task task)
+
+2021-05-11 23:05:32,422|[115]|DEBUG|ea599425a60c|DotStat.Db.DB.DotStatDbBase`1|SQL: SELECT VERSION FROM dbo.DB_VERSION|
+2021-05-11 23:05:32,429|[115]|ERROR|ea599425a60c|DotStatServices.Transfer.JsonExceptionMiddleware+<Invoke>d__3.MoveNext|The version of Data database of demo-design space is not supported by this operation. Current db version: 3.6, supported db version: 5.0. Please contact your system administrator.|System.NotSupportedException: The version of Data database of demo-design space is not supported by this operation. Current db version: 3.6, supported db version: 5.0. Please contact your system administrator.
+   at DotStat.Db.Repository.DatabaseRepositoryBase`1..ctor(DataspaceInternal dataspace, IGeneralConfiguration generalConfiguration, Version supportedDbVersion)
+   at DotStat.Db.Repository.SqlServer.SqlDatabaseRepositoryBase..ctor(DataspaceInternal dataspace, IGeneralConfiguration generalConfiguration, Version supportedDbVersion)
+   at DotStat.Db.Repository.SqlServer.SqlTransactionRepository..ctor(DataspaceInternal dataspace, IGeneralConfiguration generalConfiguration, Version supportedDbVersion)
+   at DotStat.Db.Manager.SqlServer.SqlServerDbManager.GetTransactionRepository(String dataspaceId)
+   at DotStatServices.Transfer.Controllers.CleanUpController.CleanUpMappingsets(String dataspace, String dataflow) in /app/DotStatServices.Transfer/Controllers/CleanUpController.cs:line 250
+   at lambda_method(Closure , Object , Object[] )
+   at Microsoft.Extensions.Internal.ObjectMethodExecutor.Execute(Object target, Object[] parameters)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.SyncObjectResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeActionMethodAsync()
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeNextActionFilterAsync()
+--- End of stack trace from previous location where exception was thrown ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeInnerFilterAsync>g__Awaited|13_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextResourceFilter>g__Awaited|24_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Rethrow(ResourceExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|19_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Builder.Extensions.MapWhenMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Builder.Extensions.MapWhenMiddleware.Invoke(HttpContext context)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.ExceptionHandlerMiddleware.<Invoke>g__Awaited|6_0(ExceptionHandlerMiddleware middleware, HttpContext context, Task task)
+
+2021-05-11 23:06:02,701|[107]|DEBUG|ea599425a60c|DotStat.Db.DB.DotStatDbBase`1|SQL: SELECT VERSION FROM dbo.DB_VERSION|
+2021-05-11 23:06:02,717|[107]|ERROR|ea599425a60c|DotStatServices.Transfer.JsonExceptionMiddleware+<Invoke>d__3.MoveNext|The version of Data database of demo-release space is not supported by this operation. Current db version: 3.6, supported db version: 5.0. Please contact your system administrator.|System.NotSupportedException: The version of Data database of demo-release space is not supported by this operation. Current db version: 3.6, supported db version: 5.0. Please contact your system administrator.
+   at DotStat.Db.Repository.DatabaseRepositoryBase`1..ctor(DataspaceInternal dataspace, IGeneralConfiguration generalConfiguration, Version supportedDbVersion)
+   at DotStat.Db.Repository.SqlServer.SqlDatabaseRepositoryBase..ctor(DataspaceInternal dataspace, IGeneralConfiguration generalConfiguration, Version supportedDbVersion)
+   at DotStat.Db.Repository.SqlServer.SqlTransactionRepository..ctor(DataspaceInternal dataspace, IGeneralConfiguration generalConfiguration, Version supportedDbVersion)
+   at DotStat.Db.Manager.SqlServer.SqlServerDbManager.GetTransactionRepository(String dataspaceId)
+   at DotStatServices.Transfer.Controllers.CleanUpController.CleanUpMappingsets(String dataspace, String dataflow) in /app/DotStatServices.Transfer/Controllers/CleanUpController.cs:line 250
+   at lambda_method(Closure , Object , Object[] )
+   at Microsoft.Extensions.Internal.ObjectMethodExecutor.Execute(Object target, Object[] parameters)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.SyncObjectResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeActionMethodAsync()
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeNextActionFilterAsync()
+--- End of stack trace from previous location where exception was thrown ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location where exception was thrown ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextResourceFilter>g__Awaited|24_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Rethrow(ResourceExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.InvokeFilterPipelineAsync()
+--- End of stack trace from previous location where exception was thrown ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Builder.Extensions.MapWhenMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Builder.Extensions.MapWhenMiddleware.Invoke(HttpContext context)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.ExceptionHandlerMiddleware.<Invoke>g__Awaited|6_0(ExceptionHandlerMiddleware middleware, HttpContext context, Task task)
+
+2021-05-11 23:06:02,749|[107]|DEBUG|ea599425a60c|DotStat.Db.DB.DotStatDbBase`1|SQL: SELECT VERSION FROM dbo.DB_VERSION|
+2021-05-11 23:06:02,752|[107]|ERROR|ea599425a60c|DotStatServices.Transfer.JsonExceptionMiddleware+<Invoke>d__3.MoveNext|The version of Data database of demo-release space is not supported by this operation. Current db version: 3.6, supported db version: 5.0. Please contact your system administrator.|System.NotSupportedException: The version of Data database of demo-release space is not supported by this operation. Current db version: 3.6, supported db version: 5.0. Please contact your system administrator.
+   at DotStat.Db.Repository.DatabaseRepositoryBase`1..ctor(DataspaceInternal dataspace, IGeneralConfiguration generalConfiguration, Version supportedDbVersion)
+   at DotStat.Db.Repository.SqlServer.SqlDatabaseRepositoryBase..ctor(DataspaceInternal dataspace, IGeneralConfiguration generalConfiguration, Version supportedDbVersion)
+   at DotStat.Db.Repository.SqlServer.SqlTransactionRepository..ctor(DataspaceInternal dataspace, IGeneralConfiguration generalConfiguration, Version supportedDbVersion)
+   at DotStat.Db.Manager.SqlServer.SqlServerDbManager.GetTransactionRepository(String dataspaceId)
+   at DotStatServices.Transfer.Controllers.CleanUpController.CleanUpMappingsets(String dataspace, String dataflow) in /app/DotStatServices.Transfer/Controllers/CleanUpController.cs:line 250
+   at lambda_method(Closure , Object , Object[] )
+   at Microsoft.Extensions.Internal.ObjectMethodExecutor.Execute(Object target, Object[] parameters)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.SyncObjectResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeActionMethodAsync()
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeNextActionFilterAsync()
+--- End of stack trace from previous location where exception was thrown ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location where exception was thrown ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextResourceFilter>g__Awaited|24_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Rethrow(ResourceExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.InvokeFilterPipelineAsync()
+--- End of stack trace from previous location where exception was thrown ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Builder.Extensions.MapWhenMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Builder.Extensions.MapWhenMiddleware.Invoke(HttpContext context)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.ExceptionHandlerMiddleware.<Invoke>g__Awaited|6_0(ExceptionHandlerMiddleware middleware, HttpContext context, Task task)
+
+2021-05-11 23:06:02,760|[107]|DEBUG|ea599425a60c|DotStat.Db.DB.DotStatDbBase`1|SQL: SELECT VERSION FROM dbo.DB_VERSION|
+2021-05-11 23:06:02,762|[107]|ERROR|ea599425a60c|DotStatServices.Transfer.JsonExceptionMiddleware+<Invoke>d__3.MoveNext|The version of Data database of demo-release space is not supported by this operation. Current db version: 3.6, supported db version: 5.0. Please contact your system administrator.|System.NotSupportedException: The version of Data database of demo-release space is not supported by this operation. Current db version: 3.6, supported db version: 5.0. Please contact your system administrator.
+   at DotStat.Db.Repository.DatabaseRepositoryBase`1..ctor(DataspaceInternal dataspace, IGeneralConfiguration generalConfiguration, Version supportedDbVersion)
+   at DotStat.Db.Repository.SqlServer.SqlDatabaseRepositoryBase..ctor(DataspaceInternal dataspace, IGeneralConfiguration generalConfiguration, Version supportedDbVersion)
+   at DotStat.Db.Repository.SqlServer.SqlTransactionRepository..ctor(DataspaceInternal dataspace, IGeneralConfiguration generalConfiguration, Version supportedDbVersion)
+   at DotStat.Db.Manager.SqlServer.SqlServerDbManager.GetTransactionRepository(String dataspaceId)
+   at DotStatServices.Transfer.Controllers.CleanUpController.CleanUpMappingsets(String dataspace, String dataflow) in /app/DotStatServices.Transfer/Controllers/CleanUpController.cs:line 250
+   at lambda_method(Closure , Object , Object[] )
+   at Microsoft.Extensions.Internal.ObjectMethodExecutor.Execute(Object target, Object[] parameters)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.SyncObjectResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeActionMethodAsync()
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeNextActionFilterAsync()
+--- End of stack trace from previous location where exception was thrown ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location where exception was thrown ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextResourceFilter>g__Awaited|24_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Rethrow(ResourceExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.InvokeFilterPipelineAsync()
+--- End of stack trace from previous location where exception was thrown ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Builder.Extensions.MapWhenMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Builder.Extensions.MapWhenMiddleware.Invoke(HttpContext context)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.ExceptionHandlerMiddleware.<Invoke>g__Awaited|6_0(ExceptionHandlerMiddleware middleware, HttpContext context, Task task)
+
+2021-05-11 23:06:02,771|[115]|DEBUG|ea599425a60c|DotStat.Db.DB.DotStatDbBase`1|SQL: SELECT VERSION FROM dbo.DB_VERSION|
+2021-05-11 23:06:02,774|[115]|ERROR|ea599425a60c|DotStatServices.Transfer.JsonExceptionMiddleware+<Invoke>d__3.MoveNext|The version of Data database of demo-release space is not supported by this operation. Current db version: 3.6, supported db version: 5.0. Please contact your system administrator.|System.NotSupportedException: The version of Data database of demo-release space is not supported by this operation. Current db version: 3.6, supported db version: 5.0. Please contact your system administrator.
+   at DotStat.Db.Repository.DatabaseRepositoryBase`1..ctor(DataspaceInternal dataspace, IGeneralConfiguration generalConfiguration, Version supportedDbVersion)
+   at DotStat.Db.Repository.SqlServer.SqlDatabaseRepositoryBase..ctor(DataspaceInternal dataspace, IGeneralConfiguration generalConfiguration, Version supportedDbVersion)
+   at DotStat.Db.Repository.SqlServer.SqlTransactionRepository..ctor(DataspaceInternal dataspace, IGeneralConfiguration generalConfiguration, Version supportedDbVersion)
+   at DotStat.Db.Manager.SqlServer.SqlServerDbManager.GetTransactionRepository(String dataspaceId)
+   at DotStatServices.Transfer.Controllers.CleanUpController.CleanUpMappingsets(String dataspace, String dataflow) in /app/DotStatServices.Transfer/Controllers/CleanUpController.cs:line 250
+   at lambda_method(Closure , Object , Object[] )
+   at Microsoft.Extensions.Internal.ObjectMethodExecutor.Execute(Object target, Object[] parameters)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.SyncObjectResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeActionMethodAsync()
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeNextActionFilterAsync()
+--- End of stack trace from previous location where exception was thrown ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location where exception was thrown ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextResourceFilter>g__Awaited|24_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Rethrow(ResourceExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.InvokeFilterPipelineAsync()
+--- End of stack trace from previous location where exception was thrown ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Builder.Extensions.MapWhenMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Builder.Extensions.MapWhenMiddleware.Invoke(HttpContext context)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.ExceptionHandlerMiddleware.<Invoke>g__Awaited|6_0(ExceptionHandlerMiddleware middleware, HttpContext context, Task task)
+
+2021-05-11 23:18:45,901|[27]|DEBUG|ea599425a60c|DotStat.Db.DB.DotStatDbBase`1|SQL: SELECT VERSION FROM dbo.DB_VERSION|
+2021-05-11 23:18:45,904|[19]|DEBUG|ea599425a60c|DotStat.Db.DB.DotStatDbBase`1|SQL: SELECT VERSION FROM dbo.DB_VERSION|
+2021-05-11 23:18:45,983|[27]|ERROR|ea599425a60c|DotStatServices.Transfer.JsonExceptionMiddleware+<Invoke>d__3.MoveNext|The version of Data database of demo-design space is not supported by this operation. Current db version: 3.6, supported db version: 5.0. Please contact your system administrator.|System.NotSupportedException: The version of Data database of demo-design space is not supported by this operation. Current db version: 3.6, supported db version: 5.0. Please contact your system administrator.
+   at DotStat.Db.Repository.DatabaseRepositoryBase`1..ctor(DataspaceInternal dataspace, IGeneralConfiguration generalConfiguration, Version supportedDbVersion)
+   at DotStat.Db.Repository.SqlServer.SqlDatabaseRepositoryBase..ctor(DataspaceInternal dataspace, IGeneralConfiguration generalConfiguration, Version supportedDbVersion)
+   at DotStat.Db.Repository.SqlServer.SqlTransactionRepository..ctor(DataspaceInternal dataspace, IGeneralConfiguration generalConfiguration, Version supportedDbVersion)
+   at DotStat.Db.Manager.SqlServer.SqlServerDbManager.GetTransactionRepository(String dataspaceId)
+   at DotStatServices.Transfer.Controllers.CleanUpController.CleanUpMappingsets(String dataspace, String dataflow) in /app/DotStatServices.Transfer/Controllers/CleanUpController.cs:line 250
+   at lambda_method(Closure , Object , Object[] )
+   at Microsoft.Extensions.Internal.ObjectMethodExecutor.Execute(Object target, Object[] parameters)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.SyncObjectResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeActionMethodAsync()
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeNextActionFilterAsync()
+--- End of stack trace from previous location where exception was thrown ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location where exception was thrown ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextResourceFilter>g__Awaited|24_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Rethrow(ResourceExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.InvokeFilterPipelineAsync()
+--- End of stack trace from previous location where exception was thrown ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Builder.Extensions.MapWhenMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Builder.Extensions.MapWhenMiddleware.Invoke(HttpContext context)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.ExceptionHandlerMiddleware.<Invoke>g__Awaited|6_0(ExceptionHandlerMiddleware middleware, HttpContext context, Task task)
+
+2021-05-11 23:18:45,986|[19]|ERROR|ea599425a60c|DotStatServices.Transfer.JsonExceptionMiddleware+<Invoke>d__3.MoveNext|The version of Data database of demo-design space is not supported by this operation. Current db version: 3.6, supported db version: 5.0. Please contact your system administrator.|System.NotSupportedException: The version of Data database of demo-design space is not supported by this operation. Current db version: 3.6, supported db version: 5.0. Please contact your system administrator.
+   at DotStat.Db.Repository.DatabaseRepositoryBase`1..ctor(DataspaceInternal dataspace, IGeneralConfiguration generalConfiguration, Version supportedDbVersion)
+   at DotStat.Db.Repository.SqlServer.SqlDatabaseRepositoryBase..ctor(DataspaceInternal dataspace, IGeneralConfiguration generalConfiguration, Version supportedDbVersion)
+   at DotStat.Db.Repository.SqlServer.SqlTransactionRepository..ctor(DataspaceInternal dataspace, IGeneralConfiguration generalConfiguration, Version supportedDbVersion)
+   at DotStat.Db.Manager.SqlServer.SqlServerDbManager.GetTransactionRepository(String dataspaceId)
+   at DotStatServices.Transfer.Controllers.CleanUpController.CleanUpMappingsets(String dataspace, String dataflow) in /app/DotStatServices.Transfer/Controllers/CleanUpController.cs:line 250
+   at lambda_method(Closure , Object , Object[] )
+   at Microsoft.Extensions.Internal.ObjectMethodExecutor.Execute(Object target, Object[] parameters)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.SyncObjectResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeActionMethodAsync()
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeNextActionFilterAsync()
+--- End of stack trace from previous location where exception was thrown ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location where exception was thrown ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextResourceFilter>g__Awaited|24_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Rethrow(ResourceExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.InvokeFilterPipelineAsync()
+--- End of stack trace from previous location where exception was thrown ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Builder.Extensions.MapWhenMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Builder.Extensions.MapWhenMiddleware.Invoke(HttpContext context)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.ExceptionHandlerMiddleware.<Invoke>g__Awaited|6_0(ExceptionHandlerMiddleware middleware, HttpContext context, Task task)
+
+2021-05-11 23:18:45,989|[27]|DEBUG|ea599425a60c|DotStat.Db.DB.DotStatDbBase`1|SQL: SELECT VERSION FROM dbo.DB_VERSION|
+2021-05-11 23:18:45,992|[27]|ERROR|ea599425a60c|DotStatServices.Transfer.JsonExceptionMiddleware+<Invoke>d__3.MoveNext|The version of Data database of demo-design space is not supported by this operation. Current db version: 3.6, supported db version: 5.0. Please contact your system administrator.|System.NotSupportedException: The version of Data database of demo-design space is not supported by this operation. Current db version: 3.6, supported db version: 5.0. Please contact your system administrator.
+   at DotStat.Db.Repository.DatabaseRepositoryBase`1..ctor(DataspaceInternal dataspace, IGeneralConfiguration generalConfiguration, Version supportedDbVersion)
+   at DotStat.Db.Repository.SqlServer.SqlDatabaseRepositoryBase..ctor(DataspaceInternal dataspace, IGeneralConfiguration generalConfiguration, Version supportedDbVersion)
+   at DotStat.Db.Repository.SqlServer.SqlTransactionRepository..ctor(DataspaceInternal dataspace, IGeneralConfiguration generalConfiguration, Version supportedDbVersion)
+   at DotStat.Db.Manager.SqlServer.SqlServerDbManager.GetTransactionRepository(String dataspaceId)
+   at DotStatServices.Transfer.Controllers.CleanUpController.CleanUpMappingsets(String dataspace, String dataflow) in /app/DotStatServices.Transfer/Controllers/CleanUpController.cs:line 250
+   at lambda_method(Closure , Object , Object[] )
+   at Microsoft.Extensions.Internal.ObjectMethodExecutor.Execute(Object target, Object[] parameters)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.SyncObjectResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeActionMethodAsync()
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeNextActionFilterAsync()
+--- End of stack trace from previous location where exception was thrown ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location where exception was thrown ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextResourceFilter>g__Awaited|24_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Rethrow(ResourceExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.InvokeFilterPipelineAsync()
+--- End of stack trace from previous location where exception was thrown ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Builder.Extensions.MapWhenMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Builder.Extensions.MapWhenMiddleware.Invoke(HttpContext context)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.ExceptionHandlerMiddleware.<Invoke>g__Awaited|6_0(ExceptionHandlerMiddleware middleware, HttpContext context, Task task)
+
+2021-05-11 23:20:19,882|[34]|DEBUG|ea599425a60c|DotStat.Db.DB.DotStatDbBase`1|SQL: SELECT VERSION FROM dbo.DB_VERSION|
+2021-05-11 23:20:19,896|[34]|ERROR|ea599425a60c|DotStatServices.Transfer.JsonExceptionMiddleware+<Invoke>d__3.MoveNext|The version of Data database of demo-release space is not supported by this operation. Current db version: 3.6, supported db version: 5.0. Please contact your system administrator.|System.NotSupportedException: The version of Data database of demo-release space is not supported by this operation. Current db version: 3.6, supported db version: 5.0. Please contact your system administrator.
+   at DotStat.Db.Repository.DatabaseRepositoryBase`1..ctor(DataspaceInternal dataspace, IGeneralConfiguration generalConfiguration, Version supportedDbVersion)
+   at DotStat.Db.Repository.SqlServer.SqlDatabaseRepositoryBase..ctor(DataspaceInternal dataspace, IGeneralConfiguration generalConfiguration, Version supportedDbVersion)
+   at DotStat.Db.Repository.SqlServer.SqlTransactionRepository..ctor(DataspaceInternal dataspace, IGeneralConfiguration generalConfiguration, Version supportedDbVersion)
+   at DotStat.Db.Manager.SqlServer.SqlServerDbManager.GetTransactionRepository(String dataspaceId)
+   at DotStatServices.Transfer.Controllers.CleanUpController.CleanUpMappingsets(String dataspace, String dataflow) in /app/DotStatServices.Transfer/Controllers/CleanUpController.cs:line 250
+   at lambda_method(Closure , Object , Object[] )
+   at Microsoft.Extensions.Internal.ObjectMethodExecutor.Execute(Object target, Object[] parameters)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.SyncObjectResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeActionMethodAsync()
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeNextActionFilterAsync()
+--- End of stack trace from previous location where exception was thrown ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location where exception was thrown ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextResourceFilter>g__Awaited|24_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Rethrow(ResourceExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.InvokeFilterPipelineAsync()
+--- End of stack trace from previous location where exception was thrown ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Builder.Extensions.MapWhenMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Builder.Extensions.MapWhenMiddleware.Invoke(HttpContext context)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.ExceptionHandlerMiddleware.<Invoke>g__Awaited|6_0(ExceptionHandlerMiddleware middleware, HttpContext context, Task task)
+
+2021-05-11 23:20:19,913|[34]|DEBUG|ea599425a60c|DotStat.Db.DB.DotStatDbBase`1|SQL: SELECT VERSION FROM dbo.DB_VERSION|
+2021-05-11 23:20:19,916|[34]|ERROR|ea599425a60c|DotStatServices.Transfer.JsonExceptionMiddleware+<Invoke>d__3.MoveNext|The version of Data database of demo-release space is not supported by this operation. Current db version: 3.6, supported db version: 5.0. Please contact your system administrator.|System.NotSupportedException: The version of Data database of demo-release space is not supported by this operation. Current db version: 3.6, supported db version: 5.0. Please contact your system administrator.
+   at DotStat.Db.Repository.DatabaseRepositoryBase`1..ctor(DataspaceInternal dataspace, IGeneralConfiguration generalConfiguration, Version supportedDbVersion)
+   at DotStat.Db.Repository.SqlServer.SqlDatabaseRepositoryBase..ctor(DataspaceInternal dataspace, IGeneralConfiguration generalConfiguration, Version supportedDbVersion)
+   at DotStat.Db.Repository.SqlServer.SqlTransactionRepository..ctor(DataspaceInternal dataspace, IGeneralConfiguration generalConfiguration, Version supportedDbVersion)
+   at DotStat.Db.Manager.SqlServer.SqlServerDbManager.GetTransactionRepository(String dataspaceId)
+   at DotStatServices.Transfer.Controllers.CleanUpController.CleanUpMappingsets(String dataspace, String dataflow) in /app/DotStatServices.Transfer/Controllers/CleanUpController.cs:line 250
+   at lambda_method(Closure , Object , Object[] )
+   at Microsoft.Extensions.Internal.ObjectMethodExecutor.Execute(Object target, Object[] parameters)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.SyncObjectResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeActionMethodAsync()
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeNextActionFilterAsync()
+--- End of stack trace from previous location where exception was thrown ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location where exception was thrown ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextResourceFilter>g__Awaited|24_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Rethrow(ResourceExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.InvokeFilterPipelineAsync()
+--- End of stack trace from previous location where exception was thrown ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Builder.Extensions.MapWhenMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Builder.Extensions.MapWhenMiddleware.Invoke(HttpContext context)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.ExceptionHandlerMiddleware.<Invoke>g__Awaited|6_0(ExceptionHandlerMiddleware middleware, HttpContext context, Task task)
+
+2021-05-11 23:20:19,925|[34]|DEBUG|ea599425a60c|DotStat.Db.DB.DotStatDbBase`1|SQL: SELECT VERSION FROM dbo.DB_VERSION|
+2021-05-11 23:20:19,928|[34]|ERROR|ea599425a60c|DotStatServices.Transfer.JsonExceptionMiddleware+<Invoke>d__3.MoveNext|The version of Data database of demo-release space is not supported by this operation. Current db version: 3.6, supported db version: 5.0. Please contact your system administrator.|System.NotSupportedException: The version of Data database of demo-release space is not supported by this operation. Current db version: 3.6, supported db version: 5.0. Please contact your system administrator.
+   at DotStat.Db.Repository.DatabaseRepositoryBase`1..ctor(DataspaceInternal dataspace, IGeneralConfiguration generalConfiguration, Version supportedDbVersion)
+   at DotStat.Db.Repository.SqlServer.SqlDatabaseRepositoryBase..ctor(DataspaceInternal dataspace, IGeneralConfiguration generalConfiguration, Version supportedDbVersion)
+   at DotStat.Db.Repository.SqlServer.SqlTransactionRepository..ctor(DataspaceInternal dataspace, IGeneralConfiguration generalConfiguration, Version supportedDbVersion)
+   at DotStat.Db.Manager.SqlServer.SqlServerDbManager.GetTransactionRepository(String dataspaceId)
+   at DotStatServices.Transfer.Controllers.CleanUpController.CleanUpMappingsets(String dataspace, String dataflow) in /app/DotStatServices.Transfer/Controllers/CleanUpController.cs:line 250
+   at lambda_method(Closure , Object , Object[] )
+   at Microsoft.Extensions.Internal.ObjectMethodExecutor.Execute(Object target, Object[] parameters)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.SyncObjectResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeActionMethodAsync()
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeNextActionFilterAsync()
+--- End of stack trace from previous location where exception was thrown ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location where exception was thrown ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextResourceFilter>g__Awaited|24_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Rethrow(ResourceExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.InvokeFilterPipelineAsync()
+--- End of stack trace from previous location where exception was thrown ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Builder.Extensions.MapWhenMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Builder.Extensions.MapWhenMiddleware.Invoke(HttpContext context)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.ExceptionHandlerMiddleware.<Invoke>g__Awaited|6_0(ExceptionHandlerMiddleware middleware, HttpContext context, Task task)
+
+2021-05-11 23:20:19,965|[34]|DEBUG|ea599425a60c|DotStat.Db.DB.DotStatDbBase`1|SQL: SELECT VERSION FROM dbo.DB_VERSION|
+2021-05-11 23:20:19,969|[34]|ERROR|ea599425a60c|DotStatServices.Transfer.JsonExceptionMiddleware+<Invoke>d__3.MoveNext|The version of Data database of demo-release space is not supported by this operation. Current db version: 3.6, supported db version: 5.0. Please contact your system administrator.|System.NotSupportedException: The version of Data database of demo-release space is not supported by this operation. Current db version: 3.6, supported db version: 5.0. Please contact your system administrator.
+   at DotStat.Db.Repository.DatabaseRepositoryBase`1..ctor(DataspaceInternal dataspace, IGeneralConfiguration generalConfiguration, Version supportedDbVersion)
+   at DotStat.Db.Repository.SqlServer.SqlDatabaseRepositoryBase..ctor(DataspaceInternal dataspace, IGeneralConfiguration generalConfiguration, Version supportedDbVersion)
+   at DotStat.Db.Repository.SqlServer.SqlTransactionRepository..ctor(DataspaceInternal dataspace, IGeneralConfiguration generalConfiguration, Version supportedDbVersion)
+   at DotStat.Db.Manager.SqlServer.SqlServerDbManager.GetTransactionRepository(String dataspaceId)
+   at DotStatServices.Transfer.Controllers.CleanUpController.CleanUpMappingsets(String dataspace, String dataflow) in /app/DotStatServices.Transfer/Controllers/CleanUpController.cs:line 250
+   at lambda_method(Closure , Object , Object[] )
+   at Microsoft.Extensions.Internal.ObjectMethodExecutor.Execute(Object target, Object[] parameters)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.SyncObjectResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeActionMethodAsync()
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeNextActionFilterAsync()
+--- End of stack trace from previous location where exception was thrown ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location where exception was thrown ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextResourceFilter>g__Awaited|24_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Rethrow(ResourceExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.InvokeFilterPipelineAsync()
+--- End of stack trace from previous location where exception was thrown ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Builder.Extensions.MapWhenMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Builder.Extensions.MapWhenMiddleware.Invoke(HttpContext context)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.ExceptionHandlerMiddleware.<Invoke>g__Awaited|6_0(ExceptionHandlerMiddleware middleware, HttpContext context, Task task)
+

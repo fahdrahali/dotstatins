@@ -1,0 +1,2 @@
+2021-05-17 11:56:33,386|[1]|WARN |ff907830c363|Estat.Sri.Ws.Controllers.Manager.SettingsManager|Assembly 'Estat.Sri.Mapping.MappingStore, Version=8.1.2.0, Culture=neutral, PublicKeyToken=null' was requested but is not configured.|
+2021-05-17 11:56:52,822|[5]|ERROR|ff907830c363|Estat.Sri.Ws.Retrievers.Manager.MappingStoreSettingsManager|No connection string with name MappingStoreServer could not be found. Please add at the Web.config at <connectionStrings> section a connection string with name MappingStoreServer.|

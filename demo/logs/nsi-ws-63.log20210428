@@ -1,0 +1,24 @@
+2021-04-28 08:14:49,556|[45]|ERROR|41fd049c84d2|NSIWebServiceCore.ErrorHandlingMiddleware|Unhandled exception|System.UriFormatException: Invalid URI: The hostname could not be parsed.
+   at System.Uri.CreateThis(String uri, Boolean dontEscape, UriKind uriKind)
+   at System.Uri..ctor(String uriString)
+   at System.UriBuilder.get_Uri()
+   at Estat.Sri.Ws.NSIWebServiceCore.LoggingMiddleware.GetAbsoluteUri(HttpContext context) in /app/src/NSIWebServiceCore/LoggingMiddleware.cs:line 63
+   at Estat.Sri.Ws.NSIWebServiceCore.LoggingMiddleware.Invoke(HttpContext context) in /app/src/NSIWebServiceCore/LoggingMiddleware.cs:line 45
+   at Microsoft.AspNetCore.Diagnostics.ExceptionHandlerMiddleware.<Invoke>g__Awaited|6_0(ExceptionHandlerMiddleware middleware, HttpContext context, Task task)
+
+2021-04-28 08:14:49,591|[45]|ERROR|41fd049c84d2|NSIWebServiceCore.ErrorHandlingMiddleware|Unhandled exception|System.UriFormatException: Invalid URI: The hostname could not be parsed.
+   at System.Uri.CreateThis(String uri, Boolean dontEscape, UriKind uriKind)
+   at System.Uri..ctor(String uriString)
+   at System.UriBuilder.get_Uri()
+   at Estat.Sri.Ws.NSIWebServiceCore.LoggingMiddleware.GetAbsoluteUri(HttpContext context) in /app/src/NSIWebServiceCore/LoggingMiddleware.cs:line 63
+   at Estat.Sri.Ws.NSIWebServiceCore.LoggingMiddleware.Invoke(HttpContext context) in /app/src/NSIWebServiceCore/LoggingMiddleware.cs:line 45
+   at Microsoft.AspNetCore.Diagnostics.ExceptionHandlerMiddleware.<Invoke>g__Awaited|6_0(ExceptionHandlerMiddleware middleware, HttpContext context, Task task)
+
+2021-04-28 08:14:49,614|[43]|ERROR|41fd049c84d2|NSIWebServiceCore.ErrorHandlingMiddleware|Unhandled exception|System.UriFormatException: Invalid URI: The hostname could not be parsed.
+   at System.Uri.CreateThis(String uri, Boolean dontEscape, UriKind uriKind)
+   at System.Uri..ctor(String uriString)
+   at System.UriBuilder.get_Uri()
+   at Estat.Sri.Ws.NSIWebServiceCore.LoggingMiddleware.GetAbsoluteUri(HttpContext context) in /app/src/NSIWebServiceCore/LoggingMiddleware.cs:line 63
+   at Estat.Sri.Ws.NSIWebServiceCore.LoggingMiddleware.Invoke(HttpContext context) in /app/src/NSIWebServiceCore/LoggingMiddleware.cs:line 45
+   at Microsoft.AspNetCore.Diagnostics.ExceptionHandlerMiddleware.<Invoke>g__Awaited|6_0(ExceptionHandlerMiddleware middleware, HttpContext context, Task task)
+

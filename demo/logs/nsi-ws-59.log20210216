@@ -1,0 +1,1212 @@
+2021-02-16 13:13:58,233|[49]|ERROR|f23efd4de895|Org.Sdmxsource.Sdmx.Api.Exception.SdmxException|No structures found for the specific query|Org.Sdmxsource.Sdmx.Api.Exception.SdmxNoResultsException: No structures found for the specific query
+
+2021-02-16 13:13:58,249|[49]|ERROR|f23efd4de895|Org.Sdmxsource.Sdmx.Api.Exception.SdmxException|Could not find requested structures|Org.Sdmxsource.Sdmx.Api.Exception.SdmxNoResultsException: Could not find requested structures
+
+2021-02-16 13:13:58,250|[49]|ERROR|f23efd4de895|Estat.Sri.Ws.Rest.StructureResourceErrorHandler|Org.Sdmxsource.Sdmx.Api.Exception.SdmxNoResultsException: Could not find requested structures
+   at Estat.Sri.Ws.Controllers.Manager.RetrieverManager.TryFactories(Func`2 tryRetrieverFactory) in /app/src/Controllers/Manager/RetrieverManager.cs:line 787
+   at Estat.Sri.Ws.Controllers.Manager.RetrieverManager.ParseRequest(SdmxSchema sdmxSchema, IRestStructureQuery query) in /app/src/Controllers/Manager/RetrieverManager.cs:line 249
+   at Estat.Sri.Ws.Controllers.Controller.StructureRequestController.ParseRequest(IRestStructureQuery query, IHeaderDictionary headersFromRequest, HttpContext ctx) in /app/src/Controllers/Controller/StructureRequestController.cs:line 164
+   at Estat.Sri.Ws.Rest.StructureResource.ProcessRequest(String structure, String agencyId, String resourceId, String version, String filter, HttpContext ctx) in /app/src/NSIWebServices/StructureResource.cs:line 426
+   at Estat.Sri.Ws.Rest.StructureResource.GetStructure(String structure, String agencyId, String resourceId, String version, String filter) in /app/src/NSIWebServices/StructureResource.cs:line 154
+   at Estat.Sri.Ws.Rest.StructureResourceErrorHandler.GetStructure(String structure, String agencyId, String resourceId, String version, String filter) in /app/src/NSIWebServices/StructureResourceErrorHandler.cs:line 89|
+2021-02-16 13:13:58,251|[49]|ERROR|f23efd4de895|Estat.Sri.Ws.Controllers.Builder.ServiceExceptionRestBuilder|SdmxError : No Results Found, code : 100|
+2021-02-16 13:13:58,251|[49]|ERROR|f23efd4de895|Estat.Sri.Ws.Controllers.Builder.ServiceExceptionRestBuilder|Could not find requested structures|Org.Sdmxsource.Sdmx.Api.Exception.SdmxNoResultsException: Could not find requested structures
+   at Estat.Sri.Ws.Controllers.Manager.RetrieverManager.TryFactories(Func`2 tryRetrieverFactory) in /app/src/Controllers/Manager/RetrieverManager.cs:line 787
+   at Estat.Sri.Ws.Controllers.Manager.RetrieverManager.ParseRequest(SdmxSchema sdmxSchema, IRestStructureQuery query) in /app/src/Controllers/Manager/RetrieverManager.cs:line 249
+   at Estat.Sri.Ws.Controllers.Controller.StructureRequestController.ParseRequest(IRestStructureQuery query, IHeaderDictionary headersFromRequest, HttpContext ctx) in /app/src/Controllers/Controller/StructureRequestController.cs:line 164
+   at Estat.Sri.Ws.Rest.StructureResource.ProcessRequest(String structure, String agencyId, String resourceId, String version, String filter, HttpContext ctx) in /app/src/NSIWebServices/StructureResource.cs:line 426
+   at Estat.Sri.Ws.Rest.StructureResource.GetStructure(String structure, String agencyId, String resourceId, String version, String filter) in /app/src/NSIWebServices/StructureResource.cs:line 154
+   at Estat.Sri.Ws.Rest.StructureResourceErrorHandler.GetStructure(String structure, String agencyId, String resourceId, String version, String filter) in /app/src/NSIWebServices/StructureResourceErrorHandler.cs:line 89
+
+2021-02-16 13:13:58,258|[49]|ERROR|f23efd4de895|NSIWebServiceCore.ErrorHandlingMiddleware|Unhandled exception|Controllers.Utils.ServiceException: Could not find requested structures
+ ---> Org.Sdmxsource.Sdmx.Api.Exception.SdmxNoResultsException: Could not find requested structures
+   at Estat.Sri.Ws.Controllers.Manager.RetrieverManager.TryFactories(Func`2 tryRetrieverFactory) in /app/src/Controllers/Manager/RetrieverManager.cs:line 787
+   at Estat.Sri.Ws.Controllers.Manager.RetrieverManager.ParseRequest(SdmxSchema sdmxSchema, IRestStructureQuery query) in /app/src/Controllers/Manager/RetrieverManager.cs:line 249
+   at Estat.Sri.Ws.Controllers.Controller.StructureRequestController.ParseRequest(IRestStructureQuery query, IHeaderDictionary headersFromRequest, HttpContext ctx) in /app/src/Controllers/Controller/StructureRequestController.cs:line 164
+   at Estat.Sri.Ws.Rest.StructureResource.ProcessRequest(String structure, String agencyId, String resourceId, String version, String filter, HttpContext ctx) in /app/src/NSIWebServices/StructureResource.cs:line 426
+   at Estat.Sri.Ws.Rest.StructureResource.GetStructure(String structure, String agencyId, String resourceId, String version, String filter) in /app/src/NSIWebServices/StructureResource.cs:line 154
+   at Estat.Sri.Ws.Rest.StructureResourceErrorHandler.GetStructure(String structure, String agencyId, String resourceId, String version, String filter) in /app/src/NSIWebServices/StructureResourceErrorHandler.cs:line 89
+   --- End of inner exception stack trace ---
+   at Estat.Sri.Ws.Rest.StructureResourceErrorHandler.BuildErrorResponse(Exception e) in /app/src/NSIWebServices/StructureResourceErrorHandler.cs:line 137
+   at Estat.Sri.Ws.Rest.StructureResourceErrorHandler.GetStructure(String structure, String agencyId, String resourceId, String version, String filter) in /app/src/NSIWebServices/StructureResourceErrorHandler.cs:line 89
+   at Estat.Sri.Ws.NSIWebServiceCore.Controllers.StructureController.GetStructure(String structure, String agencyId, String resourceId, String version) in /app/src/NSIWebServiceCore/Controllers/StructureController.cs:line 44
+   at Microsoft.Extensions.Internal.ObjectMethodExecutor.<>c__DisplayClass33_0.<WrapVoidMethod>b__0(Object target, Object[] parameters)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.VoidResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeActionMethodAsync()
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeNextActionFilterAsync()
+--- End of stack trace from previous location where exception was thrown ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location where exception was thrown ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextResourceFilter>g__Awaited|24_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Rethrow(ResourceExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.InvokeFilterPipelineAsync()
+--- End of stack trace from previous location where exception was thrown ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Builder.Extensions.MapWhenMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.ResponseCaching.ResponseCachingMiddleware.Invoke(HttpContext httpContext)
+   at Estat.Sri.Ws.AuthorizationMiddleware.SriAuthorizationMiddleware.Invoke(HttpContext context) in /app/src/Estat.Sri.Ws.AuthorizationMiddleware/SriAuthorizationMiddleware.cs:line 48
+   at Estat.Sri.Ws.LoggingOptions.LoggingOptionsMiddleware.Invoke(HttpContext context) in /app/src/Estat.Sri.Ws.LoggingOptions/LoggingOptionsMiddleware.cs:line 37
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Estat.Sri.Ws.CorsModule.CorsHttpModule.Invoke(HttpContext context) in /app/src/Estat.Sri.Ws.CorsModule/CorsHttpModule.cs:line 31
+   at Estat.Sri.Ws.NSIWebServiceCore.LoggingMiddleware.Invoke(HttpContext context) in /app/src/NSIWebServiceCore/LoggingMiddleware.cs:line 47
+   at Microsoft.AspNetCore.Diagnostics.ExceptionHandlerMiddleware.<Invoke>g__Awaited|6_0(ExceptionHandlerMiddleware middleware, HttpContext context, Task task)
+
+2021-02-16 13:41:12,440|[54]|ERROR|f23efd4de895|Org.Sdmxsource.Sdmx.Api.Exception.SdmxException|No structures found for the specific query|Org.Sdmxsource.Sdmx.Api.Exception.SdmxNoResultsException: No structures found for the specific query
+
+2021-02-16 13:41:12,441|[54]|ERROR|f23efd4de895|Org.Sdmxsource.Sdmx.Api.Exception.SdmxException|Could not find requested structures|Org.Sdmxsource.Sdmx.Api.Exception.SdmxNoResultsException: Could not find requested structures
+
+2021-02-16 13:41:12,441|[54]|ERROR|f23efd4de895|Estat.Sri.Ws.Rest.StructureResourceErrorHandler|Org.Sdmxsource.Sdmx.Api.Exception.SdmxNoResultsException: Could not find requested structures
+   at Estat.Sri.Ws.Controllers.Manager.RetrieverManager.TryFactories(Func`2 tryRetrieverFactory) in /app/src/Controllers/Manager/RetrieverManager.cs:line 787
+   at Estat.Sri.Ws.Controllers.Manager.RetrieverManager.ParseRequest(SdmxSchema sdmxSchema, IRestStructureQuery query) in /app/src/Controllers/Manager/RetrieverManager.cs:line 249
+   at Estat.Sri.Ws.Controllers.Controller.StructureRequestController.ParseRequest(IRestStructureQuery query, IHeaderDictionary headersFromRequest, HttpContext ctx) in /app/src/Controllers/Controller/StructureRequestController.cs:line 164
+   at Estat.Sri.Ws.Rest.StructureResource.ProcessRequest(String structure, String agencyId, String resourceId, String version, String filter, HttpContext ctx) in /app/src/NSIWebServices/StructureResource.cs:line 426
+   at Estat.Sri.Ws.Rest.StructureResource.GetStructure(String structure, String agencyId, String resourceId, String version, String filter) in /app/src/NSIWebServices/StructureResource.cs:line 154
+   at Estat.Sri.Ws.Rest.StructureResourceErrorHandler.GetStructure(String structure, String agencyId, String resourceId, String version, String filter) in /app/src/NSIWebServices/StructureResourceErrorHandler.cs:line 89|
+2021-02-16 13:41:12,441|[54]|ERROR|f23efd4de895|Estat.Sri.Ws.Controllers.Builder.ServiceExceptionRestBuilder|SdmxError : No Results Found, code : 100|
+2021-02-16 13:41:12,441|[54]|ERROR|f23efd4de895|Estat.Sri.Ws.Controllers.Builder.ServiceExceptionRestBuilder|Could not find requested structures|Org.Sdmxsource.Sdmx.Api.Exception.SdmxNoResultsException: Could not find requested structures
+   at Estat.Sri.Ws.Controllers.Manager.RetrieverManager.TryFactories(Func`2 tryRetrieverFactory) in /app/src/Controllers/Manager/RetrieverManager.cs:line 787
+   at Estat.Sri.Ws.Controllers.Manager.RetrieverManager.ParseRequest(SdmxSchema sdmxSchema, IRestStructureQuery query) in /app/src/Controllers/Manager/RetrieverManager.cs:line 249
+   at Estat.Sri.Ws.Controllers.Controller.StructureRequestController.ParseRequest(IRestStructureQuery query, IHeaderDictionary headersFromRequest, HttpContext ctx) in /app/src/Controllers/Controller/StructureRequestController.cs:line 164
+   at Estat.Sri.Ws.Rest.StructureResource.ProcessRequest(String structure, String agencyId, String resourceId, String version, String filter, HttpContext ctx) in /app/src/NSIWebServices/StructureResource.cs:line 426
+   at Estat.Sri.Ws.Rest.StructureResource.GetStructure(String structure, String agencyId, String resourceId, String version, String filter) in /app/src/NSIWebServices/StructureResource.cs:line 154
+   at Estat.Sri.Ws.Rest.StructureResourceErrorHandler.GetStructure(String structure, String agencyId, String resourceId, String version, String filter) in /app/src/NSIWebServices/StructureResourceErrorHandler.cs:line 89
+
+2021-02-16 13:41:12,443|[54]|ERROR|f23efd4de895|NSIWebServiceCore.ErrorHandlingMiddleware|Unhandled exception|Controllers.Utils.ServiceException: Could not find requested structures
+ ---> Org.Sdmxsource.Sdmx.Api.Exception.SdmxNoResultsException: Could not find requested structures
+   at Estat.Sri.Ws.Controllers.Manager.RetrieverManager.TryFactories(Func`2 tryRetrieverFactory) in /app/src/Controllers/Manager/RetrieverManager.cs:line 787
+   at Estat.Sri.Ws.Controllers.Manager.RetrieverManager.ParseRequest(SdmxSchema sdmxSchema, IRestStructureQuery query) in /app/src/Controllers/Manager/RetrieverManager.cs:line 249
+   at Estat.Sri.Ws.Controllers.Controller.StructureRequestController.ParseRequest(IRestStructureQuery query, IHeaderDictionary headersFromRequest, HttpContext ctx) in /app/src/Controllers/Controller/StructureRequestController.cs:line 164
+   at Estat.Sri.Ws.Rest.StructureResource.ProcessRequest(String structure, String agencyId, String resourceId, String version, String filter, HttpContext ctx) in /app/src/NSIWebServices/StructureResource.cs:line 426
+   at Estat.Sri.Ws.Rest.StructureResource.GetStructure(String structure, String agencyId, String resourceId, String version, String filter) in /app/src/NSIWebServices/StructureResource.cs:line 154
+   at Estat.Sri.Ws.Rest.StructureResourceErrorHandler.GetStructure(String structure, String agencyId, String resourceId, String version, String filter) in /app/src/NSIWebServices/StructureResourceErrorHandler.cs:line 89
+   --- End of inner exception stack trace ---
+   at Estat.Sri.Ws.Rest.StructureResourceErrorHandler.BuildErrorResponse(Exception e) in /app/src/NSIWebServices/StructureResourceErrorHandler.cs:line 137
+   at Estat.Sri.Ws.Rest.StructureResourceErrorHandler.GetStructure(String structure, String agencyId, String resourceId, String version, String filter) in /app/src/NSIWebServices/StructureResourceErrorHandler.cs:line 89
+   at Estat.Sri.Ws.NSIWebServiceCore.Controllers.StructureController.GetStructure(String structure, String agencyId, String resourceId, String version) in /app/src/NSIWebServiceCore/Controllers/StructureController.cs:line 44
+   at Microsoft.Extensions.Internal.ObjectMethodExecutor.<>c__DisplayClass33_0.<WrapVoidMethod>b__0(Object target, Object[] parameters)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.VoidResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeActionMethodAsync()
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeNextActionFilterAsync()
+--- End of stack trace from previous location where exception was thrown ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location where exception was thrown ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextResourceFilter>g__Awaited|24_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Rethrow(ResourceExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.InvokeFilterPipelineAsync()
+--- End of stack trace from previous location where exception was thrown ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Builder.Extensions.MapWhenMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.ResponseCaching.ResponseCachingMiddleware.Invoke(HttpContext httpContext)
+   at Estat.Sri.Ws.AuthorizationMiddleware.SriAuthorizationMiddleware.Invoke(HttpContext context) in /app/src/Estat.Sri.Ws.AuthorizationMiddleware/SriAuthorizationMiddleware.cs:line 48
+   at Estat.Sri.Ws.LoggingOptions.LoggingOptionsMiddleware.Invoke(HttpContext context) in /app/src/Estat.Sri.Ws.LoggingOptions/LoggingOptionsMiddleware.cs:line 37
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Estat.Sri.Ws.CorsModule.CorsHttpModule.Invoke(HttpContext context) in /app/src/Estat.Sri.Ws.CorsModule/CorsHttpModule.cs:line 31
+   at Estat.Sri.Ws.NSIWebServiceCore.LoggingMiddleware.Invoke(HttpContext context) in /app/src/NSIWebServiceCore/LoggingMiddleware.cs:line 47
+   at Microsoft.AspNetCore.Diagnostics.ExceptionHandlerMiddleware.<Invoke>g__Awaited|6_0(ExceptionHandlerMiddleware middleware, HttpContext context, Task task)
+
+2021-02-16 14:01:07,335|[54]|ERROR|f23efd4de895|Org.Sdmxsource.Sdmx.Api.Exception.SdmxException|No structures found for the specific query|Org.Sdmxsource.Sdmx.Api.Exception.SdmxNoResultsException: No structures found for the specific query
+
+2021-02-16 14:01:07,335|[54]|ERROR|f23efd4de895|Org.Sdmxsource.Sdmx.Api.Exception.SdmxException|Could not find requested structures|Org.Sdmxsource.Sdmx.Api.Exception.SdmxNoResultsException: Could not find requested structures
+
+2021-02-16 14:01:07,336|[54]|ERROR|f23efd4de895|Estat.Sri.Ws.Rest.StructureResourceErrorHandler|Org.Sdmxsource.Sdmx.Api.Exception.SdmxNoResultsException: Could not find requested structures
+   at Estat.Sri.Ws.Controllers.Manager.RetrieverManager.TryFactories(Func`2 tryRetrieverFactory) in /app/src/Controllers/Manager/RetrieverManager.cs:line 787
+   at Estat.Sri.Ws.Controllers.Manager.RetrieverManager.ParseRequest(SdmxSchema sdmxSchema, IRestStructureQuery query) in /app/src/Controllers/Manager/RetrieverManager.cs:line 249
+   at Estat.Sri.Ws.Controllers.Controller.StructureRequestController.ParseRequest(IRestStructureQuery query, IHeaderDictionary headersFromRequest, HttpContext ctx) in /app/src/Controllers/Controller/StructureRequestController.cs:line 164
+   at Estat.Sri.Ws.Rest.StructureResource.ProcessRequest(String structure, String agencyId, String resourceId, String version, String filter, HttpContext ctx) in /app/src/NSIWebServices/StructureResource.cs:line 426
+   at Estat.Sri.Ws.Rest.StructureResource.GetStructure(String structure, String agencyId, String resourceId, String version, String filter) in /app/src/NSIWebServices/StructureResource.cs:line 154
+   at Estat.Sri.Ws.Rest.StructureResourceErrorHandler.GetStructure(String structure, String agencyId, String resourceId, String version, String filter) in /app/src/NSIWebServices/StructureResourceErrorHandler.cs:line 89|
+2021-02-16 14:01:07,336|[54]|ERROR|f23efd4de895|Estat.Sri.Ws.Controllers.Builder.ServiceExceptionRestBuilder|SdmxError : No Results Found, code : 100|
+2021-02-16 14:01:07,336|[54]|ERROR|f23efd4de895|Estat.Sri.Ws.Controllers.Builder.ServiceExceptionRestBuilder|Could not find requested structures|Org.Sdmxsource.Sdmx.Api.Exception.SdmxNoResultsException: Could not find requested structures
+   at Estat.Sri.Ws.Controllers.Manager.RetrieverManager.TryFactories(Func`2 tryRetrieverFactory) in /app/src/Controllers/Manager/RetrieverManager.cs:line 787
+   at Estat.Sri.Ws.Controllers.Manager.RetrieverManager.ParseRequest(SdmxSchema sdmxSchema, IRestStructureQuery query) in /app/src/Controllers/Manager/RetrieverManager.cs:line 249
+   at Estat.Sri.Ws.Controllers.Controller.StructureRequestController.ParseRequest(IRestStructureQuery query, IHeaderDictionary headersFromRequest, HttpContext ctx) in /app/src/Controllers/Controller/StructureRequestController.cs:line 164
+   at Estat.Sri.Ws.Rest.StructureResource.ProcessRequest(String structure, String agencyId, String resourceId, String version, String filter, HttpContext ctx) in /app/src/NSIWebServices/StructureResource.cs:line 426
+   at Estat.Sri.Ws.Rest.StructureResource.GetStructure(String structure, String agencyId, String resourceId, String version, String filter) in /app/src/NSIWebServices/StructureResource.cs:line 154
+   at Estat.Sri.Ws.Rest.StructureResourceErrorHandler.GetStructure(String structure, String agencyId, String resourceId, String version, String filter) in /app/src/NSIWebServices/StructureResourceErrorHandler.cs:line 89
+
+2021-02-16 14:01:07,339|[54]|ERROR|f23efd4de895|NSIWebServiceCore.ErrorHandlingMiddleware|Unhandled exception|Controllers.Utils.ServiceException: Could not find requested structures
+ ---> Org.Sdmxsource.Sdmx.Api.Exception.SdmxNoResultsException: Could not find requested structures
+   at Estat.Sri.Ws.Controllers.Manager.RetrieverManager.TryFactories(Func`2 tryRetrieverFactory) in /app/src/Controllers/Manager/RetrieverManager.cs:line 787
+   at Estat.Sri.Ws.Controllers.Manager.RetrieverManager.ParseRequest(SdmxSchema sdmxSchema, IRestStructureQuery query) in /app/src/Controllers/Manager/RetrieverManager.cs:line 249
+   at Estat.Sri.Ws.Controllers.Controller.StructureRequestController.ParseRequest(IRestStructureQuery query, IHeaderDictionary headersFromRequest, HttpContext ctx) in /app/src/Controllers/Controller/StructureRequestController.cs:line 164
+   at Estat.Sri.Ws.Rest.StructureResource.ProcessRequest(String structure, String agencyId, String resourceId, String version, String filter, HttpContext ctx) in /app/src/NSIWebServices/StructureResource.cs:line 426
+   at Estat.Sri.Ws.Rest.StructureResource.GetStructure(String structure, String agencyId, String resourceId, String version, String filter) in /app/src/NSIWebServices/StructureResource.cs:line 154
+   at Estat.Sri.Ws.Rest.StructureResourceErrorHandler.GetStructure(String structure, String agencyId, String resourceId, String version, String filter) in /app/src/NSIWebServices/StructureResourceErrorHandler.cs:line 89
+   --- End of inner exception stack trace ---
+   at Estat.Sri.Ws.Rest.StructureResourceErrorHandler.BuildErrorResponse(Exception e) in /app/src/NSIWebServices/StructureResourceErrorHandler.cs:line 137
+   at Estat.Sri.Ws.Rest.StructureResourceErrorHandler.GetStructure(String structure, String agencyId, String resourceId, String version, String filter) in /app/src/NSIWebServices/StructureResourceErrorHandler.cs:line 89
+   at Estat.Sri.Ws.NSIWebServiceCore.Controllers.StructureController.GetStructure(String structure, String agencyId, String resourceId, String version) in /app/src/NSIWebServiceCore/Controllers/StructureController.cs:line 44
+   at Microsoft.Extensions.Internal.ObjectMethodExecutor.<>c__DisplayClass33_0.<WrapVoidMethod>b__0(Object target, Object[] parameters)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.VoidResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeActionMethodAsync()
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeNextActionFilterAsync()
+--- End of stack trace from previous location where exception was thrown ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location where exception was thrown ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextResourceFilter>g__Awaited|24_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Rethrow(ResourceExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.InvokeFilterPipelineAsync()
+--- End of stack trace from previous location where exception was thrown ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Builder.Extensions.MapWhenMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.ResponseCaching.ResponseCachingMiddleware.Invoke(HttpContext httpContext)
+   at Estat.Sri.Ws.AuthorizationMiddleware.SriAuthorizationMiddleware.Invoke(HttpContext context) in /app/src/Estat.Sri.Ws.AuthorizationMiddleware/SriAuthorizationMiddleware.cs:line 48
+   at Estat.Sri.Ws.LoggingOptions.LoggingOptionsMiddleware.Invoke(HttpContext context) in /app/src/Estat.Sri.Ws.LoggingOptions/LoggingOptionsMiddleware.cs:line 37
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Estat.Sri.Ws.CorsModule.CorsHttpModule.Invoke(HttpContext context) in /app/src/Estat.Sri.Ws.CorsModule/CorsHttpModule.cs:line 31
+   at Estat.Sri.Ws.NSIWebServiceCore.LoggingMiddleware.Invoke(HttpContext context) in /app/src/NSIWebServiceCore/LoggingMiddleware.cs:line 47
+   at Microsoft.AspNetCore.Diagnostics.ExceptionHandlerMiddleware.<Invoke>g__Awaited|6_0(ExceptionHandlerMiddleware middleware, HttpContext context, Task task)
+
+2021-02-16 14:01:10,521|[54]|ERROR|f23efd4de895|Org.Sdmxsource.Sdmx.Api.Exception.SdmxException|No structures found for the specific query|Org.Sdmxsource.Sdmx.Api.Exception.SdmxNoResultsException: No structures found for the specific query
+
+2021-02-16 14:01:10,522|[54]|ERROR|f23efd4de895|Org.Sdmxsource.Sdmx.Api.Exception.SdmxException|Could not find requested structures|Org.Sdmxsource.Sdmx.Api.Exception.SdmxNoResultsException: Could not find requested structures
+
+2021-02-16 14:01:10,523|[54]|ERROR|f23efd4de895|Estat.Sri.Ws.Rest.StructureResourceErrorHandler|Org.Sdmxsource.Sdmx.Api.Exception.SdmxNoResultsException: Could not find requested structures
+   at Estat.Sri.Ws.Controllers.Manager.RetrieverManager.TryFactories(Func`2 tryRetrieverFactory) in /app/src/Controllers/Manager/RetrieverManager.cs:line 787
+   at Estat.Sri.Ws.Controllers.Manager.RetrieverManager.ParseRequest(SdmxSchema sdmxSchema, IRestStructureQuery query) in /app/src/Controllers/Manager/RetrieverManager.cs:line 249
+   at Estat.Sri.Ws.Controllers.Controller.StructureRequestController.ParseRequest(IRestStructureQuery query, IHeaderDictionary headersFromRequest, HttpContext ctx) in /app/src/Controllers/Controller/StructureRequestController.cs:line 164
+   at Estat.Sri.Ws.Rest.StructureResource.ProcessRequest(String structure, String agencyId, String resourceId, String version, String filter, HttpContext ctx) in /app/src/NSIWebServices/StructureResource.cs:line 426
+   at Estat.Sri.Ws.Rest.StructureResource.GetStructure(String structure, String agencyId, String resourceId, String version, String filter) in /app/src/NSIWebServices/StructureResource.cs:line 154
+   at Estat.Sri.Ws.Rest.StructureResourceErrorHandler.GetStructure(String structure, String agencyId, String resourceId, String version, String filter) in /app/src/NSIWebServices/StructureResourceErrorHandler.cs:line 89|
+2021-02-16 14:01:10,523|[54]|ERROR|f23efd4de895|Estat.Sri.Ws.Controllers.Builder.ServiceExceptionRestBuilder|SdmxError : No Results Found, code : 100|
+2021-02-16 14:01:10,523|[54]|ERROR|f23efd4de895|Estat.Sri.Ws.Controllers.Builder.ServiceExceptionRestBuilder|Could not find requested structures|Org.Sdmxsource.Sdmx.Api.Exception.SdmxNoResultsException: Could not find requested structures
+   at Estat.Sri.Ws.Controllers.Manager.RetrieverManager.TryFactories(Func`2 tryRetrieverFactory) in /app/src/Controllers/Manager/RetrieverManager.cs:line 787
+   at Estat.Sri.Ws.Controllers.Manager.RetrieverManager.ParseRequest(SdmxSchema sdmxSchema, IRestStructureQuery query) in /app/src/Controllers/Manager/RetrieverManager.cs:line 249
+   at Estat.Sri.Ws.Controllers.Controller.StructureRequestController.ParseRequest(IRestStructureQuery query, IHeaderDictionary headersFromRequest, HttpContext ctx) in /app/src/Controllers/Controller/StructureRequestController.cs:line 164
+   at Estat.Sri.Ws.Rest.StructureResource.ProcessRequest(String structure, String agencyId, String resourceId, String version, String filter, HttpContext ctx) in /app/src/NSIWebServices/StructureResource.cs:line 426
+   at Estat.Sri.Ws.Rest.StructureResource.GetStructure(String structure, String agencyId, String resourceId, String version, String filter) in /app/src/NSIWebServices/StructureResource.cs:line 154
+   at Estat.Sri.Ws.Rest.StructureResourceErrorHandler.GetStructure(String structure, String agencyId, String resourceId, String version, String filter) in /app/src/NSIWebServices/StructureResourceErrorHandler.cs:line 89
+
+2021-02-16 14:01:10,526|[54]|ERROR|f23efd4de895|NSIWebServiceCore.ErrorHandlingMiddleware|Unhandled exception|Controllers.Utils.ServiceException: Could not find requested structures
+ ---> Org.Sdmxsource.Sdmx.Api.Exception.SdmxNoResultsException: Could not find requested structures
+   at Estat.Sri.Ws.Controllers.Manager.RetrieverManager.TryFactories(Func`2 tryRetrieverFactory) in /app/src/Controllers/Manager/RetrieverManager.cs:line 787
+   at Estat.Sri.Ws.Controllers.Manager.RetrieverManager.ParseRequest(SdmxSchema sdmxSchema, IRestStructureQuery query) in /app/src/Controllers/Manager/RetrieverManager.cs:line 249
+   at Estat.Sri.Ws.Controllers.Controller.StructureRequestController.ParseRequest(IRestStructureQuery query, IHeaderDictionary headersFromRequest, HttpContext ctx) in /app/src/Controllers/Controller/StructureRequestController.cs:line 164
+   at Estat.Sri.Ws.Rest.StructureResource.ProcessRequest(String structure, String agencyId, String resourceId, String version, String filter, HttpContext ctx) in /app/src/NSIWebServices/StructureResource.cs:line 426
+   at Estat.Sri.Ws.Rest.StructureResource.GetStructure(String structure, String agencyId, String resourceId, String version, String filter) in /app/src/NSIWebServices/StructureResource.cs:line 154
+   at Estat.Sri.Ws.Rest.StructureResourceErrorHandler.GetStructure(String structure, String agencyId, String resourceId, String version, String filter) in /app/src/NSIWebServices/StructureResourceErrorHandler.cs:line 89
+   --- End of inner exception stack trace ---
+   at Estat.Sri.Ws.Rest.StructureResourceErrorHandler.BuildErrorResponse(Exception e) in /app/src/NSIWebServices/StructureResourceErrorHandler.cs:line 137
+   at Estat.Sri.Ws.Rest.StructureResourceErrorHandler.GetStructure(String structure, String agencyId, String resourceId, String version, String filter) in /app/src/NSIWebServices/StructureResourceErrorHandler.cs:line 89
+   at Estat.Sri.Ws.NSIWebServiceCore.Controllers.StructureController.GetStructure(String structure, String agencyId, String resourceId, String version) in /app/src/NSIWebServiceCore/Controllers/StructureController.cs:line 44
+   at Microsoft.Extensions.Internal.ObjectMethodExecutor.<>c__DisplayClass33_0.<WrapVoidMethod>b__0(Object target, Object[] parameters)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.VoidResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeActionMethodAsync()
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeNextActionFilterAsync()
+--- End of stack trace from previous location where exception was thrown ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location where exception was thrown ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextResourceFilter>g__Awaited|24_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Rethrow(ResourceExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.InvokeFilterPipelineAsync()
+--- End of stack trace from previous location where exception was thrown ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Builder.Extensions.MapWhenMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.ResponseCaching.ResponseCachingMiddleware.Invoke(HttpContext httpContext)
+   at Estat.Sri.Ws.AuthorizationMiddleware.SriAuthorizationMiddleware.Invoke(HttpContext context) in /app/src/Estat.Sri.Ws.AuthorizationMiddleware/SriAuthorizationMiddleware.cs:line 48
+   at Estat.Sri.Ws.LoggingOptions.LoggingOptionsMiddleware.Invoke(HttpContext context) in /app/src/Estat.Sri.Ws.LoggingOptions/LoggingOptionsMiddleware.cs:line 37
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Estat.Sri.Ws.CorsModule.CorsHttpModule.Invoke(HttpContext context) in /app/src/Estat.Sri.Ws.CorsModule/CorsHttpModule.cs:line 31
+   at Estat.Sri.Ws.NSIWebServiceCore.LoggingMiddleware.Invoke(HttpContext context) in /app/src/NSIWebServiceCore/LoggingMiddleware.cs:line 47
+   at Microsoft.AspNetCore.Diagnostics.ExceptionHandlerMiddleware.<Invoke>g__Awaited|6_0(ExceptionHandlerMiddleware middleware, HttpContext context, Task task)
+
+2021-02-16 14:01:26,638|[54]|ERROR|f23efd4de895|Estat.Nsi.StructureRetriever.Builders.StructureRetrievalInfoBuilder|An error occured while trying to retrieve mapping set for dataflow: TN1+BIRTH_RATIO+1.1: 
+ Dataflow 'urn:sdmx:org.sdmx.infomodel.datastructure.Dataflow=TN1:BIRTH_RATIO(1.1)' doesn't contains a mapping set|
+2021-02-16 14:01:26,638|[54]|ERROR|f23efd4de895|Estat.Nsi.StructureRetriever.Builders.StructureRetrievalInfoBuilder|Estat.Sri.Mapping.Api.Exceptions.ResourceNotFoundException: Dataflow 'urn:sdmx:org.sdmx.infomodel.datastructure.Dataflow=TN1:BIRTH_RATIO(1.1)' doesn't contains a mapping set
+   at Estat.Sri.Mapping.Api.Manager.ComponentMappingManager.GetBuilders(String storeId, IDataflowObject dataflow, IDataStructureObject dataStructure, Boolean isPit)
+   at Estat.Nsi.StructureRetriever.Builders.StructureRetrievalInfoBuilder.Build(IAvailableConstraintQuery query, StructureRetrieverSettings settings)|
+2021-02-16 14:01:26,639|[54]|ERROR|f23efd4de895|Org.Sdmxsource.Sdmx.Api.Exception.SdmxException|An error occured while trying to retrieve mapping set for dataflow: TN1+BIRTH_RATIO+1.1: 
+ Dataflow 'urn:sdmx:org.sdmx.infomodel.datastructure.Dataflow=TN1:BIRTH_RATIO(1.1)' doesn't contains a mapping set|Org.Sdmxsource.Sdmx.Api.Exception.SdmxException: An error occured while trying to retrieve mapping set for dataflow: TN1+BIRTH_RATIO+1.1: 
+ Dataflow 'urn:sdmx:org.sdmx.infomodel.datastructure.Dataflow=TN1:BIRTH_RATIO(1.1)' doesn't contains a mapping set
+ ---> Estat.Sri.Mapping.Api.Exceptions.ResourceNotFoundException: Dataflow 'urn:sdmx:org.sdmx.infomodel.datastructure.Dataflow=TN1:BIRTH_RATIO(1.1)' doesn't contains a mapping set
+   at Estat.Sri.Mapping.Api.Manager.ComponentMappingManager.GetBuilders(String storeId, IDataflowObject dataflow, IDataStructureObject dataStructure, Boolean isPit)
+   at Estat.Nsi.StructureRetriever.Builders.StructureRetrievalInfoBuilder.Build(IAvailableConstraintQuery query, StructureRetrieverSettings settings)
+   --- End of inner exception stack trace ---
+
+2021-02-16 14:01:26,639|[54]|ERROR|f23efd4de895|Estat.Sri.Ws.Rest.DataResourceErrorHandler|GetGenericData : TN1,BIRTH_RATIO,1.1/all/ALL|
+2021-02-16 14:01:26,640|[54]|ERROR|f23efd4de895|Estat.Sri.Ws.Rest.DataResourceErrorHandler|Org.Sdmxsource.Sdmx.Api.Exception.SdmxException: An error occured while trying to retrieve mapping set for dataflow: TN1+BIRTH_RATIO+1.1: 
+ Dataflow 'urn:sdmx:org.sdmx.infomodel.datastructure.Dataflow=TN1:BIRTH_RATIO(1.1)' doesn't contains a mapping set
+ ---> Estat.Sri.Mapping.Api.Exceptions.ResourceNotFoundException: Dataflow 'urn:sdmx:org.sdmx.infomodel.datastructure.Dataflow=TN1:BIRTH_RATIO(1.1)' doesn't contains a mapping set
+   at Estat.Sri.Mapping.Api.Manager.ComponentMappingManager.GetBuilders(String storeId, IDataflowObject dataflow, IDataStructureObject dataStructure, Boolean isPit)
+   at Estat.Nsi.StructureRetriever.Builders.StructureRetrievalInfoBuilder.Build(IAvailableConstraintQuery query, StructureRetrieverSettings settings)
+   --- End of inner exception stack trace ---
+   at Estat.Nsi.StructureRetriever.Builders.StructureRetrievalInfoBuilder.Build(IAvailableConstraintQuery query, StructureRetrieverSettings settings)
+   at Estat.Nsi.StructureRetriever.Manager.AvailableDataManager.BuildInfo(IAvailableConstraintQuery query)
+   at Estat.Nsi.StructureRetriever.Manager.AvailableDataManager.GetCount(IAvailableConstraintQuery query, Boolean includeHistory)
+   at Estat.Sri.Ws.Retrievers.Factory.SriRetrieverFactory.GetNumberOfObservations(IDataQuery dataQuery)
+   at Estat.Sri.Ws.Controllers.Controller.RangeHeaderHandler.AddHeaderForData(String rangeHeader, DataRequest request, SdmxSchema sdmxSchema) in /app/src/Controllers/Controller/RangeHeaderHandler.cs:line 99
+   at Estat.Sri.Ws.Controllers.Controller.DataRequestController.<>c__DisplayClass10_2.<GetAction>b__1(Stream writer, Queue`1 queue) in /app/src/Controllers/Controller/DataRequestController.cs:line 233
+   at Estat.Sri.Ws.Controllers.Controller.StreamController`1.StreamTo(TWriter writer, Queue`1 actions) in /app/src/Controllers/Controller/StreamController.cs:line 66
+   at Estat.Sri.Ws.Controllers.Builder.RestMessageBuilder.BuildPrivate(IStreamController`1 controller, Stream outputStream, IResponseContentHeader responseContentHeader, IMessageFormat format) in /app/src/Controllers/Builder/RestMessageBuilder.cs:line 135
+   at Estat.Sri.Ws.Controllers.Builder.RestMessageBuilder.Build(IStreamController`1 controller, IMessageFormat format) in /app/src/Controllers/Builder/RestMessageBuilder.cs:line 111
+   at Estat.Sri.Ws.Rest.DataResource.ProcessRequest(String flowRef, String key, String providerRef, HttpContext ctx) in /app/src/NSIWebServices/DataResource.cs:line 188
+   at Estat.Sri.Ws.Rest.DataResource.GetGenericData(String flowRef, String key, String providerRef) in /app/src/NSIWebServices/DataResource.cs:line 109
+   at Estat.Sri.Ws.Rest.DataResourceErrorHandler.GetGenericData(String flowRef, String key, String providerRef) in /app/src/NSIWebServices/DataResourceErrorHandler.cs:line 58|
+2021-02-16 14:01:26,644|[54]|ERROR|f23efd4de895|NSIWebServiceCore.ErrorHandlingMiddleware|Unhandled exception|Controllers.Utils.ServiceException: An error occured while trying to retrieve mapping set for dataflow: TN1+BIRTH_RATIO+1.1: 
+ Dataflow 'urn:sdmx:org.sdmx.infomodel.datastructure.Dataflow=TN1:BIRTH_RATIO(1.1)' doesn't contains a mapping set
+ ---> Org.Sdmxsource.Sdmx.Api.Exception.SdmxException: An error occured while trying to retrieve mapping set for dataflow: TN1+BIRTH_RATIO+1.1: 
+ Dataflow 'urn:sdmx:org.sdmx.infomodel.datastructure.Dataflow=TN1:BIRTH_RATIO(1.1)' doesn't contains a mapping set
+ ---> Estat.Sri.Mapping.Api.Exceptions.ResourceNotFoundException: Dataflow 'urn:sdmx:org.sdmx.infomodel.datastructure.Dataflow=TN1:BIRTH_RATIO(1.1)' doesn't contains a mapping set
+   at Estat.Sri.Mapping.Api.Manager.ComponentMappingManager.GetBuilders(String storeId, IDataflowObject dataflow, IDataStructureObject dataStructure, Boolean isPit)
+   at Estat.Nsi.StructureRetriever.Builders.StructureRetrievalInfoBuilder.Build(IAvailableConstraintQuery query, StructureRetrieverSettings settings)
+   --- End of inner exception stack trace ---
+   at Estat.Nsi.StructureRetriever.Builders.StructureRetrievalInfoBuilder.Build(IAvailableConstraintQuery query, StructureRetrieverSettings settings)
+   at Estat.Nsi.StructureRetriever.Manager.AvailableDataManager.BuildInfo(IAvailableConstraintQuery query)
+   at Estat.Nsi.StructureRetriever.Manager.AvailableDataManager.GetCount(IAvailableConstraintQuery query, Boolean includeHistory)
+   at Estat.Sri.Ws.Retrievers.Factory.SriRetrieverFactory.GetNumberOfObservations(IDataQuery dataQuery)
+   at Estat.Sri.Ws.Controllers.Controller.RangeHeaderHandler.AddHeaderForData(String rangeHeader, DataRequest request, SdmxSchema sdmxSchema) in /app/src/Controllers/Controller/RangeHeaderHandler.cs:line 99
+   at Estat.Sri.Ws.Controllers.Controller.DataRequestController.<>c__DisplayClass10_2.<GetAction>b__1(Stream writer, Queue`1 queue) in /app/src/Controllers/Controller/DataRequestController.cs:line 233
+   at Estat.Sri.Ws.Controllers.Controller.StreamController`1.StreamTo(TWriter writer, Queue`1 actions) in /app/src/Controllers/Controller/StreamController.cs:line 66
+   at Estat.Sri.Ws.Controllers.Builder.RestMessageBuilder.BuildPrivate(IStreamController`1 controller, Stream outputStream, IResponseContentHeader responseContentHeader, IMessageFormat format) in /app/src/Controllers/Builder/RestMessageBuilder.cs:line 135
+   at Estat.Sri.Ws.Controllers.Builder.RestMessageBuilder.Build(IStreamController`1 controller, IMessageFormat format) in /app/src/Controllers/Builder/RestMessageBuilder.cs:line 111
+   at Estat.Sri.Ws.Rest.DataResource.ProcessRequest(String flowRef, String key, String providerRef, HttpContext ctx) in /app/src/NSIWebServices/DataResource.cs:line 188
+   at Estat.Sri.Ws.Rest.DataResource.GetGenericData(String flowRef, String key, String providerRef) in /app/src/NSIWebServices/DataResource.cs:line 109
+   at Estat.Sri.Ws.Rest.DataResourceErrorHandler.GetGenericData(String flowRef, String key, String providerRef) in /app/src/NSIWebServices/DataResourceErrorHandler.cs:line 58
+   --- End of inner exception stack trace ---
+   at Estat.Sri.Ws.Rest.DataResourceErrorHandler.GetGenericData(String flowRef, String key, String providerRef) in /app/src/NSIWebServices/DataResourceErrorHandler.cs:line 69
+   at Microsoft.Extensions.Internal.ObjectMethodExecutor.<>c__DisplayClass33_0.<WrapVoidMethod>b__0(Object target, Object[] parameters)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.VoidResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeActionMethodAsync()
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeNextActionFilterAsync()
+--- End of stack trace from previous location where exception was thrown ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location where exception was thrown ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextResourceFilter>g__Awaited|24_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Rethrow(ResourceExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.InvokeFilterPipelineAsync()
+--- End of stack trace from previous location where exception was thrown ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Builder.Extensions.MapWhenMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.ResponseCaching.ResponseCachingMiddleware.Invoke(HttpContext httpContext)
+   at Estat.Sri.Ws.AuthorizationMiddleware.SriAuthorizationMiddleware.Invoke(HttpContext context) in /app/src/Estat.Sri.Ws.AuthorizationMiddleware/SriAuthorizationMiddleware.cs:line 48
+   at Estat.Sri.Ws.LoggingOptions.LoggingOptionsMiddleware.Invoke(HttpContext context) in /app/src/Estat.Sri.Ws.LoggingOptions/LoggingOptionsMiddleware.cs:line 37
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Estat.Sri.Ws.CorsModule.CorsHttpModule.Invoke(HttpContext context) in /app/src/Estat.Sri.Ws.CorsModule/CorsHttpModule.cs:line 31
+   at Estat.Sri.Ws.NSIWebServiceCore.LoggingMiddleware.Invoke(HttpContext context) in /app/src/NSIWebServiceCore/LoggingMiddleware.cs:line 47
+   at Microsoft.AspNetCore.Diagnostics.ExceptionHandlerMiddleware.<Invoke>g__Awaited|6_0(ExceptionHandlerMiddleware middleware, HttpContext context, Task task)
+
+2021-02-16 14:02:05,453|[54]|ERROR|f23efd4de895|Org.Sdmxsource.Sdmx.Api.Exception.SdmxException|No structures found for the specific query|Org.Sdmxsource.Sdmx.Api.Exception.SdmxNoResultsException: No structures found for the specific query
+
+2021-02-16 14:02:05,453|[54]|ERROR|f23efd4de895|Org.Sdmxsource.Sdmx.Api.Exception.SdmxException|Could not find requested structures|Org.Sdmxsource.Sdmx.Api.Exception.SdmxNoResultsException: Could not find requested structures
+
+2021-02-16 14:02:05,453|[54]|ERROR|f23efd4de895|Estat.Sri.Ws.Rest.StructureResourceErrorHandler|Org.Sdmxsource.Sdmx.Api.Exception.SdmxNoResultsException: Could not find requested structures
+   at Estat.Sri.Ws.Controllers.Manager.RetrieverManager.TryFactories(Func`2 tryRetrieverFactory) in /app/src/Controllers/Manager/RetrieverManager.cs:line 787
+   at Estat.Sri.Ws.Controllers.Manager.RetrieverManager.ParseRequest(SdmxSchema sdmxSchema, IRestStructureQuery query) in /app/src/Controllers/Manager/RetrieverManager.cs:line 249
+   at Estat.Sri.Ws.Controllers.Controller.StructureRequestController.ParseRequest(IRestStructureQuery query, IHeaderDictionary headersFromRequest, HttpContext ctx) in /app/src/Controllers/Controller/StructureRequestController.cs:line 164
+   at Estat.Sri.Ws.Rest.StructureResource.ProcessRequest(String structure, String agencyId, String resourceId, String version, String filter, HttpContext ctx) in /app/src/NSIWebServices/StructureResource.cs:line 426
+   at Estat.Sri.Ws.Rest.StructureResource.GetStructure(String structure, String agencyId, String resourceId, String version, String filter) in /app/src/NSIWebServices/StructureResource.cs:line 154
+   at Estat.Sri.Ws.Rest.StructureResourceErrorHandler.GetStructure(String structure, String agencyId, String resourceId, String version, String filter) in /app/src/NSIWebServices/StructureResourceErrorHandler.cs:line 89|
+2021-02-16 14:02:05,454|[54]|ERROR|f23efd4de895|Estat.Sri.Ws.Controllers.Builder.ServiceExceptionRestBuilder|SdmxError : No Results Found, code : 100|
+2021-02-16 14:02:05,454|[54]|ERROR|f23efd4de895|Estat.Sri.Ws.Controllers.Builder.ServiceExceptionRestBuilder|Could not find requested structures|Org.Sdmxsource.Sdmx.Api.Exception.SdmxNoResultsException: Could not find requested structures
+   at Estat.Sri.Ws.Controllers.Manager.RetrieverManager.TryFactories(Func`2 tryRetrieverFactory) in /app/src/Controllers/Manager/RetrieverManager.cs:line 787
+   at Estat.Sri.Ws.Controllers.Manager.RetrieverManager.ParseRequest(SdmxSchema sdmxSchema, IRestStructureQuery query) in /app/src/Controllers/Manager/RetrieverManager.cs:line 249
+   at Estat.Sri.Ws.Controllers.Controller.StructureRequestController.ParseRequest(IRestStructureQuery query, IHeaderDictionary headersFromRequest, HttpContext ctx) in /app/src/Controllers/Controller/StructureRequestController.cs:line 164
+   at Estat.Sri.Ws.Rest.StructureResource.ProcessRequest(String structure, String agencyId, String resourceId, String version, String filter, HttpContext ctx) in /app/src/NSIWebServices/StructureResource.cs:line 426
+   at Estat.Sri.Ws.Rest.StructureResource.GetStructure(String structure, String agencyId, String resourceId, String version, String filter) in /app/src/NSIWebServices/StructureResource.cs:line 154
+   at Estat.Sri.Ws.Rest.StructureResourceErrorHandler.GetStructure(String structure, String agencyId, String resourceId, String version, String filter) in /app/src/NSIWebServices/StructureResourceErrorHandler.cs:line 89
+
+2021-02-16 14:02:05,462|[54]|ERROR|f23efd4de895|NSIWebServiceCore.ErrorHandlingMiddleware|Unhandled exception|Controllers.Utils.ServiceException: Could not find requested structures
+ ---> Org.Sdmxsource.Sdmx.Api.Exception.SdmxNoResultsException: Could not find requested structures
+   at Estat.Sri.Ws.Controllers.Manager.RetrieverManager.TryFactories(Func`2 tryRetrieverFactory) in /app/src/Controllers/Manager/RetrieverManager.cs:line 787
+   at Estat.Sri.Ws.Controllers.Manager.RetrieverManager.ParseRequest(SdmxSchema sdmxSchema, IRestStructureQuery query) in /app/src/Controllers/Manager/RetrieverManager.cs:line 249
+   at Estat.Sri.Ws.Controllers.Controller.StructureRequestController.ParseRequest(IRestStructureQuery query, IHeaderDictionary headersFromRequest, HttpContext ctx) in /app/src/Controllers/Controller/StructureRequestController.cs:line 164
+   at Estat.Sri.Ws.Rest.StructureResource.ProcessRequest(String structure, String agencyId, String resourceId, String version, String filter, HttpContext ctx) in /app/src/NSIWebServices/StructureResource.cs:line 426
+   at Estat.Sri.Ws.Rest.StructureResource.GetStructure(String structure, String agencyId, String resourceId, String version, String filter) in /app/src/NSIWebServices/StructureResource.cs:line 154
+   at Estat.Sri.Ws.Rest.StructureResourceErrorHandler.GetStructure(String structure, String agencyId, String resourceId, String version, String filter) in /app/src/NSIWebServices/StructureResourceErrorHandler.cs:line 89
+   --- End of inner exception stack trace ---
+   at Estat.Sri.Ws.Rest.StructureResourceErrorHandler.BuildErrorResponse(Exception e) in /app/src/NSIWebServices/StructureResourceErrorHandler.cs:line 137
+   at Estat.Sri.Ws.Rest.StructureResourceErrorHandler.GetStructure(String structure, String agencyId, String resourceId, String version, String filter) in /app/src/NSIWebServices/StructureResourceErrorHandler.cs:line 89
+   at Estat.Sri.Ws.NSIWebServiceCore.Controllers.StructureController.GetStructure(String structure, String agencyId, String resourceId, String version) in /app/src/NSIWebServiceCore/Controllers/StructureController.cs:line 44
+   at Microsoft.Extensions.Internal.ObjectMethodExecutor.<>c__DisplayClass33_0.<WrapVoidMethod>b__0(Object target, Object[] parameters)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.VoidResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeActionMethodAsync()
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeNextActionFilterAsync()
+--- End of stack trace from previous location where exception was thrown ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location where exception was thrown ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextResourceFilter>g__Awaited|24_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Rethrow(ResourceExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.InvokeFilterPipelineAsync()
+--- End of stack trace from previous location where exception was thrown ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Builder.Extensions.MapWhenMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.ResponseCaching.ResponseCachingMiddleware.Invoke(HttpContext httpContext)
+   at Estat.Sri.Ws.AuthorizationMiddleware.SriAuthorizationMiddleware.Invoke(HttpContext context) in /app/src/Estat.Sri.Ws.AuthorizationMiddleware/SriAuthorizationMiddleware.cs:line 48
+   at Estat.Sri.Ws.LoggingOptions.LoggingOptionsMiddleware.Invoke(HttpContext context) in /app/src/Estat.Sri.Ws.LoggingOptions/LoggingOptionsMiddleware.cs:line 37
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Estat.Sri.Ws.CorsModule.CorsHttpModule.Invoke(HttpContext context) in /app/src/Estat.Sri.Ws.CorsModule/CorsHttpModule.cs:line 31
+   at Estat.Sri.Ws.NSIWebServiceCore.LoggingMiddleware.Invoke(HttpContext context) in /app/src/NSIWebServiceCore/LoggingMiddleware.cs:line 47
+   at Microsoft.AspNetCore.Diagnostics.ExceptionHandlerMiddleware.<Invoke>g__Awaited|6_0(ExceptionHandlerMiddleware middleware, HttpContext context, Task task)
+
+2021-02-16 14:03:48,731|[68]|ERROR|f23efd4de895|Org.Sdmxsource.Sdmx.Api.Exception.SdmxException|No structures found for the specific query|Org.Sdmxsource.Sdmx.Api.Exception.SdmxNoResultsException: No structures found for the specific query
+
+2021-02-16 14:03:48,732|[68]|ERROR|f23efd4de895|Org.Sdmxsource.Sdmx.Api.Exception.SdmxException|Could not find requested structures|Org.Sdmxsource.Sdmx.Api.Exception.SdmxNoResultsException: Could not find requested structures
+
+2021-02-16 14:03:48,732|[68]|ERROR|f23efd4de895|Estat.Sri.Ws.Rest.StructureResourceErrorHandler|Org.Sdmxsource.Sdmx.Api.Exception.SdmxNoResultsException: Could not find requested structures
+   at Estat.Sri.Ws.Controllers.Manager.RetrieverManager.TryFactories(Func`2 tryRetrieverFactory) in /app/src/Controllers/Manager/RetrieverManager.cs:line 787
+   at Estat.Sri.Ws.Controllers.Manager.RetrieverManager.ParseRequest(SdmxSchema sdmxSchema, IRestStructureQuery query) in /app/src/Controllers/Manager/RetrieverManager.cs:line 249
+   at Estat.Sri.Ws.Controllers.Controller.StructureRequestController.ParseRequest(IRestStructureQuery query, IHeaderDictionary headersFromRequest, HttpContext ctx) in /app/src/Controllers/Controller/StructureRequestController.cs:line 164
+   at Estat.Sri.Ws.Rest.StructureResource.ProcessRequest(String structure, String agencyId, String resourceId, String version, String filter, HttpContext ctx) in /app/src/NSIWebServices/StructureResource.cs:line 426
+   at Estat.Sri.Ws.Rest.StructureResource.GetStructure(String structure, String agencyId, String resourceId, String version, String filter) in /app/src/NSIWebServices/StructureResource.cs:line 154
+   at Estat.Sri.Ws.Rest.StructureResourceErrorHandler.GetStructure(String structure, String agencyId, String resourceId, String version, String filter) in /app/src/NSIWebServices/StructureResourceErrorHandler.cs:line 89|
+2021-02-16 14:03:48,732|[68]|ERROR|f23efd4de895|Estat.Sri.Ws.Controllers.Builder.ServiceExceptionRestBuilder|SdmxError : No Results Found, code : 100|
+2021-02-16 14:03:48,732|[68]|ERROR|f23efd4de895|Estat.Sri.Ws.Controllers.Builder.ServiceExceptionRestBuilder|Could not find requested structures|Org.Sdmxsource.Sdmx.Api.Exception.SdmxNoResultsException: Could not find requested structures
+   at Estat.Sri.Ws.Controllers.Manager.RetrieverManager.TryFactories(Func`2 tryRetrieverFactory) in /app/src/Controllers/Manager/RetrieverManager.cs:line 787
+   at Estat.Sri.Ws.Controllers.Manager.RetrieverManager.ParseRequest(SdmxSchema sdmxSchema, IRestStructureQuery query) in /app/src/Controllers/Manager/RetrieverManager.cs:line 249
+   at Estat.Sri.Ws.Controllers.Controller.StructureRequestController.ParseRequest(IRestStructureQuery query, IHeaderDictionary headersFromRequest, HttpContext ctx) in /app/src/Controllers/Controller/StructureRequestController.cs:line 164
+   at Estat.Sri.Ws.Rest.StructureResource.ProcessRequest(String structure, String agencyId, String resourceId, String version, String filter, HttpContext ctx) in /app/src/NSIWebServices/StructureResource.cs:line 426
+   at Estat.Sri.Ws.Rest.StructureResource.GetStructure(String structure, String agencyId, String resourceId, String version, String filter) in /app/src/NSIWebServices/StructureResource.cs:line 154
+   at Estat.Sri.Ws.Rest.StructureResourceErrorHandler.GetStructure(String structure, String agencyId, String resourceId, String version, String filter) in /app/src/NSIWebServices/StructureResourceErrorHandler.cs:line 89
+
+2021-02-16 14:03:48,737|[68]|ERROR|f23efd4de895|NSIWebServiceCore.ErrorHandlingMiddleware|Unhandled exception|Controllers.Utils.ServiceException: Could not find requested structures
+ ---> Org.Sdmxsource.Sdmx.Api.Exception.SdmxNoResultsException: Could not find requested structures
+   at Estat.Sri.Ws.Controllers.Manager.RetrieverManager.TryFactories(Func`2 tryRetrieverFactory) in /app/src/Controllers/Manager/RetrieverManager.cs:line 787
+   at Estat.Sri.Ws.Controllers.Manager.RetrieverManager.ParseRequest(SdmxSchema sdmxSchema, IRestStructureQuery query) in /app/src/Controllers/Manager/RetrieverManager.cs:line 249
+   at Estat.Sri.Ws.Controllers.Controller.StructureRequestController.ParseRequest(IRestStructureQuery query, IHeaderDictionary headersFromRequest, HttpContext ctx) in /app/src/Controllers/Controller/StructureRequestController.cs:line 164
+   at Estat.Sri.Ws.Rest.StructureResource.ProcessRequest(String structure, String agencyId, String resourceId, String version, String filter, HttpContext ctx) in /app/src/NSIWebServices/StructureResource.cs:line 426
+   at Estat.Sri.Ws.Rest.StructureResource.GetStructure(String structure, String agencyId, String resourceId, String version, String filter) in /app/src/NSIWebServices/StructureResource.cs:line 154
+   at Estat.Sri.Ws.Rest.StructureResourceErrorHandler.GetStructure(String structure, String agencyId, String resourceId, String version, String filter) in /app/src/NSIWebServices/StructureResourceErrorHandler.cs:line 89
+   --- End of inner exception stack trace ---
+   at Estat.Sri.Ws.Rest.StructureResourceErrorHandler.BuildErrorResponse(Exception e) in /app/src/NSIWebServices/StructureResourceErrorHandler.cs:line 137
+   at Estat.Sri.Ws.Rest.StructureResourceErrorHandler.GetStructure(String structure, String agencyId, String resourceId, String version, String filter) in /app/src/NSIWebServices/StructureResourceErrorHandler.cs:line 89
+   at Estat.Sri.Ws.NSIWebServiceCore.Controllers.StructureController.GetStructure(String structure, String agencyId, String resourceId, String version) in /app/src/NSIWebServiceCore/Controllers/StructureController.cs:line 44
+   at Microsoft.Extensions.Internal.ObjectMethodExecutor.<>c__DisplayClass33_0.<WrapVoidMethod>b__0(Object target, Object[] parameters)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.VoidResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeActionMethodAsync()
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeNextActionFilterAsync()
+--- End of stack trace from previous location where exception was thrown ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location where exception was thrown ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextResourceFilter>g__Awaited|24_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Rethrow(ResourceExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.InvokeFilterPipelineAsync()
+--- End of stack trace from previous location where exception was thrown ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Builder.Extensions.MapWhenMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.ResponseCaching.ResponseCachingMiddleware.Invoke(HttpContext httpContext)
+   at Estat.Sri.Ws.AuthorizationMiddleware.SriAuthorizationMiddleware.Invoke(HttpContext context) in /app/src/Estat.Sri.Ws.AuthorizationMiddleware/SriAuthorizationMiddleware.cs:line 48
+   at Estat.Sri.Ws.LoggingOptions.LoggingOptionsMiddleware.Invoke(HttpContext context) in /app/src/Estat.Sri.Ws.LoggingOptions/LoggingOptionsMiddleware.cs:line 37
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Estat.Sri.Ws.CorsModule.CorsHttpModule.Invoke(HttpContext context) in /app/src/Estat.Sri.Ws.CorsModule/CorsHttpModule.cs:line 31
+   at Estat.Sri.Ws.NSIWebServiceCore.LoggingMiddleware.Invoke(HttpContext context) in /app/src/NSIWebServiceCore/LoggingMiddleware.cs:line 47
+   at Microsoft.AspNetCore.Diagnostics.ExceptionHandlerMiddleware.<Invoke>g__Awaited|6_0(ExceptionHandlerMiddleware middleware, HttpContext context, Task task)
+
+2021-02-16 14:05:28,273|[66]|ERROR|f23efd4de895|Org.Sdmxsource.Sdmx.Api.Exception.SdmxException|No structures found for the specific query|Org.Sdmxsource.Sdmx.Api.Exception.SdmxNoResultsException: No structures found for the specific query
+
+2021-02-16 14:05:28,274|[66]|ERROR|f23efd4de895|Org.Sdmxsource.Sdmx.Api.Exception.SdmxException|Could not find requested structures|Org.Sdmxsource.Sdmx.Api.Exception.SdmxNoResultsException: Could not find requested structures
+
+2021-02-16 14:05:28,274|[66]|ERROR|f23efd4de895|Estat.Sri.Ws.Rest.StructureResourceErrorHandler|Org.Sdmxsource.Sdmx.Api.Exception.SdmxNoResultsException: Could not find requested structures
+   at Estat.Sri.Ws.Controllers.Manager.RetrieverManager.TryFactories(Func`2 tryRetrieverFactory) in /app/src/Controllers/Manager/RetrieverManager.cs:line 787
+   at Estat.Sri.Ws.Controllers.Manager.RetrieverManager.ParseRequest(SdmxSchema sdmxSchema, IRestStructureQuery query) in /app/src/Controllers/Manager/RetrieverManager.cs:line 249
+   at Estat.Sri.Ws.Controllers.Controller.StructureRequestController.ParseRequest(IRestStructureQuery query, IHeaderDictionary headersFromRequest, HttpContext ctx) in /app/src/Controllers/Controller/StructureRequestController.cs:line 164
+   at Estat.Sri.Ws.Rest.StructureResource.ProcessRequest(String structure, String agencyId, String resourceId, String version, String filter, HttpContext ctx) in /app/src/NSIWebServices/StructureResource.cs:line 426
+   at Estat.Sri.Ws.Rest.StructureResource.GetStructure(String structure, String agencyId, String resourceId, String version, String filter) in /app/src/NSIWebServices/StructureResource.cs:line 154
+   at Estat.Sri.Ws.Rest.StructureResourceErrorHandler.GetStructure(String structure, String agencyId, String resourceId, String version, String filter) in /app/src/NSIWebServices/StructureResourceErrorHandler.cs:line 89|
+2021-02-16 14:05:28,274|[66]|ERROR|f23efd4de895|Estat.Sri.Ws.Controllers.Builder.ServiceExceptionRestBuilder|SdmxError : No Results Found, code : 100|
+2021-02-16 14:05:28,274|[66]|ERROR|f23efd4de895|Estat.Sri.Ws.Controllers.Builder.ServiceExceptionRestBuilder|Could not find requested structures|Org.Sdmxsource.Sdmx.Api.Exception.SdmxNoResultsException: Could not find requested structures
+   at Estat.Sri.Ws.Controllers.Manager.RetrieverManager.TryFactories(Func`2 tryRetrieverFactory) in /app/src/Controllers/Manager/RetrieverManager.cs:line 787
+   at Estat.Sri.Ws.Controllers.Manager.RetrieverManager.ParseRequest(SdmxSchema sdmxSchema, IRestStructureQuery query) in /app/src/Controllers/Manager/RetrieverManager.cs:line 249
+   at Estat.Sri.Ws.Controllers.Controller.StructureRequestController.ParseRequest(IRestStructureQuery query, IHeaderDictionary headersFromRequest, HttpContext ctx) in /app/src/Controllers/Controller/StructureRequestController.cs:line 164
+   at Estat.Sri.Ws.Rest.StructureResource.ProcessRequest(String structure, String agencyId, String resourceId, String version, String filter, HttpContext ctx) in /app/src/NSIWebServices/StructureResource.cs:line 426
+   at Estat.Sri.Ws.Rest.StructureResource.GetStructure(String structure, String agencyId, String resourceId, String version, String filter) in /app/src/NSIWebServices/StructureResource.cs:line 154
+   at Estat.Sri.Ws.Rest.StructureResourceErrorHandler.GetStructure(String structure, String agencyId, String resourceId, String version, String filter) in /app/src/NSIWebServices/StructureResourceErrorHandler.cs:line 89
+
+2021-02-16 14:05:28,276|[66]|ERROR|f23efd4de895|NSIWebServiceCore.ErrorHandlingMiddleware|Unhandled exception|Controllers.Utils.ServiceException: Could not find requested structures
+ ---> Org.Sdmxsource.Sdmx.Api.Exception.SdmxNoResultsException: Could not find requested structures
+   at Estat.Sri.Ws.Controllers.Manager.RetrieverManager.TryFactories(Func`2 tryRetrieverFactory) in /app/src/Controllers/Manager/RetrieverManager.cs:line 787
+   at Estat.Sri.Ws.Controllers.Manager.RetrieverManager.ParseRequest(SdmxSchema sdmxSchema, IRestStructureQuery query) in /app/src/Controllers/Manager/RetrieverManager.cs:line 249
+   at Estat.Sri.Ws.Controllers.Controller.StructureRequestController.ParseRequest(IRestStructureQuery query, IHeaderDictionary headersFromRequest, HttpContext ctx) in /app/src/Controllers/Controller/StructureRequestController.cs:line 164
+   at Estat.Sri.Ws.Rest.StructureResource.ProcessRequest(String structure, String agencyId, String resourceId, String version, String filter, HttpContext ctx) in /app/src/NSIWebServices/StructureResource.cs:line 426
+   at Estat.Sri.Ws.Rest.StructureResource.GetStructure(String structure, String agencyId, String resourceId, String version, String filter) in /app/src/NSIWebServices/StructureResource.cs:line 154
+   at Estat.Sri.Ws.Rest.StructureResourceErrorHandler.GetStructure(String structure, String agencyId, String resourceId, String version, String filter) in /app/src/NSIWebServices/StructureResourceErrorHandler.cs:line 89
+   --- End of inner exception stack trace ---
+   at Estat.Sri.Ws.Rest.StructureResourceErrorHandler.BuildErrorResponse(Exception e) in /app/src/NSIWebServices/StructureResourceErrorHandler.cs:line 137
+   at Estat.Sri.Ws.Rest.StructureResourceErrorHandler.GetStructure(String structure, String agencyId, String resourceId, String version, String filter) in /app/src/NSIWebServices/StructureResourceErrorHandler.cs:line 89
+   at Estat.Sri.Ws.NSIWebServiceCore.Controllers.StructureController.GetStructure(String structure, String agencyId, String resourceId, String version) in /app/src/NSIWebServiceCore/Controllers/StructureController.cs:line 44
+   at Microsoft.Extensions.Internal.ObjectMethodExecutor.<>c__DisplayClass33_0.<WrapVoidMethod>b__0(Object target, Object[] parameters)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.VoidResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeActionMethodAsync()
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeNextActionFilterAsync()
+--- End of stack trace from previous location where exception was thrown ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location where exception was thrown ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextResourceFilter>g__Awaited|24_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Rethrow(ResourceExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.InvokeFilterPipelineAsync()
+--- End of stack trace from previous location where exception was thrown ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Builder.Extensions.MapWhenMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.ResponseCaching.ResponseCachingMiddleware.Invoke(HttpContext httpContext)
+   at Estat.Sri.Ws.AuthorizationMiddleware.SriAuthorizationMiddleware.Invoke(HttpContext context) in /app/src/Estat.Sri.Ws.AuthorizationMiddleware/SriAuthorizationMiddleware.cs:line 48
+   at Estat.Sri.Ws.LoggingOptions.LoggingOptionsMiddleware.Invoke(HttpContext context) in /app/src/Estat.Sri.Ws.LoggingOptions/LoggingOptionsMiddleware.cs:line 37
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Estat.Sri.Ws.CorsModule.CorsHttpModule.Invoke(HttpContext context) in /app/src/Estat.Sri.Ws.CorsModule/CorsHttpModule.cs:line 31
+   at Estat.Sri.Ws.NSIWebServiceCore.LoggingMiddleware.Invoke(HttpContext context) in /app/src/NSIWebServiceCore/LoggingMiddleware.cs:line 47
+   at Microsoft.AspNetCore.Diagnostics.ExceptionHandlerMiddleware.<Invoke>g__Awaited|6_0(ExceptionHandlerMiddleware middleware, HttpContext context, Task task)
+
+2021-02-16 14:07:24,139|[66]|ERROR|f23efd4de895|Estat.Nsi.StructureRetriever.Builders.StructureRetrievalInfoBuilder|An error occured while trying to retrieve mapping set for dataflow: TN1+DF_BIRTHS_BY_MOTHER_AGE_GROUP+1.0: 
+ Dataflow 'urn:sdmx:org.sdmx.infomodel.datastructure.Dataflow=TN1:DF_BIRTHS_BY_MOTHER_AGE_GROUP(1.0)' doesn't contains a mapping set|
+2021-02-16 14:07:24,139|[66]|ERROR|f23efd4de895|Estat.Nsi.StructureRetriever.Builders.StructureRetrievalInfoBuilder|Estat.Sri.Mapping.Api.Exceptions.ResourceNotFoundException: Dataflow 'urn:sdmx:org.sdmx.infomodel.datastructure.Dataflow=TN1:DF_BIRTHS_BY_MOTHER_AGE_GROUP(1.0)' doesn't contains a mapping set
+   at Estat.Sri.Mapping.Api.Manager.ComponentMappingManager.GetBuilders(String storeId, IDataflowObject dataflow, IDataStructureObject dataStructure, Boolean isPit)
+   at Estat.Nsi.StructureRetriever.Builders.StructureRetrievalInfoBuilder.Build(IAvailableConstraintQuery query, StructureRetrieverSettings settings)|
+2021-02-16 14:07:24,139|[66]|ERROR|f23efd4de895|Org.Sdmxsource.Sdmx.Api.Exception.SdmxException|An error occured while trying to retrieve mapping set for dataflow: TN1+DF_BIRTHS_BY_MOTHER_AGE_GROUP+1.0: 
+ Dataflow 'urn:sdmx:org.sdmx.infomodel.datastructure.Dataflow=TN1:DF_BIRTHS_BY_MOTHER_AGE_GROUP(1.0)' doesn't contains a mapping set|Org.Sdmxsource.Sdmx.Api.Exception.SdmxException: An error occured while trying to retrieve mapping set for dataflow: TN1+DF_BIRTHS_BY_MOTHER_AGE_GROUP+1.0: 
+ Dataflow 'urn:sdmx:org.sdmx.infomodel.datastructure.Dataflow=TN1:DF_BIRTHS_BY_MOTHER_AGE_GROUP(1.0)' doesn't contains a mapping set
+ ---> Estat.Sri.Mapping.Api.Exceptions.ResourceNotFoundException: Dataflow 'urn:sdmx:org.sdmx.infomodel.datastructure.Dataflow=TN1:DF_BIRTHS_BY_MOTHER_AGE_GROUP(1.0)' doesn't contains a mapping set
+   at Estat.Sri.Mapping.Api.Manager.ComponentMappingManager.GetBuilders(String storeId, IDataflowObject dataflow, IDataStructureObject dataStructure, Boolean isPit)
+   at Estat.Nsi.StructureRetriever.Builders.StructureRetrievalInfoBuilder.Build(IAvailableConstraintQuery query, StructureRetrieverSettings settings)
+   --- End of inner exception stack trace ---
+
+2021-02-16 14:07:24,140|[66]|ERROR|f23efd4de895|Estat.Sri.Ws.Rest.DataResourceErrorHandler|GetGenericData : TN1,DF_BIRTHS_BY_MOTHER_AGE_GROUP,1.0/all/ALL|
+2021-02-16 14:07:24,140|[66]|ERROR|f23efd4de895|Estat.Sri.Ws.Rest.DataResourceErrorHandler|Org.Sdmxsource.Sdmx.Api.Exception.SdmxException: An error occured while trying to retrieve mapping set for dataflow: TN1+DF_BIRTHS_BY_MOTHER_AGE_GROUP+1.0: 
+ Dataflow 'urn:sdmx:org.sdmx.infomodel.datastructure.Dataflow=TN1:DF_BIRTHS_BY_MOTHER_AGE_GROUP(1.0)' doesn't contains a mapping set
+ ---> Estat.Sri.Mapping.Api.Exceptions.ResourceNotFoundException: Dataflow 'urn:sdmx:org.sdmx.infomodel.datastructure.Dataflow=TN1:DF_BIRTHS_BY_MOTHER_AGE_GROUP(1.0)' doesn't contains a mapping set
+   at Estat.Sri.Mapping.Api.Manager.ComponentMappingManager.GetBuilders(String storeId, IDataflowObject dataflow, IDataStructureObject dataStructure, Boolean isPit)
+   at Estat.Nsi.StructureRetriever.Builders.StructureRetrievalInfoBuilder.Build(IAvailableConstraintQuery query, StructureRetrieverSettings settings)
+   --- End of inner exception stack trace ---
+   at Estat.Nsi.StructureRetriever.Builders.StructureRetrievalInfoBuilder.Build(IAvailableConstraintQuery query, StructureRetrieverSettings settings)
+   at Estat.Nsi.StructureRetriever.Manager.AvailableDataManager.BuildInfo(IAvailableConstraintQuery query)
+   at Estat.Nsi.StructureRetriever.Manager.AvailableDataManager.GetCount(IAvailableConstraintQuery query, Boolean includeHistory)
+   at Estat.Sri.Ws.Retrievers.Factory.SriRetrieverFactory.GetNumberOfObservations(IDataQuery dataQuery)
+   at Estat.Sri.Ws.Controllers.Controller.RangeHeaderHandler.AddHeaderForData(String rangeHeader, DataRequest request, SdmxSchema sdmxSchema) in /app/src/Controllers/Controller/RangeHeaderHandler.cs:line 99
+   at Estat.Sri.Ws.Controllers.Controller.DataRequestController.<>c__DisplayClass10_2.<GetAction>b__1(Stream writer, Queue`1 queue) in /app/src/Controllers/Controller/DataRequestController.cs:line 233
+   at Estat.Sri.Ws.Controllers.Builder.RestMessageBuilder.BuildPrivate(IStreamController`1 controller, Stream outputStream, IResponseContentHeader responseContentHeader, IMessageFormat format) in /app/src/Controllers/Builder/RestMessageBuilder.cs:line 151
+   at Estat.Sri.Ws.Rest.DataResource.ProcessRequest(String flowRef, String key, String providerRef, HttpContext ctx) in /app/src/NSIWebServices/DataResource.cs:line 188
+   at Estat.Sri.Ws.Rest.DataResource.GetGenericData(String flowRef, String key, String providerRef) in /app/src/NSIWebServices/DataResource.cs:line 109
+   at Estat.Sri.Ws.Rest.DataResourceErrorHandler.GetGenericData(String flowRef, String key, String providerRef) in /app/src/NSIWebServices/DataResourceErrorHandler.cs:line 58|
+2021-02-16 14:07:24,142|[66]|ERROR|f23efd4de895|NSIWebServiceCore.ErrorHandlingMiddleware|Unhandled exception|Controllers.Utils.ServiceException: An error occured while trying to retrieve mapping set for dataflow: TN1+DF_BIRTHS_BY_MOTHER_AGE_GROUP+1.0: 
+ Dataflow 'urn:sdmx:org.sdmx.infomodel.datastructure.Dataflow=TN1:DF_BIRTHS_BY_MOTHER_AGE_GROUP(1.0)' doesn't contains a mapping set
+ ---> Org.Sdmxsource.Sdmx.Api.Exception.SdmxException: An error occured while trying to retrieve mapping set for dataflow: TN1+DF_BIRTHS_BY_MOTHER_AGE_GROUP+1.0: 
+ Dataflow 'urn:sdmx:org.sdmx.infomodel.datastructure.Dataflow=TN1:DF_BIRTHS_BY_MOTHER_AGE_GROUP(1.0)' doesn't contains a mapping set
+ ---> Estat.Sri.Mapping.Api.Exceptions.ResourceNotFoundException: Dataflow 'urn:sdmx:org.sdmx.infomodel.datastructure.Dataflow=TN1:DF_BIRTHS_BY_MOTHER_AGE_GROUP(1.0)' doesn't contains a mapping set
+   at Estat.Sri.Mapping.Api.Manager.ComponentMappingManager.GetBuilders(String storeId, IDataflowObject dataflow, IDataStructureObject dataStructure, Boolean isPit)
+   at Estat.Nsi.StructureRetriever.Builders.StructureRetrievalInfoBuilder.Build(IAvailableConstraintQuery query, StructureRetrieverSettings settings)
+   --- End of inner exception stack trace ---
+   at Estat.Nsi.StructureRetriever.Builders.StructureRetrievalInfoBuilder.Build(IAvailableConstraintQuery query, StructureRetrieverSettings settings)
+   at Estat.Nsi.StructureRetriever.Manager.AvailableDataManager.BuildInfo(IAvailableConstraintQuery query)
+   at Estat.Nsi.StructureRetriever.Manager.AvailableDataManager.GetCount(IAvailableConstraintQuery query, Boolean includeHistory)
+   at Estat.Sri.Ws.Retrievers.Factory.SriRetrieverFactory.GetNumberOfObservations(IDataQuery dataQuery)
+   at Estat.Sri.Ws.Controllers.Controller.RangeHeaderHandler.AddHeaderForData(String rangeHeader, DataRequest request, SdmxSchema sdmxSchema) in /app/src/Controllers/Controller/RangeHeaderHandler.cs:line 99
+   at Estat.Sri.Ws.Controllers.Controller.DataRequestController.<>c__DisplayClass10_2.<GetAction>b__1(Stream writer, Queue`1 queue) in /app/src/Controllers/Controller/DataRequestController.cs:line 233
+   at Estat.Sri.Ws.Controllers.Builder.RestMessageBuilder.BuildPrivate(IStreamController`1 controller, Stream outputStream, IResponseContentHeader responseContentHeader, IMessageFormat format) in /app/src/Controllers/Builder/RestMessageBuilder.cs:line 151
+   at Estat.Sri.Ws.Rest.DataResource.ProcessRequest(String flowRef, String key, String providerRef, HttpContext ctx) in /app/src/NSIWebServices/DataResource.cs:line 188
+   at Estat.Sri.Ws.Rest.DataResource.GetGenericData(String flowRef, String key, String providerRef) in /app/src/NSIWebServices/DataResource.cs:line 109
+   at Estat.Sri.Ws.Rest.DataResourceErrorHandler.GetGenericData(String flowRef, String key, String providerRef) in /app/src/NSIWebServices/DataResourceErrorHandler.cs:line 58
+   --- End of inner exception stack trace ---
+   at Estat.Sri.Ws.Rest.DataResourceErrorHandler.GetGenericData(String flowRef, String key, String providerRef) in /app/src/NSIWebServices/DataResourceErrorHandler.cs:line 69
+   at Microsoft.Extensions.Internal.ObjectMethodExecutor.<>c__DisplayClass33_0.<WrapVoidMethod>b__0(Object target, Object[] parameters)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.VoidResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeActionMethodAsync()
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeNextActionFilterAsync()
+--- End of stack trace from previous location where exception was thrown ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location where exception was thrown ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextResourceFilter>g__Awaited|24_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Rethrow(ResourceExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.InvokeFilterPipelineAsync()
+--- End of stack trace from previous location where exception was thrown ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Builder.Extensions.MapWhenMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.ResponseCaching.ResponseCachingMiddleware.Invoke(HttpContext httpContext)
+   at Estat.Sri.Ws.AuthorizationMiddleware.SriAuthorizationMiddleware.Invoke(HttpContext context) in /app/src/Estat.Sri.Ws.AuthorizationMiddleware/SriAuthorizationMiddleware.cs:line 48
+   at Estat.Sri.Ws.LoggingOptions.LoggingOptionsMiddleware.Invoke(HttpContext context) in /app/src/Estat.Sri.Ws.LoggingOptions/LoggingOptionsMiddleware.cs:line 37
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Estat.Sri.Ws.CorsModule.CorsHttpModule.Invoke(HttpContext context) in /app/src/Estat.Sri.Ws.CorsModule/CorsHttpModule.cs:line 31
+   at Estat.Sri.Ws.NSIWebServiceCore.LoggingMiddleware.Invoke(HttpContext context) in /app/src/NSIWebServiceCore/LoggingMiddleware.cs:line 47
+   at Microsoft.AspNetCore.Diagnostics.ExceptionHandlerMiddleware.<Invoke>g__Awaited|6_0(ExceptionHandlerMiddleware middleware, HttpContext context, Task task)
+
+2021-02-16 14:07:49,878|[76]|ERROR|f23efd4de895|Org.Sdmxsource.Sdmx.Api.Exception.SdmxException|Data Flow could not be found for query : Target :Dataflow - Agency Id: TN1 - Maintainable Id: DF_BIRTHS_BY_MOTHER_AGE_GROUP - Version: 1.0|Org.Sdmxsource.Sdmx.Api.Exception.SdmxNoResultsException: Data Flow could not be found for query : Target :Dataflow - Agency Id: TN1 - Maintainable Id: DF_BIRTHS_BY_MOTHER_AGE_GROUP - Version: 1.0
+
+2021-02-16 14:07:49,878|[76]|ERROR|f23efd4de895|Org.Sdmxsource.Sdmx.Api.Exception.SdmxException|Could not find Dataflow and/or DSD related with this data request|Org.Sdmxsource.Sdmx.Api.Exception.SdmxNoResultsException: Could not find Dataflow and/or DSD related with this data request
+
+2021-02-16 14:07:49,879|[76]|ERROR|f23efd4de895|Estat.Sri.Ws.Rest.DataResourceErrorHandler|GetGenericData : TN1,DF_BIRTHS_BY_MOTHER_AGE_GROUP,1.0/all/ALL|
+2021-02-16 14:07:49,879|[76]|ERROR|f23efd4de895|Estat.Sri.Ws.Rest.DataResourceErrorHandler|Org.Sdmxsource.Sdmx.Api.Exception.SdmxNoResultsException: Could not find Dataflow and/or DSD related with this data request
+   at Estat.Sri.Ws.Controllers.Manager.RetrieverManager.GetDataResponseBase[TReturnValue](Func`3 dataQueryParser) in /app/src/Controllers/Manager/RetrieverManager.cs:line 648
+   at Estat.Sri.Ws.Controllers.Manager.RetrieverManager.GetDataRequest(IRestDataQuery dataQuery) in /app/src/Controllers/Manager/RetrieverManager.cs:line 591
+   at Estat.Sri.Ws.Controllers.Manager.RetrieverManager.ParseDataRequest(IRestDataQuery dataQuery) in /app/src/Controllers/Manager/RetrieverManager.cs:line 329
+   at Estat.Sri.Ws.Controllers.Controller.DataRequestController.ParseRequest(IRestDataQuery request, IHeaderDictionary headers) in /app/src/Controllers/Controller/DataRequestController.cs:line 156
+   at Estat.Sri.Ws.Controllers.Controller.AuthorizationDataRequestDecorator.ParseRequest(IRestDataQuery request, IHeaderDictionary headers) in /app/src/Controllers/Controller/AuthorizationDataRequestDecorator.cs:line 63
+   at Estat.Sri.Ws.Rest.DataResource.ProcessRequest(String flowRef, String key, String providerRef, HttpContext ctx) in /app/src/NSIWebServices/DataResource.cs:line 180
+   at Estat.Sri.Ws.Rest.DataResource.GetGenericData(String flowRef, String key, String providerRef) in /app/src/NSIWebServices/DataResource.cs:line 109
+   at Estat.Sri.Ws.Rest.DataResourceErrorHandler.GetGenericData(String flowRef, String key, String providerRef) in /app/src/NSIWebServices/DataResourceErrorHandler.cs:line 58|
+2021-02-16 14:07:49,881|[76]|ERROR|f23efd4de895|NSIWebServiceCore.ErrorHandlingMiddleware|Unhandled exception|Controllers.Utils.ServiceException: Could not find Dataflow and/or DSD related with this data request
+ ---> Org.Sdmxsource.Sdmx.Api.Exception.SdmxNoResultsException: Could not find Dataflow and/or DSD related with this data request
+   at Estat.Sri.Ws.Controllers.Manager.RetrieverManager.GetDataResponseBase[TReturnValue](Func`3 dataQueryParser) in /app/src/Controllers/Manager/RetrieverManager.cs:line 648
+   at Estat.Sri.Ws.Controllers.Manager.RetrieverManager.GetDataRequest(IRestDataQuery dataQuery) in /app/src/Controllers/Manager/RetrieverManager.cs:line 591
+   at Estat.Sri.Ws.Controllers.Manager.RetrieverManager.ParseDataRequest(IRestDataQuery dataQuery) in /app/src/Controllers/Manager/RetrieverManager.cs:line 329
+   at Estat.Sri.Ws.Controllers.Controller.DataRequestController.ParseRequest(IRestDataQuery request, IHeaderDictionary headers) in /app/src/Controllers/Controller/DataRequestController.cs:line 156
+   at Estat.Sri.Ws.Controllers.Controller.AuthorizationDataRequestDecorator.ParseRequest(IRestDataQuery request, IHeaderDictionary headers) in /app/src/Controllers/Controller/AuthorizationDataRequestDecorator.cs:line 63
+   at Estat.Sri.Ws.Rest.DataResource.ProcessRequest(String flowRef, String key, String providerRef, HttpContext ctx) in /app/src/NSIWebServices/DataResource.cs:line 180
+   at Estat.Sri.Ws.Rest.DataResource.GetGenericData(String flowRef, String key, String providerRef) in /app/src/NSIWebServices/DataResource.cs:line 109
+   at Estat.Sri.Ws.Rest.DataResourceErrorHandler.GetGenericData(String flowRef, String key, String providerRef) in /app/src/NSIWebServices/DataResourceErrorHandler.cs:line 58
+   --- End of inner exception stack trace ---
+   at Estat.Sri.Ws.Rest.DataResourceErrorHandler.GetGenericData(String flowRef, String key, String providerRef) in /app/src/NSIWebServices/DataResourceErrorHandler.cs:line 69
+   at Microsoft.Extensions.Internal.ObjectMethodExecutor.<>c__DisplayClass33_0.<WrapVoidMethod>b__0(Object target, Object[] parameters)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.VoidResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeActionMethodAsync()
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeNextActionFilterAsync()
+--- End of stack trace from previous location where exception was thrown ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location where exception was thrown ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextResourceFilter>g__Awaited|24_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Rethrow(ResourceExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.InvokeFilterPipelineAsync()
+--- End of stack trace from previous location where exception was thrown ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Builder.Extensions.MapWhenMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.ResponseCaching.ResponseCachingMiddleware.Invoke(HttpContext httpContext)
+   at Estat.Sri.Ws.AuthorizationMiddleware.SriAuthorizationMiddleware.Invoke(HttpContext context) in /app/src/Estat.Sri.Ws.AuthorizationMiddleware/SriAuthorizationMiddleware.cs:line 48
+   at Estat.Sri.Ws.LoggingOptions.LoggingOptionsMiddleware.Invoke(HttpContext context) in /app/src/Estat.Sri.Ws.LoggingOptions/LoggingOptionsMiddleware.cs:line 37
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Estat.Sri.Ws.CorsModule.CorsHttpModule.Invoke(HttpContext context) in /app/src/Estat.Sri.Ws.CorsModule/CorsHttpModule.cs:line 31
+   at Estat.Sri.Ws.NSIWebServiceCore.LoggingMiddleware.Invoke(HttpContext context) in /app/src/NSIWebServiceCore/LoggingMiddleware.cs:line 47
+   at Microsoft.AspNetCore.Diagnostics.ExceptionHandlerMiddleware.<Invoke>g__Awaited|6_0(ExceptionHandlerMiddleware middleware, HttpContext context, Task task)
+
+2021-02-16 14:09:11,032|[74]|ERROR|f23efd4de895|Estat.Nsi.StructureRetriever.Builders.StructureRetrievalInfoBuilder|An error occured while trying to retrieve mapping set for dataflow: TN1+DF_EDUCATIONAL_ESTABLISHMENT+1.0: 
+ Dataflow 'urn:sdmx:org.sdmx.infomodel.datastructure.Dataflow=TN1:DF_EDUCATIONAL_ESTABLISHMENT(1.0)' doesn't contains a mapping set|
+2021-02-16 14:09:11,033|[74]|ERROR|f23efd4de895|Estat.Nsi.StructureRetriever.Builders.StructureRetrievalInfoBuilder|Estat.Sri.Mapping.Api.Exceptions.ResourceNotFoundException: Dataflow 'urn:sdmx:org.sdmx.infomodel.datastructure.Dataflow=TN1:DF_EDUCATIONAL_ESTABLISHMENT(1.0)' doesn't contains a mapping set
+   at Estat.Sri.Mapping.Api.Manager.ComponentMappingManager.GetBuilders(String storeId, IDataflowObject dataflow, IDataStructureObject dataStructure, Boolean isPit)
+   at Estat.Nsi.StructureRetriever.Builders.StructureRetrievalInfoBuilder.Build(IAvailableConstraintQuery query, StructureRetrieverSettings settings)|
+2021-02-16 14:09:11,033|[74]|ERROR|f23efd4de895|Org.Sdmxsource.Sdmx.Api.Exception.SdmxException|An error occured while trying to retrieve mapping set for dataflow: TN1+DF_EDUCATIONAL_ESTABLISHMENT+1.0: 
+ Dataflow 'urn:sdmx:org.sdmx.infomodel.datastructure.Dataflow=TN1:DF_EDUCATIONAL_ESTABLISHMENT(1.0)' doesn't contains a mapping set|Org.Sdmxsource.Sdmx.Api.Exception.SdmxException: An error occured while trying to retrieve mapping set for dataflow: TN1+DF_EDUCATIONAL_ESTABLISHMENT+1.0: 
+ Dataflow 'urn:sdmx:org.sdmx.infomodel.datastructure.Dataflow=TN1:DF_EDUCATIONAL_ESTABLISHMENT(1.0)' doesn't contains a mapping set
+ ---> Estat.Sri.Mapping.Api.Exceptions.ResourceNotFoundException: Dataflow 'urn:sdmx:org.sdmx.infomodel.datastructure.Dataflow=TN1:DF_EDUCATIONAL_ESTABLISHMENT(1.0)' doesn't contains a mapping set
+   at Estat.Sri.Mapping.Api.Manager.ComponentMappingManager.GetBuilders(String storeId, IDataflowObject dataflow, IDataStructureObject dataStructure, Boolean isPit)
+   at Estat.Nsi.StructureRetriever.Builders.StructureRetrievalInfoBuilder.Build(IAvailableConstraintQuery query, StructureRetrieverSettings settings)
+   --- End of inner exception stack trace ---
+
+2021-02-16 14:09:11,033|[74]|ERROR|f23efd4de895|Estat.Sri.Ws.Rest.DataResourceErrorHandler|GetGenericData : TN1,DF_EDUCATIONAL_ESTABLISHMENT,1.0/all/ALL|
+2021-02-16 14:09:11,034|[74]|ERROR|f23efd4de895|Estat.Sri.Ws.Rest.DataResourceErrorHandler|Org.Sdmxsource.Sdmx.Api.Exception.SdmxException: An error occured while trying to retrieve mapping set for dataflow: TN1+DF_EDUCATIONAL_ESTABLISHMENT+1.0: 
+ Dataflow 'urn:sdmx:org.sdmx.infomodel.datastructure.Dataflow=TN1:DF_EDUCATIONAL_ESTABLISHMENT(1.0)' doesn't contains a mapping set
+ ---> Estat.Sri.Mapping.Api.Exceptions.ResourceNotFoundException: Dataflow 'urn:sdmx:org.sdmx.infomodel.datastructure.Dataflow=TN1:DF_EDUCATIONAL_ESTABLISHMENT(1.0)' doesn't contains a mapping set
+   at Estat.Sri.Mapping.Api.Manager.ComponentMappingManager.GetBuilders(String storeId, IDataflowObject dataflow, IDataStructureObject dataStructure, Boolean isPit)
+   at Estat.Nsi.StructureRetriever.Builders.StructureRetrievalInfoBuilder.Build(IAvailableConstraintQuery query, StructureRetrieverSettings settings)
+   --- End of inner exception stack trace ---
+   at Estat.Nsi.StructureRetriever.Builders.StructureRetrievalInfoBuilder.Build(IAvailableConstraintQuery query, StructureRetrieverSettings settings)
+   at Estat.Nsi.StructureRetriever.Manager.AvailableDataManager.BuildInfo(IAvailableConstraintQuery query)
+   at Estat.Nsi.StructureRetriever.Manager.AvailableDataManager.GetCount(IAvailableConstraintQuery query, Boolean includeHistory)
+   at Estat.Sri.Ws.Retrievers.Factory.SriRetrieverFactory.GetNumberOfObservations(IDataQuery dataQuery)
+   at Estat.Sri.Ws.Controllers.Controller.RangeHeaderHandler.AddHeaderForData(String rangeHeader, DataRequest request, SdmxSchema sdmxSchema) in /app/src/Controllers/Controller/RangeHeaderHandler.cs:line 99
+   at Estat.Sri.Ws.Controllers.Controller.DataRequestController.<>c__DisplayClass10_2.<GetAction>b__1(Stream writer, Queue`1 queue) in /app/src/Controllers/Controller/DataRequestController.cs:line 233
+   at Estat.Sri.Ws.Controllers.Builder.RestMessageBuilder.BuildPrivate(IStreamController`1 controller, Stream outputStream, IResponseContentHeader responseContentHeader, IMessageFormat format) in /app/src/Controllers/Builder/RestMessageBuilder.cs:line 151
+   at Estat.Sri.Ws.Rest.DataResource.ProcessRequest(String flowRef, String key, String providerRef, HttpContext ctx) in /app/src/NSIWebServices/DataResource.cs:line 188
+   at Estat.Sri.Ws.Rest.DataResource.GetGenericData(String flowRef, String key, String providerRef) in /app/src/NSIWebServices/DataResource.cs:line 109
+   at Estat.Sri.Ws.Rest.DataResourceErrorHandler.GetGenericData(String flowRef, String key, String providerRef) in /app/src/NSIWebServices/DataResourceErrorHandler.cs:line 58|
+2021-02-16 14:09:11,038|[74]|ERROR|f23efd4de895|NSIWebServiceCore.ErrorHandlingMiddleware|Unhandled exception|Controllers.Utils.ServiceException: An error occured while trying to retrieve mapping set for dataflow: TN1+DF_EDUCATIONAL_ESTABLISHMENT+1.0: 
+ Dataflow 'urn:sdmx:org.sdmx.infomodel.datastructure.Dataflow=TN1:DF_EDUCATIONAL_ESTABLISHMENT(1.0)' doesn't contains a mapping set
+ ---> Org.Sdmxsource.Sdmx.Api.Exception.SdmxException: An error occured while trying to retrieve mapping set for dataflow: TN1+DF_EDUCATIONAL_ESTABLISHMENT+1.0: 
+ Dataflow 'urn:sdmx:org.sdmx.infomodel.datastructure.Dataflow=TN1:DF_EDUCATIONAL_ESTABLISHMENT(1.0)' doesn't contains a mapping set
+ ---> Estat.Sri.Mapping.Api.Exceptions.ResourceNotFoundException: Dataflow 'urn:sdmx:org.sdmx.infomodel.datastructure.Dataflow=TN1:DF_EDUCATIONAL_ESTABLISHMENT(1.0)' doesn't contains a mapping set
+   at Estat.Sri.Mapping.Api.Manager.ComponentMappingManager.GetBuilders(String storeId, IDataflowObject dataflow, IDataStructureObject dataStructure, Boolean isPit)
+   at Estat.Nsi.StructureRetriever.Builders.StructureRetrievalInfoBuilder.Build(IAvailableConstraintQuery query, StructureRetrieverSettings settings)
+   --- End of inner exception stack trace ---
+   at Estat.Nsi.StructureRetriever.Builders.StructureRetrievalInfoBuilder.Build(IAvailableConstraintQuery query, StructureRetrieverSettings settings)
+   at Estat.Nsi.StructureRetriever.Manager.AvailableDataManager.BuildInfo(IAvailableConstraintQuery query)
+   at Estat.Nsi.StructureRetriever.Manager.AvailableDataManager.GetCount(IAvailableConstraintQuery query, Boolean includeHistory)
+   at Estat.Sri.Ws.Retrievers.Factory.SriRetrieverFactory.GetNumberOfObservations(IDataQuery dataQuery)
+   at Estat.Sri.Ws.Controllers.Controller.RangeHeaderHandler.AddHeaderForData(String rangeHeader, DataRequest request, SdmxSchema sdmxSchema) in /app/src/Controllers/Controller/RangeHeaderHandler.cs:line 99
+   at Estat.Sri.Ws.Controllers.Controller.DataRequestController.<>c__DisplayClass10_2.<GetAction>b__1(Stream writer, Queue`1 queue) in /app/src/Controllers/Controller/DataRequestController.cs:line 233
+   at Estat.Sri.Ws.Controllers.Builder.RestMessageBuilder.BuildPrivate(IStreamController`1 controller, Stream outputStream, IResponseContentHeader responseContentHeader, IMessageFormat format) in /app/src/Controllers/Builder/RestMessageBuilder.cs:line 151
+   at Estat.Sri.Ws.Rest.DataResource.ProcessRequest(String flowRef, String key, String providerRef, HttpContext ctx) in /app/src/NSIWebServices/DataResource.cs:line 188
+   at Estat.Sri.Ws.Rest.DataResource.GetGenericData(String flowRef, String key, String providerRef) in /app/src/NSIWebServices/DataResource.cs:line 109
+   at Estat.Sri.Ws.Rest.DataResourceErrorHandler.GetGenericData(String flowRef, String key, String providerRef) in /app/src/NSIWebServices/DataResourceErrorHandler.cs:line 58
+   --- End of inner exception stack trace ---
+   at Estat.Sri.Ws.Rest.DataResourceErrorHandler.GetGenericData(String flowRef, String key, String providerRef) in /app/src/NSIWebServices/DataResourceErrorHandler.cs:line 69
+   at Microsoft.Extensions.Internal.ObjectMethodExecutor.<>c__DisplayClass33_0.<WrapVoidMethod>b__0(Object target, Object[] parameters)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.VoidResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeActionMethodAsync()
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeNextActionFilterAsync()
+--- End of stack trace from previous location where exception was thrown ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location where exception was thrown ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextResourceFilter>g__Awaited|24_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Rethrow(ResourceExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.InvokeFilterPipelineAsync()
+--- End of stack trace from previous location where exception was thrown ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Builder.Extensions.MapWhenMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.ResponseCaching.ResponseCachingMiddleware.Invoke(HttpContext httpContext)
+   at Estat.Sri.Ws.AuthorizationMiddleware.SriAuthorizationMiddleware.Invoke(HttpContext context) in /app/src/Estat.Sri.Ws.AuthorizationMiddleware/SriAuthorizationMiddleware.cs:line 48
+   at Estat.Sri.Ws.LoggingOptions.LoggingOptionsMiddleware.Invoke(HttpContext context) in /app/src/Estat.Sri.Ws.LoggingOptions/LoggingOptionsMiddleware.cs:line 37
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Estat.Sri.Ws.CorsModule.CorsHttpModule.Invoke(HttpContext context) in /app/src/Estat.Sri.Ws.CorsModule/CorsHttpModule.cs:line 31
+   at Estat.Sri.Ws.NSIWebServiceCore.LoggingMiddleware.Invoke(HttpContext context) in /app/src/NSIWebServiceCore/LoggingMiddleware.cs:line 47
+   at Microsoft.AspNetCore.Diagnostics.ExceptionHandlerMiddleware.<Invoke>g__Awaited|6_0(ExceptionHandlerMiddleware middleware, HttpContext context, Task task)
+
+2021-02-16 14:21:31,808|[62]|ERROR|f23efd4de895|Org.Sdmxsource.Sdmx.Api.Exception.SdmxException|No structures found for the specific query|Org.Sdmxsource.Sdmx.Api.Exception.SdmxNoResultsException: No structures found for the specific query
+
+2021-02-16 14:21:31,808|[62]|ERROR|f23efd4de895|Org.Sdmxsource.Sdmx.Api.Exception.SdmxException|Could not find requested structures|Org.Sdmxsource.Sdmx.Api.Exception.SdmxNoResultsException: Could not find requested structures
+
+2021-02-16 14:21:31,808|[62]|ERROR|f23efd4de895|Estat.Sri.Ws.Rest.StructureResourceErrorHandler|Org.Sdmxsource.Sdmx.Api.Exception.SdmxNoResultsException: Could not find requested structures
+   at Estat.Sri.Ws.Controllers.Manager.RetrieverManager.TryFactories(Func`2 tryRetrieverFactory) in /app/src/Controllers/Manager/RetrieverManager.cs:line 787
+   at Estat.Sri.Ws.Controllers.Manager.RetrieverManager.ParseRequest(SdmxSchema sdmxSchema, IRestStructureQuery query) in /app/src/Controllers/Manager/RetrieverManager.cs:line 249
+   at Estat.Sri.Ws.Controllers.Controller.StructureRequestController.ParseRequest(IRestStructureQuery query, IHeaderDictionary headersFromRequest, HttpContext ctx) in /app/src/Controllers/Controller/StructureRequestController.cs:line 164
+   at Estat.Sri.Ws.Rest.StructureResource.ProcessRequest(String structure, String agencyId, String resourceId, String version, String filter, HttpContext ctx) in /app/src/NSIWebServices/StructureResource.cs:line 426
+   at Estat.Sri.Ws.Rest.StructureResource.GetStructure(String structure, String agencyId, String resourceId, String version, String filter) in /app/src/NSIWebServices/StructureResource.cs:line 154
+   at Estat.Sri.Ws.Rest.StructureResourceErrorHandler.GetStructure(String structure, String agencyId, String resourceId, String version, String filter) in /app/src/NSIWebServices/StructureResourceErrorHandler.cs:line 89|
+2021-02-16 14:21:31,808|[62]|ERROR|f23efd4de895|Estat.Sri.Ws.Controllers.Builder.ServiceExceptionRestBuilder|SdmxError : No Results Found, code : 100|
+2021-02-16 14:21:31,808|[62]|ERROR|f23efd4de895|Estat.Sri.Ws.Controllers.Builder.ServiceExceptionRestBuilder|Could not find requested structures|Org.Sdmxsource.Sdmx.Api.Exception.SdmxNoResultsException: Could not find requested structures
+   at Estat.Sri.Ws.Controllers.Manager.RetrieverManager.TryFactories(Func`2 tryRetrieverFactory) in /app/src/Controllers/Manager/RetrieverManager.cs:line 787
+   at Estat.Sri.Ws.Controllers.Manager.RetrieverManager.ParseRequest(SdmxSchema sdmxSchema, IRestStructureQuery query) in /app/src/Controllers/Manager/RetrieverManager.cs:line 249
+   at Estat.Sri.Ws.Controllers.Controller.StructureRequestController.ParseRequest(IRestStructureQuery query, IHeaderDictionary headersFromRequest, HttpContext ctx) in /app/src/Controllers/Controller/StructureRequestController.cs:line 164
+   at Estat.Sri.Ws.Rest.StructureResource.ProcessRequest(String structure, String agencyId, String resourceId, String version, String filter, HttpContext ctx) in /app/src/NSIWebServices/StructureResource.cs:line 426
+   at Estat.Sri.Ws.Rest.StructureResource.GetStructure(String structure, String agencyId, String resourceId, String version, String filter) in /app/src/NSIWebServices/StructureResource.cs:line 154
+   at Estat.Sri.Ws.Rest.StructureResourceErrorHandler.GetStructure(String structure, String agencyId, String resourceId, String version, String filter) in /app/src/NSIWebServices/StructureResourceErrorHandler.cs:line 89
+
+2021-02-16 14:21:31,810|[62]|ERROR|f23efd4de895|NSIWebServiceCore.ErrorHandlingMiddleware|Unhandled exception|Controllers.Utils.ServiceException: Could not find requested structures
+ ---> Org.Sdmxsource.Sdmx.Api.Exception.SdmxNoResultsException: Could not find requested structures
+   at Estat.Sri.Ws.Controllers.Manager.RetrieverManager.TryFactories(Func`2 tryRetrieverFactory) in /app/src/Controllers/Manager/RetrieverManager.cs:line 787
+   at Estat.Sri.Ws.Controllers.Manager.RetrieverManager.ParseRequest(SdmxSchema sdmxSchema, IRestStructureQuery query) in /app/src/Controllers/Manager/RetrieverManager.cs:line 249
+   at Estat.Sri.Ws.Controllers.Controller.StructureRequestController.ParseRequest(IRestStructureQuery query, IHeaderDictionary headersFromRequest, HttpContext ctx) in /app/src/Controllers/Controller/StructureRequestController.cs:line 164
+   at Estat.Sri.Ws.Rest.StructureResource.ProcessRequest(String structure, String agencyId, String resourceId, String version, String filter, HttpContext ctx) in /app/src/NSIWebServices/StructureResource.cs:line 426
+   at Estat.Sri.Ws.Rest.StructureResource.GetStructure(String structure, String agencyId, String resourceId, String version, String filter) in /app/src/NSIWebServices/StructureResource.cs:line 154
+   at Estat.Sri.Ws.Rest.StructureResourceErrorHandler.GetStructure(String structure, String agencyId, String resourceId, String version, String filter) in /app/src/NSIWebServices/StructureResourceErrorHandler.cs:line 89
+   --- End of inner exception stack trace ---
+   at Estat.Sri.Ws.Rest.StructureResourceErrorHandler.BuildErrorResponse(Exception e) in /app/src/NSIWebServices/StructureResourceErrorHandler.cs:line 137
+   at Estat.Sri.Ws.Rest.StructureResourceErrorHandler.GetStructure(String structure, String agencyId, String resourceId, String version, String filter) in /app/src/NSIWebServices/StructureResourceErrorHandler.cs:line 89
+   at Estat.Sri.Ws.NSIWebServiceCore.Controllers.StructureController.GetStructure(String structure, String agencyId, String resourceId, String version) in /app/src/NSIWebServiceCore/Controllers/StructureController.cs:line 44
+   at Microsoft.Extensions.Internal.ObjectMethodExecutor.<>c__DisplayClass33_0.<WrapVoidMethod>b__0(Object target, Object[] parameters)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.VoidResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeActionMethodAsync()
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeNextActionFilterAsync()
+--- End of stack trace from previous location where exception was thrown ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location where exception was thrown ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextResourceFilter>g__Awaited|24_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Rethrow(ResourceExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.InvokeFilterPipelineAsync()
+--- End of stack trace from previous location where exception was thrown ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Builder.Extensions.MapWhenMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.ResponseCaching.ResponseCachingMiddleware.Invoke(HttpContext httpContext)
+   at Estat.Sri.Ws.AuthorizationMiddleware.SriAuthorizationMiddleware.Invoke(HttpContext context) in /app/src/Estat.Sri.Ws.AuthorizationMiddleware/SriAuthorizationMiddleware.cs:line 48
+   at Estat.Sri.Ws.LoggingOptions.LoggingOptionsMiddleware.Invoke(HttpContext context) in /app/src/Estat.Sri.Ws.LoggingOptions/LoggingOptionsMiddleware.cs:line 37
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Estat.Sri.Ws.CorsModule.CorsHttpModule.Invoke(HttpContext context) in /app/src/Estat.Sri.Ws.CorsModule/CorsHttpModule.cs:line 31
+   at Estat.Sri.Ws.NSIWebServiceCore.LoggingMiddleware.Invoke(HttpContext context) in /app/src/NSIWebServiceCore/LoggingMiddleware.cs:line 47
+   at Microsoft.AspNetCore.Diagnostics.ExceptionHandlerMiddleware.<Invoke>g__Awaited|6_0(ExceptionHandlerMiddleware middleware, HttpContext context, Task task)
+
+2021-02-16 14:22:13,460|[59]|ERROR|f23efd4de895|Org.Sdmxsource.Sdmx.Api.Exception.SdmxException|No structures found for the specific query|Org.Sdmxsource.Sdmx.Api.Exception.SdmxNoResultsException: No structures found for the specific query
+
+2021-02-16 14:22:13,461|[59]|ERROR|f23efd4de895|Org.Sdmxsource.Sdmx.Api.Exception.SdmxException|Could not find requested structures|Org.Sdmxsource.Sdmx.Api.Exception.SdmxNoResultsException: Could not find requested structures
+
+2021-02-16 14:22:13,461|[59]|ERROR|f23efd4de895|Estat.Sri.Ws.Rest.StructureResourceErrorHandler|Org.Sdmxsource.Sdmx.Api.Exception.SdmxNoResultsException: Could not find requested structures
+   at Estat.Sri.Ws.Controllers.Manager.RetrieverManager.TryFactories(Func`2 tryRetrieverFactory) in /app/src/Controllers/Manager/RetrieverManager.cs:line 787
+   at Estat.Sri.Ws.Controllers.Manager.RetrieverManager.ParseRequest(SdmxSchema sdmxSchema, IRestStructureQuery query) in /app/src/Controllers/Manager/RetrieverManager.cs:line 249
+   at Estat.Sri.Ws.Controllers.Controller.StructureRequestController.ParseRequest(IRestStructureQuery query, IHeaderDictionary headersFromRequest, HttpContext ctx) in /app/src/Controllers/Controller/StructureRequestController.cs:line 164
+   at Estat.Sri.Ws.Rest.StructureResource.ProcessRequest(String structure, String agencyId, String resourceId, String version, String filter, HttpContext ctx) in /app/src/NSIWebServices/StructureResource.cs:line 426
+   at Estat.Sri.Ws.Rest.StructureResource.GetStructure(String structure, String agencyId, String resourceId, String version, String filter) in /app/src/NSIWebServices/StructureResource.cs:line 154
+   at Estat.Sri.Ws.Rest.StructureResourceErrorHandler.GetStructure(String structure, String agencyId, String resourceId, String version, String filter) in /app/src/NSIWebServices/StructureResourceErrorHandler.cs:line 89|
+2021-02-16 14:22:13,461|[59]|ERROR|f23efd4de895|Estat.Sri.Ws.Controllers.Builder.ServiceExceptionRestBuilder|SdmxError : No Results Found, code : 100|
+2021-02-16 14:22:13,461|[59]|ERROR|f23efd4de895|Estat.Sri.Ws.Controllers.Builder.ServiceExceptionRestBuilder|Could not find requested structures|Org.Sdmxsource.Sdmx.Api.Exception.SdmxNoResultsException: Could not find requested structures
+   at Estat.Sri.Ws.Controllers.Manager.RetrieverManager.TryFactories(Func`2 tryRetrieverFactory) in /app/src/Controllers/Manager/RetrieverManager.cs:line 787
+   at Estat.Sri.Ws.Controllers.Manager.RetrieverManager.ParseRequest(SdmxSchema sdmxSchema, IRestStructureQuery query) in /app/src/Controllers/Manager/RetrieverManager.cs:line 249
+   at Estat.Sri.Ws.Controllers.Controller.StructureRequestController.ParseRequest(IRestStructureQuery query, IHeaderDictionary headersFromRequest, HttpContext ctx) in /app/src/Controllers/Controller/StructureRequestController.cs:line 164
+   at Estat.Sri.Ws.Rest.StructureResource.ProcessRequest(String structure, String agencyId, String resourceId, String version, String filter, HttpContext ctx) in /app/src/NSIWebServices/StructureResource.cs:line 426
+   at Estat.Sri.Ws.Rest.StructureResource.GetStructure(String structure, String agencyId, String resourceId, String version, String filter) in /app/src/NSIWebServices/StructureResource.cs:line 154
+   at Estat.Sri.Ws.Rest.StructureResourceErrorHandler.GetStructure(String structure, String agencyId, String resourceId, String version, String filter) in /app/src/NSIWebServices/StructureResourceErrorHandler.cs:line 89
+
+2021-02-16 14:22:13,476|[59]|ERROR|f23efd4de895|NSIWebServiceCore.ErrorHandlingMiddleware|Unhandled exception|Controllers.Utils.ServiceException: Could not find requested structures
+ ---> Org.Sdmxsource.Sdmx.Api.Exception.SdmxNoResultsException: Could not find requested structures
+   at Estat.Sri.Ws.Controllers.Manager.RetrieverManager.TryFactories(Func`2 tryRetrieverFactory) in /app/src/Controllers/Manager/RetrieverManager.cs:line 787
+   at Estat.Sri.Ws.Controllers.Manager.RetrieverManager.ParseRequest(SdmxSchema sdmxSchema, IRestStructureQuery query) in /app/src/Controllers/Manager/RetrieverManager.cs:line 249
+   at Estat.Sri.Ws.Controllers.Controller.StructureRequestController.ParseRequest(IRestStructureQuery query, IHeaderDictionary headersFromRequest, HttpContext ctx) in /app/src/Controllers/Controller/StructureRequestController.cs:line 164
+   at Estat.Sri.Ws.Rest.StructureResource.ProcessRequest(String structure, String agencyId, String resourceId, String version, String filter, HttpContext ctx) in /app/src/NSIWebServices/StructureResource.cs:line 426
+   at Estat.Sri.Ws.Rest.StructureResource.GetStructure(String structure, String agencyId, String resourceId, String version, String filter) in /app/src/NSIWebServices/StructureResource.cs:line 154
+   at Estat.Sri.Ws.Rest.StructureResourceErrorHandler.GetStructure(String structure, String agencyId, String resourceId, String version, String filter) in /app/src/NSIWebServices/StructureResourceErrorHandler.cs:line 89
+   --- End of inner exception stack trace ---
+   at Estat.Sri.Ws.Rest.StructureResourceErrorHandler.BuildErrorResponse(Exception e) in /app/src/NSIWebServices/StructureResourceErrorHandler.cs:line 137
+   at Estat.Sri.Ws.Rest.StructureResourceErrorHandler.GetStructure(String structure, String agencyId, String resourceId, String version, String filter) in /app/src/NSIWebServices/StructureResourceErrorHandler.cs:line 89
+   at Estat.Sri.Ws.NSIWebServiceCore.Controllers.StructureController.GetStructure(String structure, String agencyId, String resourceId, String version) in /app/src/NSIWebServiceCore/Controllers/StructureController.cs:line 44
+   at Microsoft.Extensions.Internal.ObjectMethodExecutor.<>c__DisplayClass33_0.<WrapVoidMethod>b__0(Object target, Object[] parameters)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.VoidResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeActionMethodAsync()
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeNextActionFilterAsync()
+--- End of stack trace from previous location where exception was thrown ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location where exception was thrown ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextResourceFilter>g__Awaited|24_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Rethrow(ResourceExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.InvokeFilterPipelineAsync()
+--- End of stack trace from previous location where exception was thrown ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Builder.Extensions.MapWhenMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.ResponseCaching.ResponseCachingMiddleware.Invoke(HttpContext httpContext)
+   at Estat.Sri.Ws.AuthorizationMiddleware.SriAuthorizationMiddleware.Invoke(HttpContext context) in /app/src/Estat.Sri.Ws.AuthorizationMiddleware/SriAuthorizationMiddleware.cs:line 48
+   at Estat.Sri.Ws.LoggingOptions.LoggingOptionsMiddleware.Invoke(HttpContext context) in /app/src/Estat.Sri.Ws.LoggingOptions/LoggingOptionsMiddleware.cs:line 37
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Estat.Sri.Ws.CorsModule.CorsHttpModule.Invoke(HttpContext context) in /app/src/Estat.Sri.Ws.CorsModule/CorsHttpModule.cs:line 31
+   at Estat.Sri.Ws.NSIWebServiceCore.LoggingMiddleware.Invoke(HttpContext context) in /app/src/NSIWebServiceCore/LoggingMiddleware.cs:line 47
+   at Microsoft.AspNetCore.Diagnostics.ExceptionHandlerMiddleware.<Invoke>g__Awaited|6_0(ExceptionHandlerMiddleware middleware, HttpContext context, Task task)
+
+2021-02-16 14:23:15,422|[59]|ERROR|f23efd4de895|Org.Sdmxsource.Sdmx.Api.Exception.SdmxException|No structures found for the specific query|Org.Sdmxsource.Sdmx.Api.Exception.SdmxNoResultsException: No structures found for the specific query
+
+2021-02-16 14:23:15,423|[59]|ERROR|f23efd4de895|Org.Sdmxsource.Sdmx.Api.Exception.SdmxException|Could not find requested structures|Org.Sdmxsource.Sdmx.Api.Exception.SdmxNoResultsException: Could not find requested structures
+
+2021-02-16 14:23:15,425|[59]|ERROR|f23efd4de895|Estat.Sri.Ws.Rest.StructureResourceErrorHandler|Org.Sdmxsource.Sdmx.Api.Exception.SdmxNoResultsException: Could not find requested structures
+   at Estat.Sri.Ws.Controllers.Manager.RetrieverManager.TryFactories(Func`2 tryRetrieverFactory) in /app/src/Controllers/Manager/RetrieverManager.cs:line 787
+   at Estat.Sri.Ws.Controllers.Manager.RetrieverManager.ParseRequest(SdmxSchema sdmxSchema, IRestStructureQuery query) in /app/src/Controllers/Manager/RetrieverManager.cs:line 249
+   at Estat.Sri.Ws.Controllers.Controller.StructureRequestController.ParseRequest(IRestStructureQuery query, IHeaderDictionary headersFromRequest, HttpContext ctx) in /app/src/Controllers/Controller/StructureRequestController.cs:line 164
+   at Estat.Sri.Ws.Rest.StructureResource.ProcessRequest(String structure, String agencyId, String resourceId, String version, String filter, HttpContext ctx) in /app/src/NSIWebServices/StructureResource.cs:line 426
+   at Estat.Sri.Ws.Rest.StructureResource.GetStructure(String structure, String agencyId, String resourceId, String version, String filter) in /app/src/NSIWebServices/StructureResource.cs:line 154
+   at Estat.Sri.Ws.Rest.StructureResourceErrorHandler.GetStructure(String structure, String agencyId, String resourceId, String version, String filter) in /app/src/NSIWebServices/StructureResourceErrorHandler.cs:line 89|
+2021-02-16 14:23:15,425|[59]|ERROR|f23efd4de895|Estat.Sri.Ws.Controllers.Builder.ServiceExceptionRestBuilder|SdmxError : No Results Found, code : 100|
+2021-02-16 14:23:15,426|[59]|ERROR|f23efd4de895|Estat.Sri.Ws.Controllers.Builder.ServiceExceptionRestBuilder|Could not find requested structures|Org.Sdmxsource.Sdmx.Api.Exception.SdmxNoResultsException: Could not find requested structures
+   at Estat.Sri.Ws.Controllers.Manager.RetrieverManager.TryFactories(Func`2 tryRetrieverFactory) in /app/src/Controllers/Manager/RetrieverManager.cs:line 787
+   at Estat.Sri.Ws.Controllers.Manager.RetrieverManager.ParseRequest(SdmxSchema sdmxSchema, IRestStructureQuery query) in /app/src/Controllers/Manager/RetrieverManager.cs:line 249
+   at Estat.Sri.Ws.Controllers.Controller.StructureRequestController.ParseRequest(IRestStructureQuery query, IHeaderDictionary headersFromRequest, HttpContext ctx) in /app/src/Controllers/Controller/StructureRequestController.cs:line 164
+   at Estat.Sri.Ws.Rest.StructureResource.ProcessRequest(String structure, String agencyId, String resourceId, String version, String filter, HttpContext ctx) in /app/src/NSIWebServices/StructureResource.cs:line 426
+   at Estat.Sri.Ws.Rest.StructureResource.GetStructure(String structure, String agencyId, String resourceId, String version, String filter) in /app/src/NSIWebServices/StructureResource.cs:line 154
+   at Estat.Sri.Ws.Rest.StructureResourceErrorHandler.GetStructure(String structure, String agencyId, String resourceId, String version, String filter) in /app/src/NSIWebServices/StructureResourceErrorHandler.cs:line 89
+
+2021-02-16 14:23:15,428|[59]|ERROR|f23efd4de895|NSIWebServiceCore.ErrorHandlingMiddleware|Unhandled exception|Controllers.Utils.ServiceException: Could not find requested structures
+ ---> Org.Sdmxsource.Sdmx.Api.Exception.SdmxNoResultsException: Could not find requested structures
+   at Estat.Sri.Ws.Controllers.Manager.RetrieverManager.TryFactories(Func`2 tryRetrieverFactory) in /app/src/Controllers/Manager/RetrieverManager.cs:line 787
+   at Estat.Sri.Ws.Controllers.Manager.RetrieverManager.ParseRequest(SdmxSchema sdmxSchema, IRestStructureQuery query) in /app/src/Controllers/Manager/RetrieverManager.cs:line 249
+   at Estat.Sri.Ws.Controllers.Controller.StructureRequestController.ParseRequest(IRestStructureQuery query, IHeaderDictionary headersFromRequest, HttpContext ctx) in /app/src/Controllers/Controller/StructureRequestController.cs:line 164
+   at Estat.Sri.Ws.Rest.StructureResource.ProcessRequest(String structure, String agencyId, String resourceId, String version, String filter, HttpContext ctx) in /app/src/NSIWebServices/StructureResource.cs:line 426
+   at Estat.Sri.Ws.Rest.StructureResource.GetStructure(String structure, String agencyId, String resourceId, String version, String filter) in /app/src/NSIWebServices/StructureResource.cs:line 154
+   at Estat.Sri.Ws.Rest.StructureResourceErrorHandler.GetStructure(String structure, String agencyId, String resourceId, String version, String filter) in /app/src/NSIWebServices/StructureResourceErrorHandler.cs:line 89
+   --- End of inner exception stack trace ---
+   at Estat.Sri.Ws.Rest.StructureResourceErrorHandler.BuildErrorResponse(Exception e) in /app/src/NSIWebServices/StructureResourceErrorHandler.cs:line 137
+   at Estat.Sri.Ws.Rest.StructureResourceErrorHandler.GetStructure(String structure, String agencyId, String resourceId, String version, String filter) in /app/src/NSIWebServices/StructureResourceErrorHandler.cs:line 89
+   at Estat.Sri.Ws.NSIWebServiceCore.Controllers.StructureController.GetStructure(String structure, String agencyId, String resourceId, String version) in /app/src/NSIWebServiceCore/Controllers/StructureController.cs:line 44
+   at Microsoft.Extensions.Internal.ObjectMethodExecutor.<>c__DisplayClass33_0.<WrapVoidMethod>b__0(Object target, Object[] parameters)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.VoidResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeActionMethodAsync()
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeNextActionFilterAsync()
+--- End of stack trace from previous location where exception was thrown ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location where exception was thrown ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextResourceFilter>g__Awaited|24_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Rethrow(ResourceExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.InvokeFilterPipelineAsync()
+--- End of stack trace from previous location where exception was thrown ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Builder.Extensions.MapWhenMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.ResponseCaching.ResponseCachingMiddleware.Invoke(HttpContext httpContext)
+   at Estat.Sri.Ws.AuthorizationMiddleware.SriAuthorizationMiddleware.Invoke(HttpContext context) in /app/src/Estat.Sri.Ws.AuthorizationMiddleware/SriAuthorizationMiddleware.cs:line 48
+   at Estat.Sri.Ws.LoggingOptions.LoggingOptionsMiddleware.Invoke(HttpContext context) in /app/src/Estat.Sri.Ws.LoggingOptions/LoggingOptionsMiddleware.cs:line 37
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Estat.Sri.Ws.CorsModule.CorsHttpModule.Invoke(HttpContext context) in /app/src/Estat.Sri.Ws.CorsModule/CorsHttpModule.cs:line 31
+   at Estat.Sri.Ws.NSIWebServiceCore.LoggingMiddleware.Invoke(HttpContext context) in /app/src/NSIWebServiceCore/LoggingMiddleware.cs:line 47
+   at Microsoft.AspNetCore.Diagnostics.ExceptionHandlerMiddleware.<Invoke>g__Awaited|6_0(ExceptionHandlerMiddleware middleware, HttpContext context, Task task)
+
+2021-02-16 14:26:45,149|[51]|ERROR|f23efd4de895|Org.Sdmxsource.Sdmx.Api.Exception.SdmxException|No structures found for the specific query|Org.Sdmxsource.Sdmx.Api.Exception.SdmxNoResultsException: No structures found for the specific query
+
+2021-02-16 14:26:45,150|[51]|ERROR|f23efd4de895|Org.Sdmxsource.Sdmx.Api.Exception.SdmxException|Could not find requested structures|Org.Sdmxsource.Sdmx.Api.Exception.SdmxNoResultsException: Could not find requested structures
+
+2021-02-16 14:26:45,150|[51]|ERROR|f23efd4de895|Estat.Sri.Ws.Rest.StructureResourceErrorHandler|Org.Sdmxsource.Sdmx.Api.Exception.SdmxNoResultsException: Could not find requested structures
+   at Estat.Sri.Ws.Controllers.Manager.RetrieverManager.TryFactories(Func`2 tryRetrieverFactory) in /app/src/Controllers/Manager/RetrieverManager.cs:line 787
+   at Estat.Sri.Ws.Controllers.Manager.RetrieverManager.ParseRequest(SdmxSchema sdmxSchema, IRestStructureQuery query) in /app/src/Controllers/Manager/RetrieverManager.cs:line 249
+   at Estat.Sri.Ws.Controllers.Controller.StructureRequestController.ParseRequest(IRestStructureQuery query, IHeaderDictionary headersFromRequest, HttpContext ctx) in /app/src/Controllers/Controller/StructureRequestController.cs:line 164
+   at Estat.Sri.Ws.Rest.StructureResource.ProcessRequest(String structure, String agencyId, String resourceId, String version, String filter, HttpContext ctx) in /app/src/NSIWebServices/StructureResource.cs:line 426
+   at Estat.Sri.Ws.Rest.StructureResource.GetStructure(String structure, String agencyId, String resourceId, String version, String filter) in /app/src/NSIWebServices/StructureResource.cs:line 154
+   at Estat.Sri.Ws.Rest.StructureResourceErrorHandler.GetStructure(String structure, String agencyId, String resourceId, String version, String filter) in /app/src/NSIWebServices/StructureResourceErrorHandler.cs:line 89|
+2021-02-16 14:26:45,151|[51]|ERROR|f23efd4de895|Estat.Sri.Ws.Controllers.Builder.ServiceExceptionRestBuilder|SdmxError : No Results Found, code : 100|
+2021-02-16 14:26:45,151|[51]|ERROR|f23efd4de895|Estat.Sri.Ws.Controllers.Builder.ServiceExceptionRestBuilder|Could not find requested structures|Org.Sdmxsource.Sdmx.Api.Exception.SdmxNoResultsException: Could not find requested structures
+   at Estat.Sri.Ws.Controllers.Manager.RetrieverManager.TryFactories(Func`2 tryRetrieverFactory) in /app/src/Controllers/Manager/RetrieverManager.cs:line 787
+   at Estat.Sri.Ws.Controllers.Manager.RetrieverManager.ParseRequest(SdmxSchema sdmxSchema, IRestStructureQuery query) in /app/src/Controllers/Manager/RetrieverManager.cs:line 249
+   at Estat.Sri.Ws.Controllers.Controller.StructureRequestController.ParseRequest(IRestStructureQuery query, IHeaderDictionary headersFromRequest, HttpContext ctx) in /app/src/Controllers/Controller/StructureRequestController.cs:line 164
+   at Estat.Sri.Ws.Rest.StructureResource.ProcessRequest(String structure, String agencyId, String resourceId, String version, String filter, HttpContext ctx) in /app/src/NSIWebServices/StructureResource.cs:line 426
+   at Estat.Sri.Ws.Rest.StructureResource.GetStructure(String structure, String agencyId, String resourceId, String version, String filter) in /app/src/NSIWebServices/StructureResource.cs:line 154
+   at Estat.Sri.Ws.Rest.StructureResourceErrorHandler.GetStructure(String structure, String agencyId, String resourceId, String version, String filter) in /app/src/NSIWebServices/StructureResourceErrorHandler.cs:line 89
+
+2021-02-16 14:26:45,155|[51]|ERROR|f23efd4de895|NSIWebServiceCore.ErrorHandlingMiddleware|Unhandled exception|Controllers.Utils.ServiceException: Could not find requested structures
+ ---> Org.Sdmxsource.Sdmx.Api.Exception.SdmxNoResultsException: Could not find requested structures
+   at Estat.Sri.Ws.Controllers.Manager.RetrieverManager.TryFactories(Func`2 tryRetrieverFactory) in /app/src/Controllers/Manager/RetrieverManager.cs:line 787
+   at Estat.Sri.Ws.Controllers.Manager.RetrieverManager.ParseRequest(SdmxSchema sdmxSchema, IRestStructureQuery query) in /app/src/Controllers/Manager/RetrieverManager.cs:line 249
+   at Estat.Sri.Ws.Controllers.Controller.StructureRequestController.ParseRequest(IRestStructureQuery query, IHeaderDictionary headersFromRequest, HttpContext ctx) in /app/src/Controllers/Controller/StructureRequestController.cs:line 164
+   at Estat.Sri.Ws.Rest.StructureResource.ProcessRequest(String structure, String agencyId, String resourceId, String version, String filter, HttpContext ctx) in /app/src/NSIWebServices/StructureResource.cs:line 426
+   at Estat.Sri.Ws.Rest.StructureResource.GetStructure(String structure, String agencyId, String resourceId, String version, String filter) in /app/src/NSIWebServices/StructureResource.cs:line 154
+   at Estat.Sri.Ws.Rest.StructureResourceErrorHandler.GetStructure(String structure, String agencyId, String resourceId, String version, String filter) in /app/src/NSIWebServices/StructureResourceErrorHandler.cs:line 89
+   --- End of inner exception stack trace ---
+   at Estat.Sri.Ws.Rest.StructureResourceErrorHandler.BuildErrorResponse(Exception e) in /app/src/NSIWebServices/StructureResourceErrorHandler.cs:line 137
+   at Estat.Sri.Ws.Rest.StructureResourceErrorHandler.GetStructure(String structure, String agencyId, String resourceId, String version, String filter) in /app/src/NSIWebServices/StructureResourceErrorHandler.cs:line 89
+   at Estat.Sri.Ws.NSIWebServiceCore.Controllers.StructureController.GetStructure(String structure, String agencyId, String resourceId, String version) in /app/src/NSIWebServiceCore/Controllers/StructureController.cs:line 44
+   at Microsoft.Extensions.Internal.ObjectMethodExecutor.<>c__DisplayClass33_0.<WrapVoidMethod>b__0(Object target, Object[] parameters)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.VoidResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeActionMethodAsync()
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeNextActionFilterAsync()
+--- End of stack trace from previous location where exception was thrown ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location where exception was thrown ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextResourceFilter>g__Awaited|24_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Rethrow(ResourceExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.InvokeFilterPipelineAsync()
+--- End of stack trace from previous location where exception was thrown ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Builder.Extensions.MapWhenMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.ResponseCaching.ResponseCachingMiddleware.Invoke(HttpContext httpContext)
+   at Estat.Sri.Ws.AuthorizationMiddleware.SriAuthorizationMiddleware.Invoke(HttpContext context) in /app/src/Estat.Sri.Ws.AuthorizationMiddleware/SriAuthorizationMiddleware.cs:line 48
+   at Estat.Sri.Ws.LoggingOptions.LoggingOptionsMiddleware.Invoke(HttpContext context) in /app/src/Estat.Sri.Ws.LoggingOptions/LoggingOptionsMiddleware.cs:line 37
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Estat.Sri.Ws.CorsModule.CorsHttpModule.Invoke(HttpContext context) in /app/src/Estat.Sri.Ws.CorsModule/CorsHttpModule.cs:line 31
+   at Estat.Sri.Ws.NSIWebServiceCore.LoggingMiddleware.Invoke(HttpContext context) in /app/src/NSIWebServiceCore/LoggingMiddleware.cs:line 47
+   at Microsoft.AspNetCore.Diagnostics.ExceptionHandlerMiddleware.<Invoke>g__Awaited|6_0(ExceptionHandlerMiddleware middleware, HttpContext context, Task task)
+
+2021-02-16 14:27:20,710|[46]|ERROR|f23efd4de895|Org.Sdmxsource.Sdmx.Api.Exception.SdmxException|No structures found for the specific query|Org.Sdmxsource.Sdmx.Api.Exception.SdmxNoResultsException: No structures found for the specific query
+
+2021-02-16 14:27:20,710|[46]|ERROR|f23efd4de895|Org.Sdmxsource.Sdmx.Api.Exception.SdmxException|Could not find requested structures|Org.Sdmxsource.Sdmx.Api.Exception.SdmxNoResultsException: Could not find requested structures
+
+2021-02-16 14:27:20,710|[46]|ERROR|f23efd4de895|Estat.Sri.Ws.Rest.StructureResourceErrorHandler|Org.Sdmxsource.Sdmx.Api.Exception.SdmxNoResultsException: Could not find requested structures
+   at Estat.Sri.Ws.Controllers.Manager.RetrieverManager.TryFactories(Func`2 tryRetrieverFactory) in /app/src/Controllers/Manager/RetrieverManager.cs:line 787
+   at Estat.Sri.Ws.Controllers.Manager.RetrieverManager.ParseRequest(SdmxSchema sdmxSchema, IRestStructureQuery query) in /app/src/Controllers/Manager/RetrieverManager.cs:line 249
+   at Estat.Sri.Ws.Controllers.Controller.StructureRequestController.ParseRequest(IRestStructureQuery query, IHeaderDictionary headersFromRequest, HttpContext ctx) in /app/src/Controllers/Controller/StructureRequestController.cs:line 164
+   at Estat.Sri.Ws.Rest.StructureResource.ProcessRequest(String structure, String agencyId, String resourceId, String version, String filter, HttpContext ctx) in /app/src/NSIWebServices/StructureResource.cs:line 426
+   at Estat.Sri.Ws.Rest.StructureResource.GetStructure(String structure, String agencyId, String resourceId, String version, String filter) in /app/src/NSIWebServices/StructureResource.cs:line 154
+   at Estat.Sri.Ws.Rest.StructureResourceErrorHandler.GetStructure(String structure, String agencyId, String resourceId, String version, String filter) in /app/src/NSIWebServices/StructureResourceErrorHandler.cs:line 89|
+2021-02-16 14:27:20,710|[46]|ERROR|f23efd4de895|Estat.Sri.Ws.Controllers.Builder.ServiceExceptionRestBuilder|SdmxError : No Results Found, code : 100|
+2021-02-16 14:27:20,710|[46]|ERROR|f23efd4de895|Estat.Sri.Ws.Controllers.Builder.ServiceExceptionRestBuilder|Could not find requested structures|Org.Sdmxsource.Sdmx.Api.Exception.SdmxNoResultsException: Could not find requested structures
+   at Estat.Sri.Ws.Controllers.Manager.RetrieverManager.TryFactories(Func`2 tryRetrieverFactory) in /app/src/Controllers/Manager/RetrieverManager.cs:line 787
+   at Estat.Sri.Ws.Controllers.Manager.RetrieverManager.ParseRequest(SdmxSchema sdmxSchema, IRestStructureQuery query) in /app/src/Controllers/Manager/RetrieverManager.cs:line 249
+   at Estat.Sri.Ws.Controllers.Controller.StructureRequestController.ParseRequest(IRestStructureQuery query, IHeaderDictionary headersFromRequest, HttpContext ctx) in /app/src/Controllers/Controller/StructureRequestController.cs:line 164
+   at Estat.Sri.Ws.Rest.StructureResource.ProcessRequest(String structure, String agencyId, String resourceId, String version, String filter, HttpContext ctx) in /app/src/NSIWebServices/StructureResource.cs:line 426
+   at Estat.Sri.Ws.Rest.StructureResource.GetStructure(String structure, String agencyId, String resourceId, String version, String filter) in /app/src/NSIWebServices/StructureResource.cs:line 154
+   at Estat.Sri.Ws.Rest.StructureResourceErrorHandler.GetStructure(String structure, String agencyId, String resourceId, String version, String filter) in /app/src/NSIWebServices/StructureResourceErrorHandler.cs:line 89
+
+2021-02-16 14:27:20,712|[46]|ERROR|f23efd4de895|NSIWebServiceCore.ErrorHandlingMiddleware|Unhandled exception|Controllers.Utils.ServiceException: Could not find requested structures
+ ---> Org.Sdmxsource.Sdmx.Api.Exception.SdmxNoResultsException: Could not find requested structures
+   at Estat.Sri.Ws.Controllers.Manager.RetrieverManager.TryFactories(Func`2 tryRetrieverFactory) in /app/src/Controllers/Manager/RetrieverManager.cs:line 787
+   at Estat.Sri.Ws.Controllers.Manager.RetrieverManager.ParseRequest(SdmxSchema sdmxSchema, IRestStructureQuery query) in /app/src/Controllers/Manager/RetrieverManager.cs:line 249
+   at Estat.Sri.Ws.Controllers.Controller.StructureRequestController.ParseRequest(IRestStructureQuery query, IHeaderDictionary headersFromRequest, HttpContext ctx) in /app/src/Controllers/Controller/StructureRequestController.cs:line 164
+   at Estat.Sri.Ws.Rest.StructureResource.ProcessRequest(String structure, String agencyId, String resourceId, String version, String filter, HttpContext ctx) in /app/src/NSIWebServices/StructureResource.cs:line 426
+   at Estat.Sri.Ws.Rest.StructureResource.GetStructure(String structure, String agencyId, String resourceId, String version, String filter) in /app/src/NSIWebServices/StructureResource.cs:line 154
+   at Estat.Sri.Ws.Rest.StructureResourceErrorHandler.GetStructure(String structure, String agencyId, String resourceId, String version, String filter) in /app/src/NSIWebServices/StructureResourceErrorHandler.cs:line 89
+   --- End of inner exception stack trace ---
+   at Estat.Sri.Ws.Rest.StructureResourceErrorHandler.BuildErrorResponse(Exception e) in /app/src/NSIWebServices/StructureResourceErrorHandler.cs:line 137
+   at Estat.Sri.Ws.Rest.StructureResourceErrorHandler.GetStructure(String structure, String agencyId, String resourceId, String version, String filter) in /app/src/NSIWebServices/StructureResourceErrorHandler.cs:line 89
+   at Estat.Sri.Ws.NSIWebServiceCore.Controllers.StructureController.GetStructure(String structure, String agencyId, String resourceId, String version) in /app/src/NSIWebServiceCore/Controllers/StructureController.cs:line 44
+   at Microsoft.Extensions.Internal.ObjectMethodExecutor.<>c__DisplayClass33_0.<WrapVoidMethod>b__0(Object target, Object[] parameters)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.VoidResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeActionMethodAsync()
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeNextActionFilterAsync()
+--- End of stack trace from previous location where exception was thrown ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location where exception was thrown ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextResourceFilter>g__Awaited|24_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Rethrow(ResourceExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.InvokeFilterPipelineAsync()
+--- End of stack trace from previous location where exception was thrown ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Builder.Extensions.MapWhenMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.ResponseCaching.ResponseCachingMiddleware.Invoke(HttpContext httpContext)
+   at Estat.Sri.Ws.AuthorizationMiddleware.SriAuthorizationMiddleware.Invoke(HttpContext context) in /app/src/Estat.Sri.Ws.AuthorizationMiddleware/SriAuthorizationMiddleware.cs:line 48
+   at Estat.Sri.Ws.LoggingOptions.LoggingOptionsMiddleware.Invoke(HttpContext context) in /app/src/Estat.Sri.Ws.LoggingOptions/LoggingOptionsMiddleware.cs:line 37
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Estat.Sri.Ws.CorsModule.CorsHttpModule.Invoke(HttpContext context) in /app/src/Estat.Sri.Ws.CorsModule/CorsHttpModule.cs:line 31
+   at Estat.Sri.Ws.NSIWebServiceCore.LoggingMiddleware.Invoke(HttpContext context) in /app/src/NSIWebServiceCore/LoggingMiddleware.cs:line 47
+   at Microsoft.AspNetCore.Diagnostics.ExceptionHandlerMiddleware.<Invoke>g__Awaited|6_0(ExceptionHandlerMiddleware middleware, HttpContext context, Task task)
+
+2021-02-16 14:30:13,878|[44]|ERROR|f23efd4de895|Org.Sdmxsource.Sdmx.Api.Exception.SdmxException|No structures found for the specific query|Org.Sdmxsource.Sdmx.Api.Exception.SdmxNoResultsException: No structures found for the specific query
+
+2021-02-16 14:30:13,878|[44]|ERROR|f23efd4de895|Org.Sdmxsource.Sdmx.Api.Exception.SdmxException|Could not find requested structures|Org.Sdmxsource.Sdmx.Api.Exception.SdmxNoResultsException: Could not find requested structures
+
+2021-02-16 14:30:13,878|[44]|ERROR|f23efd4de895|Estat.Sri.Ws.Rest.StructureResourceErrorHandler|Org.Sdmxsource.Sdmx.Api.Exception.SdmxNoResultsException: Could not find requested structures
+   at Estat.Sri.Ws.Controllers.Manager.RetrieverManager.TryFactories(Func`2 tryRetrieverFactory) in /app/src/Controllers/Manager/RetrieverManager.cs:line 787
+   at Estat.Sri.Ws.Controllers.Manager.RetrieverManager.ParseRequest(SdmxSchema sdmxSchema, IRestStructureQuery query) in /app/src/Controllers/Manager/RetrieverManager.cs:line 249
+   at Estat.Sri.Ws.Controllers.Controller.StructureRequestController.ParseRequest(IRestStructureQuery query, IHeaderDictionary headersFromRequest, HttpContext ctx) in /app/src/Controllers/Controller/StructureRequestController.cs:line 164
+   at Estat.Sri.Ws.Rest.StructureResource.ProcessRequest(String structure, String agencyId, String resourceId, String version, String filter, HttpContext ctx) in /app/src/NSIWebServices/StructureResource.cs:line 426
+   at Estat.Sri.Ws.Rest.StructureResource.GetStructure(String structure, String agencyId, String resourceId, String version, String filter) in /app/src/NSIWebServices/StructureResource.cs:line 154
+   at Estat.Sri.Ws.Rest.StructureResourceErrorHandler.GetStructure(String structure, String agencyId, String resourceId, String version, String filter) in /app/src/NSIWebServices/StructureResourceErrorHandler.cs:line 89|
+2021-02-16 14:30:13,879|[44]|ERROR|f23efd4de895|Estat.Sri.Ws.Controllers.Builder.ServiceExceptionRestBuilder|SdmxError : No Results Found, code : 100|
+2021-02-16 14:30:13,879|[44]|ERROR|f23efd4de895|Estat.Sri.Ws.Controllers.Builder.ServiceExceptionRestBuilder|Could not find requested structures|Org.Sdmxsource.Sdmx.Api.Exception.SdmxNoResultsException: Could not find requested structures
+   at Estat.Sri.Ws.Controllers.Manager.RetrieverManager.TryFactories(Func`2 tryRetrieverFactory) in /app/src/Controllers/Manager/RetrieverManager.cs:line 787
+   at Estat.Sri.Ws.Controllers.Manager.RetrieverManager.ParseRequest(SdmxSchema sdmxSchema, IRestStructureQuery query) in /app/src/Controllers/Manager/RetrieverManager.cs:line 249
+   at Estat.Sri.Ws.Controllers.Controller.StructureRequestController.ParseRequest(IRestStructureQuery query, IHeaderDictionary headersFromRequest, HttpContext ctx) in /app/src/Controllers/Controller/StructureRequestController.cs:line 164
+   at Estat.Sri.Ws.Rest.StructureResource.ProcessRequest(String structure, String agencyId, String resourceId, String version, String filter, HttpContext ctx) in /app/src/NSIWebServices/StructureResource.cs:line 426
+   at Estat.Sri.Ws.Rest.StructureResource.GetStructure(String structure, String agencyId, String resourceId, String version, String filter) in /app/src/NSIWebServices/StructureResource.cs:line 154
+   at Estat.Sri.Ws.Rest.StructureResourceErrorHandler.GetStructure(String structure, String agencyId, String resourceId, String version, String filter) in /app/src/NSIWebServices/StructureResourceErrorHandler.cs:line 89
+
+2021-02-16 14:30:13,882|[44]|ERROR|f23efd4de895|NSIWebServiceCore.ErrorHandlingMiddleware|Unhandled exception|Controllers.Utils.ServiceException: Could not find requested structures
+ ---> Org.Sdmxsource.Sdmx.Api.Exception.SdmxNoResultsException: Could not find requested structures
+   at Estat.Sri.Ws.Controllers.Manager.RetrieverManager.TryFactories(Func`2 tryRetrieverFactory) in /app/src/Controllers/Manager/RetrieverManager.cs:line 787
+   at Estat.Sri.Ws.Controllers.Manager.RetrieverManager.ParseRequest(SdmxSchema sdmxSchema, IRestStructureQuery query) in /app/src/Controllers/Manager/RetrieverManager.cs:line 249
+   at Estat.Sri.Ws.Controllers.Controller.StructureRequestController.ParseRequest(IRestStructureQuery query, IHeaderDictionary headersFromRequest, HttpContext ctx) in /app/src/Controllers/Controller/StructureRequestController.cs:line 164
+   at Estat.Sri.Ws.Rest.StructureResource.ProcessRequest(String structure, String agencyId, String resourceId, String version, String filter, HttpContext ctx) in /app/src/NSIWebServices/StructureResource.cs:line 426
+   at Estat.Sri.Ws.Rest.StructureResource.GetStructure(String structure, String agencyId, String resourceId, String version, String filter) in /app/src/NSIWebServices/StructureResource.cs:line 154
+   at Estat.Sri.Ws.Rest.StructureResourceErrorHandler.GetStructure(String structure, String agencyId, String resourceId, String version, String filter) in /app/src/NSIWebServices/StructureResourceErrorHandler.cs:line 89
+   --- End of inner exception stack trace ---
+   at Estat.Sri.Ws.Rest.StructureResourceErrorHandler.BuildErrorResponse(Exception e) in /app/src/NSIWebServices/StructureResourceErrorHandler.cs:line 137
+   at Estat.Sri.Ws.Rest.StructureResourceErrorHandler.GetStructure(String structure, String agencyId, String resourceId, String version, String filter) in /app/src/NSIWebServices/StructureResourceErrorHandler.cs:line 89
+   at Estat.Sri.Ws.NSIWebServiceCore.Controllers.StructureController.GetStructure(String structure, String agencyId, String resourceId, String version) in /app/src/NSIWebServiceCore/Controllers/StructureController.cs:line 44
+   at Microsoft.Extensions.Internal.ObjectMethodExecutor.<>c__DisplayClass33_0.<WrapVoidMethod>b__0(Object target, Object[] parameters)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.VoidResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeActionMethodAsync()
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeNextActionFilterAsync()
+--- End of stack trace from previous location where exception was thrown ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location where exception was thrown ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextResourceFilter>g__Awaited|24_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Rethrow(ResourceExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.InvokeFilterPipelineAsync()
+--- End of stack trace from previous location where exception was thrown ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Builder.Extensions.MapWhenMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.ResponseCaching.ResponseCachingMiddleware.Invoke(HttpContext httpContext)
+   at Estat.Sri.Ws.AuthorizationMiddleware.SriAuthorizationMiddleware.Invoke(HttpContext context) in /app/src/Estat.Sri.Ws.AuthorizationMiddleware/SriAuthorizationMiddleware.cs:line 48
+   at Estat.Sri.Ws.LoggingOptions.LoggingOptionsMiddleware.Invoke(HttpContext context) in /app/src/Estat.Sri.Ws.LoggingOptions/LoggingOptionsMiddleware.cs:line 37
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Estat.Sri.Ws.CorsModule.CorsHttpModule.Invoke(HttpContext context) in /app/src/Estat.Sri.Ws.CorsModule/CorsHttpModule.cs:line 31
+   at Estat.Sri.Ws.NSIWebServiceCore.LoggingMiddleware.Invoke(HttpContext context) in /app/src/NSIWebServiceCore/LoggingMiddleware.cs:line 47
+   at Microsoft.AspNetCore.Diagnostics.ExceptionHandlerMiddleware.<Invoke>g__Awaited|6_0(ExceptionHandlerMiddleware middleware, HttpContext context, Task task)
+
+2021-02-16 14:30:17,122|[45]|ERROR|f23efd4de895|Org.Sdmxsource.Sdmx.Api.Exception.SdmxException|No structures found for the specific query|Org.Sdmxsource.Sdmx.Api.Exception.SdmxNoResultsException: No structures found for the specific query
+
+2021-02-16 14:30:17,122|[45]|ERROR|f23efd4de895|Org.Sdmxsource.Sdmx.Api.Exception.SdmxException|Could not find requested structures|Org.Sdmxsource.Sdmx.Api.Exception.SdmxNoResultsException: Could not find requested structures
+
+2021-02-16 14:30:17,122|[45]|ERROR|f23efd4de895|Estat.Sri.Ws.Rest.StructureResourceErrorHandler|Org.Sdmxsource.Sdmx.Api.Exception.SdmxNoResultsException: Could not find requested structures
+   at Estat.Sri.Ws.Controllers.Manager.RetrieverManager.TryFactories(Func`2 tryRetrieverFactory) in /app/src/Controllers/Manager/RetrieverManager.cs:line 787
+   at Estat.Sri.Ws.Controllers.Manager.RetrieverManager.ParseRequest(SdmxSchema sdmxSchema, IRestStructureQuery query) in /app/src/Controllers/Manager/RetrieverManager.cs:line 249
+   at Estat.Sri.Ws.Controllers.Controller.StructureRequestController.ParseRequest(IRestStructureQuery query, IHeaderDictionary headersFromRequest, HttpContext ctx) in /app/src/Controllers/Controller/StructureRequestController.cs:line 164
+   at Estat.Sri.Ws.Rest.StructureResource.ProcessRequest(String structure, String agencyId, String resourceId, String version, String filter, HttpContext ctx) in /app/src/NSIWebServices/StructureResource.cs:line 426
+   at Estat.Sri.Ws.Rest.StructureResource.GetStructure(String structure, String agencyId, String resourceId, String version, String filter) in /app/src/NSIWebServices/StructureResource.cs:line 154
+   at Estat.Sri.Ws.Rest.StructureResourceErrorHandler.GetStructure(String structure, String agencyId, String resourceId, String version, String filter) in /app/src/NSIWebServices/StructureResourceErrorHandler.cs:line 89|
+2021-02-16 14:30:17,123|[45]|ERROR|f23efd4de895|Estat.Sri.Ws.Controllers.Builder.ServiceExceptionRestBuilder|SdmxError : No Results Found, code : 100|
+2021-02-16 14:30:17,123|[45]|ERROR|f23efd4de895|Estat.Sri.Ws.Controllers.Builder.ServiceExceptionRestBuilder|Could not find requested structures|Org.Sdmxsource.Sdmx.Api.Exception.SdmxNoResultsException: Could not find requested structures
+   at Estat.Sri.Ws.Controllers.Manager.RetrieverManager.TryFactories(Func`2 tryRetrieverFactory) in /app/src/Controllers/Manager/RetrieverManager.cs:line 787
+   at Estat.Sri.Ws.Controllers.Manager.RetrieverManager.ParseRequest(SdmxSchema sdmxSchema, IRestStructureQuery query) in /app/src/Controllers/Manager/RetrieverManager.cs:line 249
+   at Estat.Sri.Ws.Controllers.Controller.StructureRequestController.ParseRequest(IRestStructureQuery query, IHeaderDictionary headersFromRequest, HttpContext ctx) in /app/src/Controllers/Controller/StructureRequestController.cs:line 164
+   at Estat.Sri.Ws.Rest.StructureResource.ProcessRequest(String structure, String agencyId, String resourceId, String version, String filter, HttpContext ctx) in /app/src/NSIWebServices/StructureResource.cs:line 426
+   at Estat.Sri.Ws.Rest.StructureResource.GetStructure(String structure, String agencyId, String resourceId, String version, String filter) in /app/src/NSIWebServices/StructureResource.cs:line 154
+   at Estat.Sri.Ws.Rest.StructureResourceErrorHandler.GetStructure(String structure, String agencyId, String resourceId, String version, String filter) in /app/src/NSIWebServices/StructureResourceErrorHandler.cs:line 89
+
+2021-02-16 14:30:17,124|[45]|ERROR|f23efd4de895|NSIWebServiceCore.ErrorHandlingMiddleware|Unhandled exception|Controllers.Utils.ServiceException: Could not find requested structures
+ ---> Org.Sdmxsource.Sdmx.Api.Exception.SdmxNoResultsException: Could not find requested structures
+   at Estat.Sri.Ws.Controllers.Manager.RetrieverManager.TryFactories(Func`2 tryRetrieverFactory) in /app/src/Controllers/Manager/RetrieverManager.cs:line 787
+   at Estat.Sri.Ws.Controllers.Manager.RetrieverManager.ParseRequest(SdmxSchema sdmxSchema, IRestStructureQuery query) in /app/src/Controllers/Manager/RetrieverManager.cs:line 249
+   at Estat.Sri.Ws.Controllers.Controller.StructureRequestController.ParseRequest(IRestStructureQuery query, IHeaderDictionary headersFromRequest, HttpContext ctx) in /app/src/Controllers/Controller/StructureRequestController.cs:line 164
+   at Estat.Sri.Ws.Rest.StructureResource.ProcessRequest(String structure, String agencyId, String resourceId, String version, String filter, HttpContext ctx) in /app/src/NSIWebServices/StructureResource.cs:line 426
+   at Estat.Sri.Ws.Rest.StructureResource.GetStructure(String structure, String agencyId, String resourceId, String version, String filter) in /app/src/NSIWebServices/StructureResource.cs:line 154
+   at Estat.Sri.Ws.Rest.StructureResourceErrorHandler.GetStructure(String structure, String agencyId, String resourceId, String version, String filter) in /app/src/NSIWebServices/StructureResourceErrorHandler.cs:line 89
+   --- End of inner exception stack trace ---
+   at Estat.Sri.Ws.Rest.StructureResourceErrorHandler.BuildErrorResponse(Exception e) in /app/src/NSIWebServices/StructureResourceErrorHandler.cs:line 137
+   at Estat.Sri.Ws.Rest.StructureResourceErrorHandler.GetStructure(String structure, String agencyId, String resourceId, String version, String filter) in /app/src/NSIWebServices/StructureResourceErrorHandler.cs:line 89
+   at Estat.Sri.Ws.NSIWebServiceCore.Controllers.StructureController.GetStructure(String structure, String agencyId, String resourceId, String version) in /app/src/NSIWebServiceCore/Controllers/StructureController.cs:line 44
+   at Microsoft.Extensions.Internal.ObjectMethodExecutor.<>c__DisplayClass33_0.<WrapVoidMethod>b__0(Object target, Object[] parameters)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.VoidResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeActionMethodAsync()
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeNextActionFilterAsync()
+--- End of stack trace from previous location where exception was thrown ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location where exception was thrown ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextResourceFilter>g__Awaited|24_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Rethrow(ResourceExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.InvokeFilterPipelineAsync()
+--- End of stack trace from previous location where exception was thrown ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Builder.Extensions.MapWhenMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.ResponseCaching.ResponseCachingMiddleware.Invoke(HttpContext httpContext)
+   at Estat.Sri.Ws.AuthorizationMiddleware.SriAuthorizationMiddleware.Invoke(HttpContext context) in /app/src/Estat.Sri.Ws.AuthorizationMiddleware/SriAuthorizationMiddleware.cs:line 48
+   at Estat.Sri.Ws.LoggingOptions.LoggingOptionsMiddleware.Invoke(HttpContext context) in /app/src/Estat.Sri.Ws.LoggingOptions/LoggingOptionsMiddleware.cs:line 37
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Estat.Sri.Ws.CorsModule.CorsHttpModule.Invoke(HttpContext context) in /app/src/Estat.Sri.Ws.CorsModule/CorsHttpModule.cs:line 31
+   at Estat.Sri.Ws.NSIWebServiceCore.LoggingMiddleware.Invoke(HttpContext context) in /app/src/NSIWebServiceCore/LoggingMiddleware.cs:line 47
+   at Microsoft.AspNetCore.Diagnostics.ExceptionHandlerMiddleware.<Invoke>g__Awaited|6_0(ExceptionHandlerMiddleware middleware, HttpContext context, Task task)
+
+2021-02-16 14:31:13,790|[52]|ERROR|f23efd4de895|Org.Sdmxsource.Sdmx.Api.Exception.SdmxException|No structures found for the specific query|Org.Sdmxsource.Sdmx.Api.Exception.SdmxNoResultsException: No structures found for the specific query
+
+2021-02-16 14:31:13,791|[52]|ERROR|f23efd4de895|Org.Sdmxsource.Sdmx.Api.Exception.SdmxException|Could not find requested structures|Org.Sdmxsource.Sdmx.Api.Exception.SdmxNoResultsException: Could not find requested structures
+
+2021-02-16 14:31:13,791|[52]|ERROR|f23efd4de895|Estat.Sri.Ws.Rest.StructureResourceErrorHandler|Org.Sdmxsource.Sdmx.Api.Exception.SdmxNoResultsException: Could not find requested structures
+   at Estat.Sri.Ws.Controllers.Manager.RetrieverManager.TryFactories(Func`2 tryRetrieverFactory) in /app/src/Controllers/Manager/RetrieverManager.cs:line 787
+   at Estat.Sri.Ws.Controllers.Manager.RetrieverManager.ParseRequest(SdmxSchema sdmxSchema, IRestStructureQuery query) in /app/src/Controllers/Manager/RetrieverManager.cs:line 249
+   at Estat.Sri.Ws.Controllers.Controller.StructureRequestController.ParseRequest(IRestStructureQuery query, IHeaderDictionary headersFromRequest, HttpContext ctx) in /app/src/Controllers/Controller/StructureRequestController.cs:line 164
+   at Estat.Sri.Ws.Rest.StructureResource.ProcessRequest(String structure, String agencyId, String resourceId, String version, String filter, HttpContext ctx) in /app/src/NSIWebServices/StructureResource.cs:line 426
+   at Estat.Sri.Ws.Rest.StructureResource.GetStructure(String structure, String agencyId, String resourceId, String version, String filter) in /app/src/NSIWebServices/StructureResource.cs:line 154
+   at Estat.Sri.Ws.Rest.StructureResourceErrorHandler.GetStructure(String structure, String agencyId, String resourceId, String version, String filter) in /app/src/NSIWebServices/StructureResourceErrorHandler.cs:line 89|
+2021-02-16 14:31:13,791|[52]|ERROR|f23efd4de895|Estat.Sri.Ws.Controllers.Builder.ServiceExceptionRestBuilder|SdmxError : No Results Found, code : 100|
+2021-02-16 14:31:13,792|[52]|ERROR|f23efd4de895|Estat.Sri.Ws.Controllers.Builder.ServiceExceptionRestBuilder|Could not find requested structures|Org.Sdmxsource.Sdmx.Api.Exception.SdmxNoResultsException: Could not find requested structures
+   at Estat.Sri.Ws.Controllers.Manager.RetrieverManager.TryFactories(Func`2 tryRetrieverFactory) in /app/src/Controllers/Manager/RetrieverManager.cs:line 787
+   at Estat.Sri.Ws.Controllers.Manager.RetrieverManager.ParseRequest(SdmxSchema sdmxSchema, IRestStructureQuery query) in /app/src/Controllers/Manager/RetrieverManager.cs:line 249
+   at Estat.Sri.Ws.Controllers.Controller.StructureRequestController.ParseRequest(IRestStructureQuery query, IHeaderDictionary headersFromRequest, HttpContext ctx) in /app/src/Controllers/Controller/StructureRequestController.cs:line 164
+   at Estat.Sri.Ws.Rest.StructureResource.ProcessRequest(String structure, String agencyId, String resourceId, String version, String filter, HttpContext ctx) in /app/src/NSIWebServices/StructureResource.cs:line 426
+   at Estat.Sri.Ws.Rest.StructureResource.GetStructure(String structure, String agencyId, String resourceId, String version, String filter) in /app/src/NSIWebServices/StructureResource.cs:line 154
+   at Estat.Sri.Ws.Rest.StructureResourceErrorHandler.GetStructure(String structure, String agencyId, String resourceId, String version, String filter) in /app/src/NSIWebServices/StructureResourceErrorHandler.cs:line 89
+
+2021-02-16 14:31:13,795|[52]|ERROR|f23efd4de895|NSIWebServiceCore.ErrorHandlingMiddleware|Unhandled exception|Controllers.Utils.ServiceException: Could not find requested structures
+ ---> Org.Sdmxsource.Sdmx.Api.Exception.SdmxNoResultsException: Could not find requested structures
+   at Estat.Sri.Ws.Controllers.Manager.RetrieverManager.TryFactories(Func`2 tryRetrieverFactory) in /app/src/Controllers/Manager/RetrieverManager.cs:line 787
+   at Estat.Sri.Ws.Controllers.Manager.RetrieverManager.ParseRequest(SdmxSchema sdmxSchema, IRestStructureQuery query) in /app/src/Controllers/Manager/RetrieverManager.cs:line 249
+   at Estat.Sri.Ws.Controllers.Controller.StructureRequestController.ParseRequest(IRestStructureQuery query, IHeaderDictionary headersFromRequest, HttpContext ctx) in /app/src/Controllers/Controller/StructureRequestController.cs:line 164
+   at Estat.Sri.Ws.Rest.StructureResource.ProcessRequest(String structure, String agencyId, String resourceId, String version, String filter, HttpContext ctx) in /app/src/NSIWebServices/StructureResource.cs:line 426
+   at Estat.Sri.Ws.Rest.StructureResource.GetStructure(String structure, String agencyId, String resourceId, String version, String filter) in /app/src/NSIWebServices/StructureResource.cs:line 154
+   at Estat.Sri.Ws.Rest.StructureResourceErrorHandler.GetStructure(String structure, String agencyId, String resourceId, String version, String filter) in /app/src/NSIWebServices/StructureResourceErrorHandler.cs:line 89
+   --- End of inner exception stack trace ---
+   at Estat.Sri.Ws.Rest.StructureResourceErrorHandler.BuildErrorResponse(Exception e) in /app/src/NSIWebServices/StructureResourceErrorHandler.cs:line 137
+   at Estat.Sri.Ws.Rest.StructureResourceErrorHandler.GetStructure(String structure, String agencyId, String resourceId, String version, String filter) in /app/src/NSIWebServices/StructureResourceErrorHandler.cs:line 89
+   at Estat.Sri.Ws.NSIWebServiceCore.Controllers.StructureController.GetStructure(String structure, String agencyId, String resourceId, String version) in /app/src/NSIWebServiceCore/Controllers/StructureController.cs:line 44
+   at Microsoft.Extensions.Internal.ObjectMethodExecutor.<>c__DisplayClass33_0.<WrapVoidMethod>b__0(Object target, Object[] parameters)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.VoidResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeActionMethodAsync()
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeNextActionFilterAsync()
+--- End of stack trace from previous location where exception was thrown ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location where exception was thrown ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextResourceFilter>g__Awaited|24_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Rethrow(ResourceExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.InvokeFilterPipelineAsync()
+--- End of stack trace from previous location where exception was thrown ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Builder.Extensions.MapWhenMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.ResponseCaching.ResponseCachingMiddleware.Invoke(HttpContext httpContext)
+   at Estat.Sri.Ws.AuthorizationMiddleware.SriAuthorizationMiddleware.Invoke(HttpContext context) in /app/src/Estat.Sri.Ws.AuthorizationMiddleware/SriAuthorizationMiddleware.cs:line 48
+   at Estat.Sri.Ws.LoggingOptions.LoggingOptionsMiddleware.Invoke(HttpContext context) in /app/src/Estat.Sri.Ws.LoggingOptions/LoggingOptionsMiddleware.cs:line 37
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Estat.Sri.Ws.CorsModule.CorsHttpModule.Invoke(HttpContext context) in /app/src/Estat.Sri.Ws.CorsModule/CorsHttpModule.cs:line 31
+   at Estat.Sri.Ws.NSIWebServiceCore.LoggingMiddleware.Invoke(HttpContext context) in /app/src/NSIWebServiceCore/LoggingMiddleware.cs:line 47
+   at Microsoft.AspNetCore.Diagnostics.ExceptionHandlerMiddleware.<Invoke>g__Awaited|6_0(ExceptionHandlerMiddleware middleware, HttpContext context, Task task)
+
+2021-02-16 14:32:08,480|[44]|ERROR|f23efd4de895|Org.Sdmxsource.Sdmx.Api.Exception.SdmxException|No structures found for the specific query|Org.Sdmxsource.Sdmx.Api.Exception.SdmxNoResultsException: No structures found for the specific query
+
+2021-02-16 14:32:08,480|[44]|ERROR|f23efd4de895|Org.Sdmxsource.Sdmx.Api.Exception.SdmxException|Could not find requested structures|Org.Sdmxsource.Sdmx.Api.Exception.SdmxNoResultsException: Could not find requested structures
+
+2021-02-16 14:32:08,481|[44]|ERROR|f23efd4de895|Estat.Sri.Ws.Rest.StructureResourceErrorHandler|Org.Sdmxsource.Sdmx.Api.Exception.SdmxNoResultsException: Could not find requested structures
+   at Estat.Sri.Ws.Controllers.Manager.RetrieverManager.TryFactories(Func`2 tryRetrieverFactory) in /app/src/Controllers/Manager/RetrieverManager.cs:line 787
+   at Estat.Sri.Ws.Controllers.Manager.RetrieverManager.ParseRequest(SdmxSchema sdmxSchema, IRestStructureQuery query) in /app/src/Controllers/Manager/RetrieverManager.cs:line 249
+   at Estat.Sri.Ws.Controllers.Controller.StructureRequestController.ParseRequest(IRestStructureQuery query, IHeaderDictionary headersFromRequest, HttpContext ctx) in /app/src/Controllers/Controller/StructureRequestController.cs:line 164
+   at Estat.Sri.Ws.Rest.StructureResource.ProcessRequest(String structure, String agencyId, String resourceId, String version, String filter, HttpContext ctx) in /app/src/NSIWebServices/StructureResource.cs:line 426
+   at Estat.Sri.Ws.Rest.StructureResource.GetStructure(String structure, String agencyId, String resourceId, String version, String filter) in /app/src/NSIWebServices/StructureResource.cs:line 154
+   at Estat.Sri.Ws.Rest.StructureResourceErrorHandler.GetStructure(String structure, String agencyId, String resourceId, String version, String filter) in /app/src/NSIWebServices/StructureResourceErrorHandler.cs:line 89|
+2021-02-16 14:32:08,481|[44]|ERROR|f23efd4de895|Estat.Sri.Ws.Controllers.Builder.ServiceExceptionRestBuilder|SdmxError : No Results Found, code : 100|
+2021-02-16 14:32:08,481|[44]|ERROR|f23efd4de895|Estat.Sri.Ws.Controllers.Builder.ServiceExceptionRestBuilder|Could not find requested structures|Org.Sdmxsource.Sdmx.Api.Exception.SdmxNoResultsException: Could not find requested structures
+   at Estat.Sri.Ws.Controllers.Manager.RetrieverManager.TryFactories(Func`2 tryRetrieverFactory) in /app/src/Controllers/Manager/RetrieverManager.cs:line 787
+   at Estat.Sri.Ws.Controllers.Manager.RetrieverManager.ParseRequest(SdmxSchema sdmxSchema, IRestStructureQuery query) in /app/src/Controllers/Manager/RetrieverManager.cs:line 249
+   at Estat.Sri.Ws.Controllers.Controller.StructureRequestController.ParseRequest(IRestStructureQuery query, IHeaderDictionary headersFromRequest, HttpContext ctx) in /app/src/Controllers/Controller/StructureRequestController.cs:line 164
+   at Estat.Sri.Ws.Rest.StructureResource.ProcessRequest(String structure, String agencyId, String resourceId, String version, String filter, HttpContext ctx) in /app/src/NSIWebServices/StructureResource.cs:line 426
+   at Estat.Sri.Ws.Rest.StructureResource.GetStructure(String structure, String agencyId, String resourceId, String version, String filter) in /app/src/NSIWebServices/StructureResource.cs:line 154
+   at Estat.Sri.Ws.Rest.StructureResourceErrorHandler.GetStructure(String structure, String agencyId, String resourceId, String version, String filter) in /app/src/NSIWebServices/StructureResourceErrorHandler.cs:line 89
+
+2021-02-16 14:32:08,487|[44]|ERROR|f23efd4de895|NSIWebServiceCore.ErrorHandlingMiddleware|Unhandled exception|Controllers.Utils.ServiceException: Could not find requested structures
+ ---> Org.Sdmxsource.Sdmx.Api.Exception.SdmxNoResultsException: Could not find requested structures
+   at Estat.Sri.Ws.Controllers.Manager.RetrieverManager.TryFactories(Func`2 tryRetrieverFactory) in /app/src/Controllers/Manager/RetrieverManager.cs:line 787
+   at Estat.Sri.Ws.Controllers.Manager.RetrieverManager.ParseRequest(SdmxSchema sdmxSchema, IRestStructureQuery query) in /app/src/Controllers/Manager/RetrieverManager.cs:line 249
+   at Estat.Sri.Ws.Controllers.Controller.StructureRequestController.ParseRequest(IRestStructureQuery query, IHeaderDictionary headersFromRequest, HttpContext ctx) in /app/src/Controllers/Controller/StructureRequestController.cs:line 164
+   at Estat.Sri.Ws.Rest.StructureResource.ProcessRequest(String structure, String agencyId, String resourceId, String version, String filter, HttpContext ctx) in /app/src/NSIWebServices/StructureResource.cs:line 426
+   at Estat.Sri.Ws.Rest.StructureResource.GetStructure(String structure, String agencyId, String resourceId, String version, String filter) in /app/src/NSIWebServices/StructureResource.cs:line 154
+   at Estat.Sri.Ws.Rest.StructureResourceErrorHandler.GetStructure(String structure, String agencyId, String resourceId, String version, String filter) in /app/src/NSIWebServices/StructureResourceErrorHandler.cs:line 89
+   --- End of inner exception stack trace ---
+   at Estat.Sri.Ws.Rest.StructureResourceErrorHandler.BuildErrorResponse(Exception e) in /app/src/NSIWebServices/StructureResourceErrorHandler.cs:line 137
+   at Estat.Sri.Ws.Rest.StructureResourceErrorHandler.GetStructure(String structure, String agencyId, String resourceId, String version, String filter) in /app/src/NSIWebServices/StructureResourceErrorHandler.cs:line 89
+   at Estat.Sri.Ws.NSIWebServiceCore.Controllers.StructureController.GetStructure(String structure, String agencyId, String resourceId, String version) in /app/src/NSIWebServiceCore/Controllers/StructureController.cs:line 44
+   at Microsoft.Extensions.Internal.ObjectMethodExecutor.<>c__DisplayClass33_0.<WrapVoidMethod>b__0(Object target, Object[] parameters)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.VoidResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeActionMethodAsync()
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeNextActionFilterAsync()
+--- End of stack trace from previous location where exception was thrown ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location where exception was thrown ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextResourceFilter>g__Awaited|24_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Rethrow(ResourceExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.InvokeFilterPipelineAsync()
+--- End of stack trace from previous location where exception was thrown ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Builder.Extensions.MapWhenMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.ResponseCaching.ResponseCachingMiddleware.Invoke(HttpContext httpContext)
+   at Estat.Sri.Ws.AuthorizationMiddleware.SriAuthorizationMiddleware.Invoke(HttpContext context) in /app/src/Estat.Sri.Ws.AuthorizationMiddleware/SriAuthorizationMiddleware.cs:line 48
+   at Estat.Sri.Ws.LoggingOptions.LoggingOptionsMiddleware.Invoke(HttpContext context) in /app/src/Estat.Sri.Ws.LoggingOptions/LoggingOptionsMiddleware.cs:line 37
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Estat.Sri.Ws.CorsModule.CorsHttpModule.Invoke(HttpContext context) in /app/src/Estat.Sri.Ws.CorsModule/CorsHttpModule.cs:line 31
+   at Estat.Sri.Ws.NSIWebServiceCore.LoggingMiddleware.Invoke(HttpContext context) in /app/src/NSIWebServiceCore/LoggingMiddleware.cs:line 47
+   at Microsoft.AspNetCore.Diagnostics.ExceptionHandlerMiddleware.<Invoke>g__Awaited|6_0(ExceptionHandlerMiddleware middleware, HttpContext context, Task task)
+

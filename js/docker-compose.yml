@@ -1,0 +1,122 @@
+version: "3"
+
+volumes:
+  postgres_data:
+  redis-data:
+  
+services:
+  solr:
+    image: solr:7.7.2
+    container_name: solr
+    entrypoint:
+    - bash
+    - "-c"
+    - "precreate-core sdmx-facet-search; exec solr -f"
+    ports:
+      - "${SOLR_PORT}:8983"
+  
+  redis:
+    image: redis:5.0.3
+    container_name: redis
+    ports:
+      - "${REDIS_PORT}:6379"
+    volumes:
+      - redis-data:/data
+  
+  postgres:
+    image: postgres:12.0
+    container_name: postgres
+    restart: always    
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+    environment:
+      POSTGRES_DB: ${POSTGRES_DB}
+      POSTGRES_USER: ${POSTGRES_USER}
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD}
+    ports:
+      - "${POSTGRES_PORT}:5432"
+
+  keycloak:
+    image: jboss/keycloak:7.0.0
+    container_name: keycloak
+    environment:
+      DB_VENDOR: ${DB_VENDOR}
+      DB_ADDR: ${DB_ADDR}
+      DB_DATABASE: ${DB_DATABASE}
+      DB_USER: ${DB_USER}
+      DB_PASSWORD: ${DB_PASSWORD}
+      KEYCLOAK_USER: ${KEYCLOAK_USER}
+      KEYCLOAK_PASSWORD: ${KEYCLOAK_PASSWORD}
+    ports:
+      - "${KEYCLOAK_PORT}:8080"
+    depends_on:
+      - postgres
+
+  config: 
+    container_name: config
+    build:
+      context: ./config
+      dockerfile: Dockerfile.dev
+    ports:
+      - "${CONFIG_PORT}:80"
+
+  data-lifecycle-manager:
+    image: siscc/dotstatsuite-data-lifecycle-manager:master
+    container_name: data-lifecycle-manager-test
+    ports:
+      - "${DLM_PORT}:7002"
+    environment:
+      DEFAULT_TENANT: ${DEFAULT_TENANT}
+      CONFIG_URL: http://config
+      AUTH_SERVER_URL: "${PROTOCOL}://${HOST}:${KEYCLOAK_PORT}"
+      TRANSFER_SERVER_URL: "${PROTOCOL}://${HOST}:${TRANSFERT_PORT}/${TRANSFER_API_VERSION}"
+
+  data-explorer:
+    image: siscc/dotstatsuite-data-explorer:master
+    container_name: data-explorer
+    ports:
+      - "${DE_PORT}:80"
+    environment:
+      CONFIG_URL: http://config
+      AUTH_SERVER_URL: "${PROTOCOL}://${HOST}:${KEYCLOAK_PORT}"
+      GA_TOKEN: ${GA_TOKEN}
+
+  share:
+    image: siscc/dotstatsuite-share
+    container_name: share
+    ports:
+      - "${SHARE_PORT}:3007"
+    environment:
+      CONFIG_URL: http://config
+      SFS_URL: "${PROTOCOL}://${HOST}:${SFS_PORT}"
+      SITE_URL: "${PROTOCOL}://${HOST}:${SHARE_PORT}"
+      REDIS_HOST: redis
+      REDIS_PORT: 6379
+
+  data-viewer:
+    image: siscc/dotstatsuite-data-viewer:master
+    container_name: data-viewer
+    ports:
+      - "${VIEWER_PORT}:80"
+    environment:
+      CONFIG_URL:  http://config
+      GA_TOKEN: ${GA_TOKEN}
+
+  sdmx-faceted-search:
+    image: siscc/dotstatsuite-sdmx-faceted-search:master
+    container_name: sdmx-faceted-search
+    ports:
+      - "${SFS_PORT}:80"
+    depends_on:
+      - solr
+    environment:
+      SERVER_HOST: ${HOST}
+      CONFIG_URL: http://config
+      REDIS_HOST: redis
+      REDIS_PORT: 6379
+      SOLR_HOST: solr
+      SOLR_PORT: 8983
+    entrypoint:
+      - sh
+      - -c
+      - "sleep 30s; yarn dist:run"

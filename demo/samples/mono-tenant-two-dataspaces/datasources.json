@@ -1,0 +1,21 @@
+{
+  "demo-release": {
+    "label": "demo-release",
+    "url": "http://localhost:81/rest",
+    "hasRangeHeader": true,
+    "supportsReferencePartial": true,
+    "hasLastNObservations": false,
+    "indexed": true,
+    "queries": [
+      { "version": "1.1", "categorySchemeId": "CL_CS_DISS", "agencyId": "TN1"}
+    ]
+  },
+  "demo-design": {
+    "label": "demo-design",
+    "url": "http://localhost:80/rest",
+    "hasRangeHeader": true,
+    "supportsReferencePartial": true,
+    "hasLastNObservations": true,
+    "indexed": false
+  }
+}
